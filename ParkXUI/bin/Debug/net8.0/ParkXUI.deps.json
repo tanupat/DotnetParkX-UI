@@ -1,0 +1,31 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ParkXUI/1.0.0": {
+        "runtime": {
+          "ParkXUI.dll": {}
+        },
+        "resources": {
+          "en/ParkXUI.resources.dll": {
+            "locale": "en"
+          },
+          "th/ParkXUI.resources.dll": {
+            "locale": "th"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ParkXUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

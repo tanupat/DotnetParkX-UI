@@ -1,0 +1,641 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/obj/Debug/net8.0/scopedcss/projectbundle/ParkXUI.bundle.scp.css",
+      "PackagePath": "staticwebassets/ParkXUI.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/animate.css",
+      "PackagePath": "staticwebassets/css/animate.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/brands.css",
+      "PackagePath": "staticwebassets/css/brands.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/dev.css",
+      "PackagePath": "staticwebassets/css/dev.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/fontawesome.min.css",
+      "PackagePath": "staticwebassets/css/fontawesome.min.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/global.css",
+      "PackagePath": "staticwebassets/css/global.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/jquery-confirm.min.css",
+      "PackagePath": "staticwebassets/css/jquery-confirm.min.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/jquery.fancybox.css",
+      "PackagePath": "staticwebassets/css/jquery.fancybox.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/solid.css",
+      "PackagePath": "staticwebassets/css/solid.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/swiper.css",
+      "PackagePath": "staticwebassets/css/swiper.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/fonts/TitlingGothicFBComp-Med.eot",
+      "PackagePath": "staticwebassets/fonts/TitlingGothicFBComp-Med.eot"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/fonts/TitlingGothicFBComp-Med.ttf",
+      "PackagePath": "staticwebassets/fonts/TitlingGothicFBComp-Med.ttf"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/fonts/TitlingGothicFBComp-Med.woff",
+      "PackagePath": "staticwebassets/fonts/TitlingGothicFBComp-Med.woff"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/fonts/fa-brands-400.eot",
+      "PackagePath": "staticwebassets/fonts/fa-brands-400.eot"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/fonts/fa-brands-400.ttf",
+      "PackagePath": "staticwebassets/fonts/fa-brands-400.ttf"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/fonts/fa-brands-400.woff",
+      "PackagePath": "staticwebassets/fonts/fa-brands-400.woff"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/fonts/fa-brands-400.woff2",
+      "PackagePath": "staticwebassets/fonts/fa-brands-400.woff2"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/fonts/fa-solid-900.eot",
+      "PackagePath": "staticwebassets/fonts/fa-solid-900.eot"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/fonts/fa-solid-900.ttf",
+      "PackagePath": "staticwebassets/fonts/fa-solid-900.ttf"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/fonts/fa-solid-900.woff",
+      "PackagePath": "staticwebassets/fonts/fa-solid-900.woff"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/fonts/fa-solid-900.woff2",
+      "PackagePath": "staticwebassets/fonts/fa-solid-900.woff2"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/10ec7647.jpg",
+      "PackagePath": "staticwebassets/images/10ec7647.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/116a104e.png",
+      "PackagePath": "staticwebassets/images/116a104e.png"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200506000053-2020-05-06setting000050.png",
+      "PackagePath": "staticwebassets/images/20200506000053-2020-05-06setting000050.png"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200506020342-2020-05-06social020325.svg",
+      "PackagePath": "staticwebassets/images/20200506020342-2020-05-06social020325.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200506020342-2020-05-06social020327.svg",
+      "PackagePath": "staticwebassets/images/20200506020342-2020-05-06social020327.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200506020539-2020-05-06social020524.svg",
+      "PackagePath": "staticwebassets/images/20200506020539-2020-05-06social020524.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200506020539-2020-05-06social020527.svg",
+      "PackagePath": "staticwebassets/images/20200506020539-2020-05-06social020527.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200506020609-2020-05-06social020601.svg",
+      "PackagePath": "staticwebassets/images/20200506020609-2020-05-06social020601.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200506020609-2020-05-06social020605.svg",
+      "PackagePath": "staticwebassets/images/20200506020609-2020-05-06social020605.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200507142536-2020-05-07location141738.png",
+      "PackagePath": "staticwebassets/images/20200507142536-2020-05-07location141738.png"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200507153605-2020-05-07location153604.png",
+      "PackagePath": "staticwebassets/images/20200507153605-2020-05-07location153604.png"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200507155917-2020-05-07abountus155916.jpg",
+      "PackagePath": "staticwebassets/images/20200507155917-2020-05-07abountus155916.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200510145826-2020-05-10banner145823.jpg",
+      "PackagePath": "staticwebassets/images/20200510145826-2020-05-10banner145823.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200510154754-2020-05-10option_web154753.png",
+      "PackagePath": "staticwebassets/images/20200510154754-2020-05-10option_web154753.png"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200510155059-2020-05-10find_carpark155055.jpg",
+      "PackagePath": "staticwebassets/images/20200510155059-2020-05-10find_carpark155055.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200512121337-2020-05-12find_carpark121336.jpg",
+      "PackagePath": "staticwebassets/images/20200512121337-2020-05-12find_carpark121336.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200522140249-2020-05-22find_carpark140247.jpg",
+      "PackagePath": "staticwebassets/images/20200522140249-2020-05-22find_carpark140247.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200522140302-2020-05-22find_carpark140300.jpg",
+      "PackagePath": "staticwebassets/images/20200522140302-2020-05-22find_carpark140300.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200522140322-2020-05-22find_carpark140318.jpg",
+      "PackagePath": "staticwebassets/images/20200522140322-2020-05-22find_carpark140318.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200522140338-2020-05-22find_carpark140335.jpg",
+      "PackagePath": "staticwebassets/images/20200522140338-2020-05-22find_carpark140335.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200525153700-2020-05-25location153659.jpg",
+      "PackagePath": "staticwebassets/images/20200525153700-2020-05-25location153659.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200525154613-2020-05-25location154611.jpg",
+      "PackagePath": "staticwebassets/images/20200525154613-2020-05-25location154611.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200525154807-2020-05-25location154805.jpg",
+      "PackagePath": "staticwebassets/images/20200525154807-2020-05-25location154805.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200525154935-2020-05-25location154933.jpg",
+      "PackagePath": "staticwebassets/images/20200525154935-2020-05-25location154933.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200525155040-2020-05-25location155038.jpg",
+      "PackagePath": "staticwebassets/images/20200525155040-2020-05-25location155038.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200528155402-2020-05-28seo_setting155345.jpg",
+      "PackagePath": "staticwebassets/images/20200528155402-2020-05-28seo_setting155345.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200531094307-2020-05-31location094305.jpg",
+      "PackagePath": "staticwebassets/images/20200531094307-2020-05-31location094305.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200602104455-2020-06-02banner104450.jpg",
+      "PackagePath": "staticwebassets/images/20200602104455-2020-06-02banner104450.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200602163120-2020-06-02find_carpark163119.jpg",
+      "PackagePath": "staticwebassets/images/20200602163120-2020-06-02find_carpark163119.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200618163730-2020-06-18social163729.svg",
+      "PackagePath": "staticwebassets/images/20200618163730-2020-06-18social163729.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200618163903-2020-06-18social163901.svg",
+      "PackagePath": "staticwebassets/images/20200618163903-2020-06-18social163901.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200619080913-2020-06-19social080848.svg",
+      "PackagePath": "staticwebassets/images/20200619080913-2020-06-19social080848.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200619095834-2020-06-19social095833.svg",
+      "PackagePath": "staticwebassets/images/20200619095834-2020-06-19social095833.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20211122150857-2021-11-22location150850.jpg",
+      "PackagePath": "staticwebassets/images/20211122150857-2021-11-22location150850.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20230314115802-2023-03-14location112625.jpg",
+      "PackagePath": "staticwebassets/images/20230314115802-2023-03-14location112625.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20230403133334-2023-04-03find_carpark133324.jpg",
+      "PackagePath": "staticwebassets/images/20230403133334-2023-04-03find_carpark133324.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/TitlingGothicFBComp-Med.svg",
+      "PackagePath": "staticwebassets/images/TitlingGothicFBComp-Med.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/banner-texture--1.svg",
+      "PackagePath": "staticwebassets/images/banner-texture--1.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/banner-texture--2.svg",
+      "PackagePath": "staticwebassets/images/banner-texture--2.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/fa-brands-400.svg",
+      "PackagePath": "staticwebassets/images/fa-brands-400.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/fa-solid-900.svg",
+      "PackagePath": "staticwebassets/images/fa-solid-900.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/flag-en.svg",
+      "PackagePath": "staticwebassets/images/flag-en.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/flag-th.svg",
+      "PackagePath": "staticwebassets/images/flag-th.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/icon-arrow-next-white.svg",
+      "PackagePath": "staticwebassets/images/icon-arrow-next-white.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/icon-arrow-next.svg",
+      "PackagePath": "staticwebassets/images/icon-arrow-next.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/icon-arrow-prev-white.svg",
+      "PackagePath": "staticwebassets/images/icon-arrow-prev-white.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/icon-arrow-prev.svg",
+      "PackagePath": "staticwebassets/images/icon-arrow-prev.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/icon-arrow-up.svg",
+      "PackagePath": "staticwebassets/images/icon-arrow-up.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/icon-check-mark.svg",
+      "PackagePath": "staticwebassets/images/icon-check-mark.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/icon-check.svg",
+      "PackagePath": "staticwebassets/images/icon-check.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/icon-close.svg",
+      "PackagePath": "staticwebassets/images/icon-close.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/icon-email-2.svg",
+      "PackagePath": "staticwebassets/images/icon-email-2.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/icon-email.svg",
+      "PackagePath": "staticwebassets/images/icon-email.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/icon-file-upload.png",
+      "PackagePath": "staticwebassets/images/icon-file-upload.png"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/icon-headphone.svg",
+      "PackagePath": "staticwebassets/images/icon-headphone.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/icon-home.svg",
+      "PackagePath": "staticwebassets/images/icon-home.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/icon-location.svg",
+      "PackagePath": "staticwebassets/images/icon-location.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/icon-phone.svg",
+      "PackagePath": "staticwebassets/images/icon-phone.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/logo-white.svg",
+      "PackagePath": "staticwebassets/images/logo-white.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/js/addthis_widget.js",
+      "PackagePath": "staticwebassets/js/addthis_widget.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/js/custom.js",
+      "PackagePath": "staticwebassets/js/custom.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/js/gtm.js",
+      "PackagePath": "staticwebassets/js/gtm.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/js/ie11CustomProperties.js",
+      "PackagePath": "staticwebassets/js/ie11CustomProperties.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/js/jquery-1.12.4.min.js",
+      "PackagePath": "staticwebassets/js/jquery-1.12.4.min.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/js/jquery-confirm.min.js",
+      "PackagePath": "staticwebassets/js/jquery-confirm.min.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/js/jquery.customSelect.js",
+      "PackagePath": "staticwebassets/js/jquery.customSelect.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/js/jquery.fancybox.js",
+      "PackagePath": "staticwebassets/js/jquery.fancybox.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/js/jquery.validate.js",
+      "PackagePath": "staticwebassets/js/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/js/popper.min.js",
+      "PackagePath": "staticwebassets/js/popper.min.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/js/skrollr.min.js",
+      "PackagePath": "staticwebassets/js/skrollr.min.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/js/swiper.js",
+      "PackagePath": "staticwebassets/js/swiper.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/js/wow.js",
+      "PackagePath": "staticwebassets/js/wow.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.ParkXUI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.ParkXUI.props",
+      "PackagePath": "build\\ParkXUI.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.ParkXUI.props",
+      "PackagePath": "buildMultiTargeting\\ParkXUI.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.ParkXUI.props",
+      "PackagePath": "buildTransitive\\ParkXUI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,335 @@
+@model dynamic
+
+@{
+    Layout = "_Layout";
+}
+<div class="section section-breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a  asp-controller="Home" asp-action="Index">หน้าแรก</a></li>
+            <li class="breadcrumb-item active"><span>หาที่จอดรถ</span></li>
+            <li class="breadcrumb-item active"><span>บริหารโดยพาร์คเอ็กซ์</span></li>
+        </ol>
+    </div><!--container-->
+</div>
+
+<div class="section section-findpark">
+			<div class="container">
+				<div class="section-group top">
+					<div class="section-title wow fadeIn">
+						<h2 class="title-lg">หาที่จอดรถ</h2>
+					</div>
+
+					<ul class="nav nav-location justify-content-center wow fadeIn">
+						<li><a  asp-controller="FindCarpark" asp-action="Index" class="">พาร์คเอ็กซ์</a></li>
+						<li><a asp-controller="FindCarpark" asp-action="ManagedByParkX"
+								class="active">บริหารโดยพาร์คเอ็กซ์</a></li>
+					</ul>
+
+					<div class="article wow fadeIn">
+						<p>กรุงเทพมหานคร ติดอันดับเมืองที่รถติดมากที่สุดของเอเชีย ผู้ใช้รถต้องเสียเวลาบนท้องถนนมากถึง 64
+							ชม.ต่อปีแล้วยังต้องเสียเวลากับการหาที่จอดรถอีก 20 นาที โดยประมาณ Solution
+							ของเราจึงตอบโจทย์ปัญหาที่จอดรถไม่เพียงพอ และเป็นอีกหนึ่งทางเลือก
+							ที่เพิ่มความคล่องตัวในการใช้ชีวิตสําหรับคนกรุงเทพมหานคร</p>
+					</div>
+
+					<div class="background"></div>
+				</div><!--section-group-->
+
+				<div class="section-group">
+					<div class="tab-content tab-location-content">
+						<div class="tab-pane show active" style="margin-top:3%;">
+							<br>
+							<br>
+							<h3>�&nbsp;ิรัชทาวเวอร์ แอท สาทร</h3>
+							<div class="row no-gutters wow fadeIn">
+								<div class="col-lg-7">
+									<div class="imagebox tablet-full pr-lg-3">
+										<a
+											href="https://www.parkx.com/th/find-a-carpark/managed-by-park-x/bhiraj-tower-at-sathon">
+											<img class="w-100" src="/images/20200525153700-2020-05-25location153659.jpg"
+												alt="">
+										</a>
+									</div>
+								</div><!--col-lg-7-->
+								<div class="col-lg-5">
+									<div class="map-content-wrap">
+										<ul class="nav nav-map">
+											<li class="nav-item">
+												<a class="nav-link active" data-toggle="tab"
+													href="#tab-map-1-3">แผนที่ตั้ง</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" data-toggle="tab"
+													href="#tab-map-2-3">แผนที่เดินทาง</a>
+											</li>
+										</ul>
+										<div class="tab-content tab-map-content">
+											<div class="tab-pane fade show active" id="tab-map-1-3">
+												<a class="imagebox" data-fancybox=""
+													href="https://www.parkx.com/uploads/find_carpark/20200522140249-2020-05-22find_carpark140247.jpg">
+													<div class="background"
+														style="background-image: url(/images/20200522140249-2020-05-22find_carpark140247.jpg);">
+													</div>
+												</a>
+											</div><!--tab-pane-->
+
+											<div class="tab-pane fade" id="tab-map-2-3">
+												<iframe
+													src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.988930623041!2d100.52044191483016!3d13.719119890368617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e298cd3cd3a625%3A0x87e252dd50ce73b0!2sBHIRAJ%20TOWER%20at%20Sathon!5e0!3m2!1sth!2sth!4v1590030441211!5m2!1sth!2sth"
+													width="600" height="450" frameborder="0" style="border:0;"
+													allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+											</div><!--tab-pane-->
+										</div><!--tab-map-content-->
+
+										<a class="btn btn-viewmore normal w-270 wow fadeInRight" data-wow-delay="0.2s"
+											href="https://www.parkx.com/th/find-a-carpark/managed-by-park-x/bhiraj-tower-at-sathon">เพิ่มเติม</a>
+									</div><!--map-content-wrap-->
+								</div><!--col-lg-5-->
+							</div><!--row-->
+							<br>
+							<br>
+							<h3>อาคาร�&nbsp;ิรัชทาวเวอร์ แอท เอ็มควอเทียร์</h3>
+							<div class="row no-gutters wow fadeIn">
+								<div class="col-lg-7">
+									<div class="imagebox tablet-full pr-lg-3">
+										<a
+											href="https://www.parkx.com/th/find-a-carpark/managed-by-park-x/bhiraj-tower-at-emquartier">
+											<img class="w-100" src="/images/20200525155040-2020-05-25location155038.jpg" alt="">
+										</a>
+									</div>
+								</div><!--col-lg-7-->
+								<div class="col-lg-5">
+									<div class="map-content-wrap">
+										<ul class="nav nav-map">
+											<li class="nav-item">
+												<a class="nav-link active" data-toggle="tab"
+													href="#tab-map-1-4">แผนที่ตั้ง</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" data-toggle="tab"
+													href="#tab-map-2-4">แผนที่เดินทาง</a>
+											</li>
+										</ul>
+										<div class="tab-content tab-map-content">
+											<div class="tab-pane fade show active" id="tab-map-1-4">
+												<a class="imagebox" data-fancybox=""
+													href="https://www.parkx.com/uploads/find_carpark/20200522140302-2020-05-22find_carpark140300.jpg">
+													<div class="background"
+														style="background-image: url(/images/20200522140302-2020-05-22find_carpark140300.jpg);">
+													</div>
+												</a>
+											</div><!--tab-pane-->
+
+											<div class="tab-pane fade" id="tab-map-2-4">
+												<iframe
+													src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.7903856956027!2d100.56761811483025!3d13.731136890360824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f01858d150f%3A0xbc0e87a22c16ae1c!2zQkhJUkFKIFRPV0VSIGF0IEVtUXVhcnRpZXIgKOC4oOC4tOC4o-C4seC4iuC4l-C4suC4p-C5gOC4p-C4reC4o-C5jCDguYHguK3guJcg4LmA4Lit4LmH4Lih4LiE4Lin4Lit4LmA4LiX4Li14Lii4Lij4LmMKQ!5e0!3m2!1sth!2sth!4v1590030872570!5m2!1sth!2sth"
+													width="600" height="450" frameborder="0" style="border:0;"
+													allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+											</div><!--tab-pane-->
+										</div><!--tab-map-content-->
+
+										<a class="btn btn-viewmore normal w-270 wow fadeInRight" data-wow-delay="0.2s"
+											href="https://www.parkx.com/th/find-a-carpark/managed-by-park-x/bhiraj-tower-at-emquartier">เพิ่มเติม</a>
+									</div><!--map-content-wrap-->
+								</div><!--col-lg-5-->
+							</div><!--row-->
+							<br>
+							<br>
+							<h3>�&nbsp;ิรัชทาวเวอร์ แอท ไบเทค</h3>
+							<div class="row no-gutters wow fadeIn">
+								<div class="col-lg-7">
+									<div class="imagebox tablet-full pr-lg-3">
+										<a
+											href="https://www.parkx.com/th/find-a-carpark/managed-by-park-x/bhiraj-tower-at-bitec">
+											<img class="w-100" src="/images/20200525154935-2020-05-25location154933.jpg"
+												alt="">
+										</a>
+									</div>
+								</div><!--col-lg-7-->
+								<div class="col-lg-5">
+									<div class="map-content-wrap">
+										<ul class="nav nav-map">
+											<li class="nav-item">
+												<a class="nav-link active" data-toggle="tab"
+													href="#tab-map-1-5">แผนที่ตั้ง</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" data-toggle="tab"
+													href="#tab-map-2-5">แผนที่เดินทาง</a>
+											</li>
+										</ul>
+										<div class="tab-content tab-map-content">
+											<div class="tab-pane fade show active" id="tab-map-1-5">
+												<a class="imagebox" data-fancybox=""
+													href="https://www.parkx.com/uploads/find_carpark/20200522140322-2020-05-22find_carpark140318.jpg">
+													<div class="background"
+														style="background-image: url(/images/20200522140322-2020-05-22find_carpark140318.jpg);">
+													</div>
+												</a>
+											</div><!--tab-pane-->
+
+											<div class="tab-pane fade" id="tab-map-2-5">
+												<iframe
+													src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7753.456817807943!2d100.60232774781856!3d13.674271583851072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2a0119f17dc4b%3A0xe9607d919bfe2c2e!2zQkhJUkFKIFRPV0VSIGF0IEJJVEVDIC0g4Lig4Li04Lij4Lix4LiK4LiX4Liy4Lin4LmA4Lin4Lit4Lij4LmMIOC5geC4reC4lyDguYTguJrguYDguJfguIQ!5e0!3m2!1sth!2sth!4v1590031214102!5m2!1sth!2sth"
+													width="600" height="450" frameborder="0" style="border:0;"
+													allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+											</div><!--tab-pane-->
+										</div><!--tab-map-content-->
+
+										<a class="btn btn-viewmore normal w-270 wow fadeInRight" data-wow-delay="0.2s"
+											href="https://www.parkx.com/th/find-a-carpark/managed-by-park-x/bhiraj-tower-at-bitec">เพิ่มเติม</a>
+									</div><!--map-content-wrap-->
+								</div><!--col-lg-5-->
+							</div><!--row-->
+							<br>
+							<br>
+							<h3>อาคารสมัชชาวาณิช 2</h3>
+							<div class="row no-gutters wow fadeIn">
+								<div class="col-lg-7">
+									<div class="imagebox tablet-full pr-lg-3">
+										<a
+											href="https://www.parkx.com/th/find-a-carpark/managed-by-park-x/united-business-center-2">
+											<img class="w-100" src="/images/20200525154807-2020-05-25location154805.jpg" alt="">
+										</a>
+									</div>
+								</div><!--col-lg-7-->
+								<div class="col-lg-5">
+									<div class="map-content-wrap">
+										<ul class="nav nav-map">
+											<li class="nav-item">
+												<a class="nav-link active" data-toggle="tab"
+													href="#tab-map-1-6">แผนที่ตั้ง</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" data-toggle="tab"
+													href="#tab-map-2-6">แผนที่เดินทาง</a>
+											</li>
+										</ul>
+										<div class="tab-content tab-map-content">
+											<div class="tab-pane fade show active" id="tab-map-1-6">
+												<a class="imagebox" data-fancybox=""
+													href="https://www.parkx.com/uploads/find_carpark/20200522140338-2020-05-22find_carpark140335.jpg">
+													<div class="background"
+														style="background-image: url(/images/20200522140338-2020-05-22find_carpark140335.jpg);">
+													</div>
+												</a>
+											</div><!--tab-pane-->
+
+											<div class="tab-pane fade" id="tab-map-2-6">
+												<iframe
+													src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.767552925662!2d100.56537071483024!3d13.732518190359974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f02720476ff%3A0xf9b869ab785a06ee!2z4Lit4Liy4LiE4Liy4Lij4Lii4Li54Lia4Li14LiL4Li1IDI!5e0!3m2!1sen!2sen!4v1590031505722!5m2!1sth!2sen"
+													width="600" height="450" frameborder="0" style="border:0;"
+													allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+											</div><!--tab-pane-->
+										</div><!--tab-map-content-->
+
+										<a class="btn btn-viewmore normal w-270 wow fadeInRight" data-wow-delay="0.2s"
+											href="https://www.parkx.com/th/find-a-carpark/managed-by-park-x/united-business-center-2">เพิ่มเติม</a>
+									</div><!--map-content-wrap-->
+								</div><!--col-lg-5-->
+							</div><!--row-->
+							<br>
+							<br>
+							<h3>ซัมเมอร์ ลาซาล</h3>
+							<div class="row no-gutters wow fadeIn">
+								<div class="col-lg-7">
+									<div class="imagebox tablet-full pr-lg-3">
+										<a
+											href="https://www.parkx.com/th/find-a-carpark/managed-by-park-x/summer-lasalle">
+											<img class="w-100" src="/images/20200525154613-2020-05-25location154611.jpg"
+												alt="">
+										</a>
+									</div>
+								</div><!--col-lg-7-->
+								<div class="col-lg-5">
+									<div class="map-content-wrap">
+										<ul class="nav nav-map">
+											<li class="nav-item">
+												<a class="nav-link active" data-toggle="tab"
+													href="#tab-map-1-7">แผนที่ตั้ง</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" data-toggle="tab"
+													href="#tab-map-2-7">แผนที่เดินทาง</a>
+											</li>
+										</ul>
+										<div class="tab-content tab-map-content">
+											<div class="tab-pane fade show active" id="tab-map-1-7">
+												<a class="imagebox" data-fancybox=""
+													href="https://www.parkx.com/uploads/find_carpark/20200602163120-2020-06-02find_carpark163119.jpg">
+													<div class="background"
+														style="background-image: url(/images/20200602163120-2020-06-02find_carpark163119.jpg);">
+													</div>
+												</a>
+											</div><!--tab-pane-->
+
+											<div class="tab-pane fade" id="tab-map-2-7">
+												<iframe
+													src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15507.812892274773!2d100.61384547792359!3d13.660608296503153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2a00ca953f329%3A0x9f9b5e20d994d8a7!2zU3VtbWVyIExhc2FsbGUgKOC4i-C4seC4oeC5gOC4oeC4reC4o-C5jCDguKXguLLguIvguLLguKUp!5e0!3m2!1sth!2sth!4v1590031775971!5m2!1sth!2sth"
+													width="600" height="450" frameborder="0" style="border:0;"
+													allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+											</div><!--tab-pane-->
+										</div><!--tab-map-content-->
+
+										<a class="btn btn-viewmore normal w-270 wow fadeInRight" data-wow-delay="0.2s"
+											href="https://www.parkx.com/th/find-a-carpark/managed-by-park-x/summer-lasalle">เพิ่มเติม</a>
+									</div><!--map-content-wrap-->
+								</div><!--col-lg-5-->
+							</div><!--row-->
+							<br>
+							<br>
+							<h3>ศูนย์นิทรรศการและการประชุมไบเทค</h3>
+							<div class="row no-gutters wow fadeIn">
+								<div class="col-lg-7">
+									<div class="imagebox tablet-full pr-lg-3">
+										<a href="https://www.parkx.com/th/find-a-carpark/managed-by-park-x/bitec">
+											<img class="w-100" src="/images/20230314115802-2023-03-14location112625.jpg"
+												alt="">
+											<div class="img-note left wow fadeIn">
+												*�&nbsp;าพจำลองใช้เพื่องานโฆษณาเท่านั้น</div>
+										</a>
+									</div>
+								</div><!--col-lg-7-->
+								<div class="col-lg-5">
+									<div class="map-content-wrap">
+										<ul class="nav nav-map">
+											<li class="nav-item">
+												<a class="nav-link active" data-toggle="tab"
+													href="#tab-map-1-9">แผนที่ตั้ง</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" data-toggle="tab"
+													href="#tab-map-2-9">แผนที่เดินทาง</a>
+											</li>
+										</ul>
+										<div class="tab-content tab-map-content">
+											<div class="tab-pane fade show active" id="tab-map-1-9">
+												<a class="imagebox" data-fancybox=""
+													href="https://www.parkx.com/uploads/find_carpark/20230403133334-2023-04-03find_carpark133324.jpg">
+													<div class="background"
+														style="background-image: url(/images/20230403133334-2023-04-03find_carpark133324.jpg);">
+													</div>
+												</a>
+											</div><!--tab-pane-->
+
+											<div class="tab-pane fade" id="tab-map-2-9">
+												<iframe
+													src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7753.456817807943!2d100.60232774781856!3d13.674271583851072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2a0119f17dc4b%3A0xe9607d919bfe2c2e!2zQkhJUkFKIFRPV0VSIGF0IEJJVEVDIC0g4Lig4Li04Lij4Lix4LiK4LiX4Liy4Lin4LmA4Lin4Lit4Lij4LmMIOC5geC4reC4lyDguYTguJrguYDguJfguIQ!5e0!3m2!1sth!2sth!4v1590031214102!5m2!1sth!2sth"
+													width="600" height="450" frameborder="0" style="border:0;"
+													allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+											</div><!--tab-pane-->
+										</div><!--tab-map-content-->
+
+										<a class="btn btn-viewmore normal w-270 wow fadeInRight" data-wow-delay="0.2s"
+											href="https://www.parkx.com/th/find-a-carpark/managed-by-park-x/bitec">เพิ่มเติม</a>
+									</div><!--map-content-wrap-->
+								</div><!--col-lg-5-->
+							</div><!--row-->
+						</div><!--tab-pane -->
+						<!--=====================[End] Ekkamai=======================-->
+					</div><!--tab-location-content-->
+				</div><!--section-group-->
+			</div><!--container-->
+		</div><!--section-findpark-->
+		<div class=""></div>

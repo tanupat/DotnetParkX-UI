@@ -1,0 +1,93 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Resources\View\Home\index.en.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>index.en.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\View\Home\index.th.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>index.th.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\View\Shared\_CulturePartial.en.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>_CulturePartial.en.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\View\Shared\_CulturePartial.th.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>_CulturePartial.th.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Controllers\API\LanguageController.en.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>LanguageController.en.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Controllers\API\LanguageController.th.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>LanguageController.th.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views\Shared\_Layout.en.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>_Layout.en.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views\Shared\_Layout.th.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>_Layout.th.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Resources\View\Home\index.en.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>index.en.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\View\Home\index.th.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>index.th.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\View\Shared\_CulturePartial.en.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>_CulturePartial.en.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\View\Shared\_CulturePartial.th.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>_CulturePartial.th.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Controllers\API\LanguageController.en.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>LanguageController.en.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Controllers\API\LanguageController.th.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>LanguageController.th.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views\Shared\_Layout.en.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>_Layout.en.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views\Shared\_Layout.th.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>_Layout.th.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Resources\Views\FindCarpark\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FindCarpark\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\FindCarpark\Index.cshtml" />
+    </ItemGroup>
+ 
+</Project>

@@ -1,0 +1,428 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Google Tag Manager -->
+    <script async="" src="js/gtm.js"></script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K44LBLC');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-164173407-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-164173407-1');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="keywords" content="บริการที่จอดรถ,หาที่จอดรถ,ที่จอดรถ">
+    <meta name="description"
+          content="พาร์คเอ็กซ์ บริการที่จอดรถบนทําเลสำคัญย่านธุรกิจใจกลางเมืองที่มีสิ่งอํานวยความสะดวกครบครัน สถานที่สะอาดและมีความปลอด�&nbsp;ัยสูง">
+    <meta property="og:image" content="images/20200528155402-2020-05-28seo_setting155345.jpg">
+    <title>PARK X Parking Solutions › พาร์คเอ็กซ์ สะดวก สะอาด ปลอด�&nbsp;ัย ตอบโจทย์ ตรงจุด ชีวิตคนเมือง</title>
+    <link rel="shortcut icon" href="~/images/20200510154754-2020-05-10option_web154753.png" type="image/png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap&amp;subset=thai"
+        rel="stylesheet">
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/animate.css" rel="stylesheet">
+    <link href="~/css/swiper.css" rel="stylesheet">
+    <link href="~/css/jquery.fancybox.css" rel="stylesheet">
+    <!-- <link href="https://www.parkx.com/cc-content/themes/parkx/asset/css/bootstrap-datepicker.css" rel="stylesheet"> -->
+    <link href="~/css/global.css" rel="stylesheet">
+    <!-- jquery-confirm -->
+    <link href="~/css/jquery-confirm.min.css" rel="stylesheet">
+    <!-- fontawesome -->
+    <link href="~/css/fontawesome.min.css" rel="stylesheet">
+    <link href="~/css/brands.css" rel="stylesheet">
+    <link href="~/css/solid.css" rel="stylesheet">
+    <link href="~/css/dev.css" rel="stylesheet">
+    <script src="~/js/jquery-1.12.4.min.js"></script>
+    
+    <!-- <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/ParkXUI.styles.css" asp-append-version="true"/> -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K44LBLC" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- <div class="preload"></div> -->
+<div class="page">
+    <header class="header">
+     
+        <div class="navbar navbar-topbar">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-4 d-none d-md-block">
+                        <div class="followus">
+                            <a class="facebook social " href="https://www.facebook.com/parkxsolutions/"
+                               target="_black">
+                                <img src="~/images/20200506020342-2020-05-06social020325.svg" alt="">
+                            </a>
+                            <a class="lineid social " href="https://line.me/R/ti/p/%40parkx" target="_black">
+                                <img src="~/images/20200506020539-2020-05-06social020524.svg" alt="">
+                            </a>
+                            <a class="twitter social " href="https://twitter.com/parkxsolutions" target="_black">
+                                <img src="~/images/20200506020609-2020-05-06social020601.svg" alt="">
+                            </a>
+                            <a class="Instagram social " href="https://www.instagram.com/parkxsolutions/"
+                               target="_black">
+                                <img src="~/images/20200618163730-2020-06-18social163729.svg" alt="">
+                            </a>
+                            <a class="youtube  " style="cursor: default;" href="javascript:void(0)" target="">
+                                <img src="~/images/20200619080913-2020-06-19social080848.svg" alt="">
+                            </a>
+                        </div>
+                    </div><!--col-4-->
+                    <div class="col-md-8">
+                      
+                        <ul class="nav nav-topbar">
+                            <li><span class="icons icon-phone"></span> 02-4070777 ต่อ 5902-4</li>
+                            <li><span class="icons icon-email"></span>
+                                <a href="mailto:parkx@bhirajburi.co.th">parkx@bhirajburi.co.th</a></li>
+                            <li class="nav-lang">
+                                <a href="javascript:void(0);" onclick="setCulture('en');" id="en-flag" style="display: none;">
+                                    <img src="~/images/flag-en.svg" alt="">
+                                </a>
+                                <a href="javascript:void(0);" onclick="setCulture('th');" id="th-flag">
+                                    <img src="~/images/flag-th.svg" alt="Thai">
+                                </a>
+                                </li>
+                           
+                        </ul>
+                    </div><!--col-4-->
+                </div><!--row-->
+            </div><!--container-->
+        </div><!--navbar-topbar-->
+        <div class="navbar navbar-main">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-3">
+                        <div class="navbar-brand"><a asp-controller="Home" asp-action="Index">
+                            <img src="/images/20200506000053-2020-05-06setting000050.png" alt="">
+                        </a></div>
+                    </div>
+                    <div class="col-9">
+                        <div class="nav-panel">
+                            <ul class="nav nav-main">
+                                <li class=""><a asp-area="" asp-controller="FindCarpark" asp-action="Index">@localizer["FindCar"]</a></li>
+                                <li class="">
+                                  <!--  onclick="window.location = ('https://www.parkx.com/th/parking-solutions/about-park-x');" -->
+                                    <a data-toggle="dropdown"
+                                       asp-controller="ParkingSolutions"
+                                       asp-action="AboutParkX">โซลูชั่นที่จอดรถ</a>
+                                    <div class="dropdown-menu show">
+                                        <div class="arrow up"></div>
+                                        <ul>
+                                            <li>
+                                                <a
+                                                    asp-controller="ParkingSolutions" asp-action="AboutParkX">ข้อมูลสถานที่จอด</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <a data-toggle="dropdown" href="https://www.parkx.com/th/news-promotions" onclick="window.location = ('https://www.parkx.com/th/news-promotions');">ข่าวสารและโปรโมชั่น</a>
+                                    <div class="dropdown-menu show">
+                                        <div class="arrow up"></div>
+                                        <ul>
+                                            <li>
+                                                <a href="https://www.parkx.com/th/news-promotions/news">ข่าว</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.parkx.com/th/news-promotions/promotions">โปรโมชั่น</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class=""><a href="https://www.parkx.com/th/contact-us">ติดต่อเรา</a></li>
+                            </ul>
+                            <div class="d-block d-md-none">
+                                <div class="lang">
+                                <a class="th" href="javascript:void(0);" onclick="setCulture('th');" >
+                                        <img src="~/images/flag-th.svg" alt="">
+                                    </a> 
+                                    <a class="en" href="javascript:void(0);" onclick="setCulture('en');">
+                                        <img src="~/images/flag-en.svg" alt="">
+                                    </a> 
+                                    <!--  <partial name="_CulturePartial"/> -->
+                               </div>
+                               <div class="buttons">
+                                   <a class="btn" href="mailto:parkx@bhirajburi.co.th">
+                                       
+                                       <span
+                                           class="icons icon-email"></span> parkx@bhirajburi.co.th
+                                   </a>
+                                   <a class="btn" href="tel:+6627261999p1921"><span
+                                                                                  class="icons icon-phone"></span> 02-4070777 ต่อ 5902-4</a>
+                                   <div class="followus dark">
+                                       <a class="facebook" href="https://www.facebook.com/parkxsolutions/"
+                                          target="_black">
+                                           <img src="~/images/20200506020342-2020-05-06social020327.svg" alt="">
+                                       </a>
+                                       <a class="lineid" href="https://line.me/R/ti/p/%40parkx" target="_black">
+                                           <img src="~/images/20200506020539-2020-05-06social020527.svg" alt="">
+                                       </a>
+                                       <a class="twitter" href="https://twitter.com/parkxsolutions"
+                                          target="_black">
+                                           <img src="~/images/20200506020609-2020-05-06social020605.svg" alt="">
+                                       </a>
+                                       <a class="Instagram" href="https://www.instagram.com/parkxsolutions/"
+                                          target="_black">
+                                           <img src="~/images/20200618163903-2020-06-18social163901.svg" alt="">
+                                       </a>
+                                       <a class="youtube" href="" target="_black">
+                                           <img src="~/images/20200619095834-2020-06-19social095833.svg" alt="">
+                                       </a>
+                                   </div>
+                               </div><!--buttons-->
+                            </div>
+                        </div><!--nav-panel-->
+
+                        <button class="btn btn-icon navbar-toggle" type="button">
+                            <span class="group">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                    </div><!--col-8-->
+                </div><!--row-->
+            </div><!--container-->
+        </div><!--navbar-main-->
+    </header>
+    <div>
+            @RenderBody()
+    </div>
+        
+
+
+    <footer class="footer">
+        <div class="footer-primary wow fadeIn">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="company-infos">
+                            <img class="logo" src="/images/logo-white.svg" alt="">
+                            <p>บริการที่จอดรถบนทําเลสําคัญ ย่านธุรกิจใจกลางเมือง
+                                มีสิ่งอํานวยความสะดวก ครบครัน สะดวก สะอาด ปลอด�&nbsp;ัย </p>
+                        </div>
+                    </div><!--col-lg-3-->
+
+                    <div class="col-lg-3 col-md-6">
+                        <ul class="company-contact">
+                            <li>
+                                <span class="icons icon-home"></span>
+                                <h4>บริษัท เพนต้า 591 จำกัด</h4>
+                                อาคาร สมัชชาวาณิช 2 <br>
+                                591 ถนนสุขุมวิท (ซอย 33)<br>
+                                แขวงคลองตันเหนือ เขตวัฒนา<br>
+                                กรุงเทพฯ 10110
+                            </li>
+
+                            <li>
+                                <span class="icons icon-headphone"></span>
+                                <p>02-4070777 ต่อ 5902-4</p>
+                            </li>
+
+                            <li>
+                                <span class="icons icon-email-2"></span>
+                                <p><a
+                                        href="mailto:parkx@bhirajburi.co.th">parkx@bhirajburi.co.th</a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div><!--col-lg-3-->
+
+                    <div class="col-lg-3 col-md-6">
+                        <ul class="footer-links">
+                            <li><a href="https://www.parkx.com/en">หน้าแรก</a></li>
+                            <li><a
+                                    href="https://www.parkx.com/en/find-a-carpark">หาที่จอดรถ</a>
+                            </li>
+                            <li><a
+                                    href="https://www.parkx.com/en/parking-solutions/about-park-x">โซลูชั่นที่จอดรถ</a>
+                            </li>
+                            <li><a
+                                    href="https://www.parkx.com/en/news-promotions">ข่าวสารและโปรโมชั่น</a>
+                            </li>
+                            <li><a href="https://www.parkx.com/en/contact-us">ติดต่อเรา</a>
+                            </li>
+                        </ul>
+                    </div><!--col-lg-3-->
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-infos">
+                            <p>กดติดตามบัญชีอย่างเป็นทางการของเรา
+                                เพื่อรับข่าวสารและโปรโมชั่น</p>
+                            <div class="followus dark">
+                                <a class="facebook social"
+                                   href="https://www.facebook.com/parkxsolutions/"
+                                   target="_black">
+                                    <img src="/images/20200506020342-2020-05-06social020327.svg"
+                                         alt="">
+                                </a>
+                                <a class="lineid social"
+                                   href="https://line.me/R/ti/p/%40parkx" target="_black">
+                                    <img src="/images/20200506020539-2020-05-06social020527.svg"
+                                         alt="">
+                                </a>
+                                <a class="twitter social"
+                                   href="https://twitter.com/parkxsolutions"
+                                   target="_black">
+                                    <img src="/images/20200506020609-2020-05-06social020605.svg"
+                                         alt="">
+                                </a>
+                                <a class="Instagram social"
+                                   href="https://www.instagram.com/parkxsolutions/"
+                                   target="_black">
+                                    <img src="/images/20200618163903-2020-06-18social163901.svg"
+                                         alt="">
+                                </a>
+                                <a class="youtube " style="cursor: default;"
+                                   href="javascript:void(0)" target="">
+                                    <img src="/images/20200619095834-2020-06-19social095833.svg"
+                                         alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div><!--col-lg-3-->
+                </div><!--row-->
+            </div><!--container-->
+        </div><!--footer-primary-->
+
+        <div class="footer-secondary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">สงวนลิขสิทธิ์ © 2563 บริษัท เพนต้า 591 จำกัด</div>
+                    <!--col-md-6-->
+                    <div class="col-md-6">
+                        <div class="links">
+                            <a
+                                href="https://www.parkx.com/en/terms-and-conditions">ข้อตกลงและเงื่อนไข</a>
+                            | <a
+                                href="https://www.parkx.com/en/privacy-policy">นโยบายความเป็นส่วนตัว</a>
+                        </div>
+                    </div><!--col-md-6-->
+                </div><!--row-->
+            </div><!--container-->
+        </div><!--footer-secondary-->
+    </footer>
+
+  
+</div> <!--page-->
+<!--
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script> -->
+
+
+<script src="~/js/popper.min.js"></script>
+<script src="~/js/bootstrap.min.js"></script>
+<script src="~/js/wow.js"></script>
+<script src="~/js/swiper.js"></script>
+<script src="~/js/jquery.fancybox.js"></script>
+<script src="~/js/jquery.customSelect.js"></script>
+<script src="~/js/ie11CustomProperties.js"></script>
+<script src="~/js/skrollr.min.js"></script>
+<script src="~/js/jquery.validate.js"></script>
+<script src="~/js/jquery-confirm.min.js"></script>
+<script src="~/js/custom.js"></script>
+<script type="text/javascript" src="~/js/addthis_widget.js#pubid=ra-5ed619744a784587"></script>
+<script type="text/javascript">
+    var swiperLocation = new Swiper('.swiper-location', {
+        speed: 1000,
+        loop: false,
+        observer: true,
+        effect: 'slide',
+        observeParents: true,
+        /*autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },*/
+        pagination: {
+            el: '.swiper-pagination.location',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next.location',
+            prevEl: '.swiper-button-prev.location',
+        },
+    });
+
+    function setCulture(culture) {
+        var returnUrl = window.location.pathname + window.location.search; // Include search to retain any query strings
+        fetch('/Culture/SetCulture', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `culture=${encodeURIComponent(culture)}&returnUrl=${encodeURIComponent(returnUrl)}`
+        })
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = returnUrl; // Redirects back to the current page
+                } else {
+                    console.error('Failed to set culture');
+                }
+            })
+            .catch(error => console.error('Error setting culture:', error));
+    }
+
+    function toggleFlags(selectedCulture) {
+        var enFlag = document.getElementById('en-flag');
+        var thFlag = document.getElementById('th-flag');
+
+        if (selectedCulture === 'en') {
+            enFlag.style.display = 'none';
+            thFlag.style.display = '';
+        } else {
+            enFlag.style.display = '';
+            thFlag.style.display = 'none';
+        }
+    }
+
+    /*$(".swiper-container").hover(function() {
+        (this).swiper.autoplay.stop();
+    }, function() {
+        (this).swiper.autoplay.start();
+    });*/
+</script>
+<!-- GOOGLE ANALYTIC CODE -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var currentCulture = '@System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName'; // This is an ASP.NET variable.
+        toggleFlags(currentCulture);
+    });
+</script>
+<!-- END GOOGLE ANALYTIC CODE -->
+
+
+
+
+@await RenderSectionAsync("Scripts", required: false)
+
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+/Users/tanupat/Projects/ParkX/UIParkx/Build/ParkXUI
+/Users/tanupat/Projects/ParkX/UIParkx/Build/appsettings.Development.json
+/Users/tanupat/Projects/ParkX/UIParkx/Build/appsettings.json
+/Users/tanupat/Projects/ParkX/UIParkx/Build/ParkXUI.dll
+/Users/tanupat/Projects/ParkX/UIParkx/Build/ParkXUI.deps.json
+/Users/tanupat/Projects/ParkX/UIParkx/Build/ParkXUI.runtimeconfig.json
+/Users/tanupat/Projects/ParkX/UIParkx/Build/ParkXUI.pdb
+/Users/tanupat/Projects/ParkX/UIParkx/Build/en/ParkXUI.resources.dll
+/Users/tanupat/Projects/ParkX/UIParkx/Build/th/ParkXUI.resources.dll
