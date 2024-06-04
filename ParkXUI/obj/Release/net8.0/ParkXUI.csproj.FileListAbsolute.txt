@@ -60,3 +60,4 @@
 /Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/bin/Release/net8.0/LineLoginCSharp.dll
 /Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/bin/Release/net8.0/LineLoginCSharp.pdb
 /Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/bin/Release/net8.0/MockData/sites.json
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/obj/Release/net8.0/ParkXUI.sourcelink.json

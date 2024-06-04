@@ -89,19 +89,16 @@ public class PackageController : Controller
             var dataInquiryTransactionAPI = await _paymentService.InquiryTransactionAPI(chargeId);
             string json =   dataInquiryTransactionAPI.Content.ReadAsStringAsync().Result;
             ChargePostResultApi chargePostResultApi = JsonConvert.DeserializeObject<ChargePostResultApi>(json);
-            if (chargePostResultApi.transaction_state == "success")
+            if (chargePostResultApi.status == "success")
             {
-                ViewBag.success = "Payment success.";
+                return RedirectToAction("PaymentSuccess");
             }
             else
             {
                 ViewBag.error = "Payment failed. Please try again.";
             }
         }
-        else if (token == null && chargeId == null)
-        {
-            
-        }
+        
 
         return View(purchasePackageViewModel);
     }
@@ -244,7 +241,11 @@ public class PackageController : Controller
         return View(purchasePackageViewModel);
     }
 
-   
+    [AllowAnonymous]
+    public IActionResult PaymentSuccess()
+    {
+        return View();
+    }
 
 
 

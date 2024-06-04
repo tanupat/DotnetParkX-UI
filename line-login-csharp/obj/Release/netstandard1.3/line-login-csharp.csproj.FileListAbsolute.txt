@@ -8,3 +8,4 @@
 /Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/obj/Release/netstandard1.3/line-login-csharp.csproj.CoreCompileInputs.cache
 /Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/obj/Release/netstandard1.3/LineLoginCSharp.dll
 /Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/obj/Release/netstandard1.3/LineLoginCSharp.pdb
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/obj/Release/netstandard1.3/line-login-csharp.sourcelink.json

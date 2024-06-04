@@ -62,6 +62,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFja2FnZS9QYWNrYWdlRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/Package/PaymentSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFja2FnZS9QYXltZW50U3VjY2Vzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/Package/PurchasePackage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFja2FnZS9QdXJjaGFzZVBhY2thZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
