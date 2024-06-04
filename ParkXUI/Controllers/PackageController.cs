@@ -91,7 +91,8 @@ public class PackageController : Controller
             ChargePostResultApi chargePostResultApi = JsonConvert.DeserializeObject<ChargePostResultApi>(json);
             if (chargePostResultApi.status == "success")
             {
-                return RedirectToAction("PaymentSuccess");
+              //  return RedirectToAction("PaymentSuccess");
+              ViewBag.error = "Payment failed. Please try again.";
             }
             else
             {
