@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = Line.Login
+build_property.ProjectDir = /Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -89,5 +89,21 @@
       <_ContentIncludedByDefault Remove="Views\FindCarpark\Index.cshtml" />
       <_ContentIncludedByDefault Remove="Pages\FindCarpark\Index.cshtml" />
     </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="LineAuthentication" Version="2.0.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="8.0.5" />
+      <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.5" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\line-login-csharp\line-login-csharp.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Pages\" />
+      <Folder Include="Views\Shared\Components\" />
+    </ItemGroup>
  
 </Project>

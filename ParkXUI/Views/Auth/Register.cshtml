@@ -1,0 +1,153 @@
+@model ParkXUI.ViewModel.Auth.RegisterViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+<style>
+    .register-container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #e2e2e2;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .register-container .form-group input {
+        border: 2px solid #96DC05;
+    }
+    .register-container .form-group .invalid-feedback {
+        display: block;
+    }
+    .btn-primary-custom {
+        background-color: #96DC05;
+        border: none;
+    }
+    .btn-primary-custom:hover {
+        background-color: #7FBC00;
+    }
+    .btn-google, .btn-facebook,.btn-line, .btn-google:hover, .btn-facebook:hover, .btn-line:hover{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        color: #000;
+    }
+    .btn-google img, .btn-facebook img, .btn-line img{
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+    .text-center-custom {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .text-center-custom a {
+        color: #7FBC00;
+    }
+</style>
+
+
+<div class="section section-breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">หน้าแรก</a></li>
+            <li class="breadcrumb-item active"><span>สมัคสมาชิก</span></li>
+        </ol>
+    </div><!--container-->
+</div>
+
+<div class="section section-banner normal wow fadeIn">
+    <div class="banner-texture">
+        <div class="texture-1 wow fadeInLeftBig" data-wow-duration="1.2s"
+             style="background-image: url(/images/banner-texture--1.svg);"></div>
+        <img class="texture-2 wow fadeInLeftBig" data-wow-duration="1.2s" src="/images/banner-texture--2.svg" alt="">
+    </div>
+
+    <div class="background" style="background-image: url(/images/20200507202135-2020-05-07news_category202135.jpg);">
+        <div class="note"> ภาพจำลองใช้เพื่องานโฆษณาเท่านั้น</div>
+    </div>
+
+    <div class="container">
+        <div class="page-title">
+            <h2 class="title-xl wow fadeInUp" data-wow-delay="0.35s"
+                style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">สมัคสมาชิก</h2>
+            <!-- <p class="wow fadeInUp" data-wow-delay="0.45s">PARK X</p> -->
+        </div>
+    </div><!--container-->
+</div><!--section-banner-->
+
+
+
+<div class="container  wow fadeInUpBig" data-wow-duration="1.2s">
+    <div class="register-container">
+        <h2 class="text-center">สมัคสมาชิก</h2>
+        <form asp-controller="Auth" asp-action="Register" method="post">
+            @if(ViewBag.Error != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    @ViewBag.Error
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            }
+            <p asp-validation-summary="All" class="text-danger"></p>
+            <div class="form-group">
+                <label asp-for="fullName" for="fullName">ชื่อ – นามสกุล</label>
+                <input type="text" class="form-control" asp-for="fullName" id="fullName" placeholder="ชื่อ – นามสกุล">
+                <span asp-validation-for="fullName" class="invalid-feedback"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="email">อีเมล</label>
+                <input type="email" asp-for="email" class="form-control " id="email" placeholder="อีเมล">
+                <span asp-validation-for="email" class="invalid-feedback"></span>
+                <!--  is-invalid
+                <div class="invalid-feedback">อีเมลนี้มีผู้ใช้งานแล้ว</div> -->
+            </div>
+
+            <div class="form-group">
+                <label for="password" asp-for="password">รหัสผ่าน</label>
+                <input type="password" asp-for="password" class="form-control" id="password" placeholder="รหัสผ่าน">
+                <span asp-validation-for="password" class="invalid-feedback"></span>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword" asp-for="ConfirmPassword">ยืนยันรหัสผ่าน</label>
+                <input type="password" class="form-control " asp-for="ConfirmPassword" id="confirmPassword" placeholder="ยืนยันรหัสผ่าน">
+                <span asp-validation-for="ConfirmPassword" class="invalid-feedback"></span>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="terms">
+                <label class="form-check-label " for="terms">ข้าพเจ้าขอมรับ <a href="#" class="text-success">ข้อกำหนดการใช้งาน</a></label>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="policy">
+                <label class="form-check-label" for="policy">ข้าพเจ้าขอมรับ <a href="#">นโยบายของบริษัท</a></label>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="newsletter">
+                <label class="form-check-label" for="newsletter">ต้องการรับข่าวสารและโปรโมชั่นจาก ParkX</label>
+            </div>
+            <button type="submit" class="btn btn-primary-custom btn-block">สมัครสมาชิก</button>
+        </form>
+        <div class="text-center my-3">หรือ</div>
+        <a class="btn btn-google btn-block"  asp-controller="Auth" asp-action="GoogleLogin">
+            <img src="/images/GoogleLogo.png" alt="Google Logo">
+            เข้าสู่ระบบผ่าน Google
+        </a>
+        <button class="btn btn-facebook btn-block">
+            <img src="/images/loginFB.png" alt="Facebook Logo">
+            เข้าสู่ระบบผ่าน Facebook
+        </button>
+        <a class="btn btn-line btn-block" asp-controller="Auth" asp-action="LineLogin">
+            <img src="/images/LINE_logo.png" alt="Line Logo">
+            เข้าสู่ระบบผ่าน Line
+        </a>
+        <div class="text-center-custom">
+            มีบัญชีแล้ว? <a asp-controller="Auth" asp-action="Login">เข้าสู่ระบบที่นี่</a>
+        </div>
+    </div>
+</div>

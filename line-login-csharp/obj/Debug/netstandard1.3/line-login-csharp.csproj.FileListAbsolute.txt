@@ -1,0 +1,10 @@
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/bin/Debug/netstandard1.3/LineLoginCSharp.deps.json
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/bin/Debug/netstandard1.3/LineLoginCSharp.dll
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/bin/Debug/netstandard1.3/LineLoginCSharp.pdb
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/obj/Debug/netstandard1.3/line-login-csharp.csproj.AssemblyReference.cache
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/obj/Debug/netstandard1.3/line-login-csharp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/obj/Debug/netstandard1.3/line-login-csharp.AssemblyInfoInputs.cache
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/obj/Debug/netstandard1.3/line-login-csharp.AssemblyInfo.cs
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/obj/Debug/netstandard1.3/line-login-csharp.csproj.CoreCompileInputs.cache
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/obj/Debug/netstandard1.3/LineLoginCSharp.dll
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/obj/Debug/netstandard1.3/LineLoginCSharp.pdb

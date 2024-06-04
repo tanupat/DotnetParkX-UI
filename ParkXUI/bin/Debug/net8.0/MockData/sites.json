@@ -1,0 +1,175 @@
+{
+  "sites": [
+    {
+      "siteId":"1",
+      "siteName":"พาร์คเอ็กซ์ อุดมสุข",
+      "siteDescription":"ตั้งอยู่บนถนนสุขุมวิท ซอย 66/1 ใกล้กับสถานีรถไฟฟ้าบีทีเอสอุดมสุข และใช้เวลาเพียง 10นาที โดยรถยนต์ถึงทางพิเศษเฉลิมมหานครและ\nทางด่วนบูรพาวิถีทั้งยังเชื่อมต่อถนนสุขุมวิทกับถนนศรีนครินทร์",
+      "siteType":"parkX", 
+      "siteLogo":"https://www.parkx.com/uploads/location/20200507153605-2020-05-07location153604.png",
+      "siteImage":"https://www.parkx.com/uploads/location/20200531094307-2020-05-31location094305.jpg",
+      "siteMapImage":"https://www.parkx.com/uploads/find_carpark/20200512121337-2020-05-12find_carpark121336.jpg",
+      "siteMapUrl":"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d242.2890996179959!2d100.6088276!3d13.6805158!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2a1efacf6a1b1%3A0xc6df25fe3fadb2a7!2z4Lie4Liy4Lij4LmM4LiE4LmA4Lit4LmH4LiB4LiL4LmMIOC4reC4uOC4lOC4oeC4quC4uOC4gg!5e0!3m2!1sth!2sth!4v1684464266552!5m2!1sth!2sth",
+      "siteImages":[
+        {
+          "image":"https://www.parkx.com/uploads/location/20200531094307-2020-05-31location094305.jpg",
+          "description":"Image 1"
+        },
+        {
+          "image":"https://www.parkx.com/uploads/location/20200528150847-1-2020-05-28location150841.jpg",
+          "description":"Image 2"
+        },
+        {
+          "image":"https://www.parkx.com/uploads/location/20200528150847-2-2020-05-28location150841.jpg",
+          "description":"Image 3"  
+        },
+        {
+            "image":"https://www.parkx.com/uploads/location/20200528150847-4-2020-05-28location150842.jpg",
+            "description":"Image 4"  
+        },
+        {
+            "image":"https://www.parkx.com/uploads/location/20200528150847-5-2020-05-28location150842.jpg",
+            "description":"Image 5"  
+        },
+        {
+           "image":"https://www.parkx.com/uploads/location/20200528150847-6-2020-05-28location150842.jpg",
+            "description":"Image 6"  
+        }
+      ],
+      "siteParkServiceRegulations": [
+        {
+          "regulation":"Open daily: 6 am. - 11.30 pm."
+        },
+        {
+          "regulation":"Free parking only 15 minutes, subsequent time will be charged for 1 hour. A fraction of an hour will be charged as 1 hour."
+        },
+        {
+          "regulation":"Parking before 6.00 am. or exceeding 11.30 pm. will be charged for additional of 500 Baht per night (overnight parking) excluding the rate above."
+        },
+        {
+          "regulation":"For loss or damage of the parking card, a fine of 500 Baht will be charged additionally."
+        }
+      ],
+      "siteParkServiceRates": [
+        {
+          "typeOfVehicle":"Car",
+          "HourlyRate":"30 Baht",
+          "MonthlyRate":"1,500 Baht"
+        },
+        {
+          "typeOfVehicle":"Motorcycle",
+          "HourlyRate":"10 Baht",
+          "MonthlyRate":"500 Baht"
+        }
+        
+        
+      ],
+      "siteContact": {
+        "contactName":"พาร์คเอ็กซ์  อุดมสุข",
+        "address":"2784 ซอย สุขุมวิท 66/1 แขวงบางนา เขตบางนา กรุงเทพมหานคร 10260",
+        "contactPhone":"02-123-4567"
+      },
+      "siteNearbyPlaces": [
+        {
+          "placeType": "TRANSPORTATION",
+          "placeIcon": "https://www.parkx.com/uploads/editor_uploads/2454e0c7.png",
+          "places": [
+            {
+              "placeName":"BTS UDOMSUK"
+            },
+            {
+              "placeName":"Sukhumvit Road"
+            },
+            {
+              "placeName":"Deprattana Road"
+            },
+            {
+              "placeName":"Chalerm Mahanakhon Expressway"
+            },
+            {
+              "placeName":"Buraphawithi Expressway"
+            }
+          ]
+        },
+        {
+          "placeType": "SHOPPING",
+          "placeIcon": "https://www.parkx.com/uploads/editor_uploads/23ee2f40.png",
+          "places": [
+            {
+              "placeName":"One Udomsuk"
+            },
+            {
+              "placeName":"101 the third place lifestyle complex"
+            },
+            {
+              "placeName":"Bangkok Mall (Future project)"
+            },
+            {
+              "placeName":"Central Bangna"
+            },
+            {
+              "placeName":"Bic C Bangna"
+            }
+          ]
+        },
+        {
+          "placeType": "HOSPITAL",
+          "placeIcon": "https://www.parkx.com/ckeditor/plugins/imageuploader/uploads/21f1b522.png",
+          "places": [
+            {
+              "placeName":"Bangkok Hospital"
+            },
+            {
+              "placeName":"Sikarin Hospital"
+            },
+            {
+              "placeName":"Thainakarin Hospital"
+            }
+          ]
+        },
+        {
+            "placeType": "RESTAURANT, CAFÉ & BAR",
+            "placeIcon": "https://www.parkx.com/ckeditor/plugins/imageuploader/uploads/20ae583a.png",
+            "places": [
+                {
+                "placeName":"KFC"
+                },
+                {
+                "placeName":"McDonald's"
+                },
+                {
+                "placeName":"Pizza Hut"
+                },
+                {
+                "placeName":"The Pizza Company"
+                },
+                {
+                "placeName":"Starbucks"
+                }
+            ]
+        },
+        {
+          "placeType": "OTHER",
+            "placeIcon": "https://www.parkx.com/ckeditor/plugins/imageuploader/uploads/22993d2f.png",
+            "places": [
+                {
+                "placeName":"7-Eleven"
+                },
+                {
+                "placeName":"Family Mart"
+                },
+                {
+                "placeName":"Wat Bangna Nok"
+                },
+                {
+                "placeName":"Wat Bangna Nai"
+                },
+                {
+                "placeName":"Bangna Post Office"
+                }
+            ]
+        }
+      ]
+    }
+  ]
+    
+}

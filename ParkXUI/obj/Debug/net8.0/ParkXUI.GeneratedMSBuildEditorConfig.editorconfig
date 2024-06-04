@@ -18,6 +18,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/Auth/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9BY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/Auth/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/ContactUS/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGFjdFVTL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/FindCarpark/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmluZENhcnBhcmsvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,8 +50,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/NewsPromotions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTmV3c1Byb21vdGlvbnMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/NewsPromotions/Promotions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTmV3c1Byb21vdGlvbnMvUHJvbW90aW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/Package/PackageDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFja2FnZS9QYWNrYWdlRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/Package/PurchasePackage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFja2FnZS9QdXJjaGFzZVBhY2thZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/ParkingSites/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFya2luZ1NpdGVzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/ParkingSolutions/AboutParkX.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFya2luZ1NvbHV0aW9ucy9BYm91dFBhcmtYLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/Shared/Components/CardSummary/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvQ2FyZFN1bW1hcnkvRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/Shared/Error.cshtml]
@@ -48,6 +88,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/User/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9Qcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/_ViewImports.cshtml]

@@ -1,0 +1,115 @@
+@model ParkXUI.ViewModel.User.ProfileModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<style>
+    .member-info-container {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #e2e2e2;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .nav-tabs .nav-link.active {
+        background-color: #96DC05;
+        color: #fff;
+    }
+    .form-group label {
+        font-weight: bold;
+    }
+    .btn-primary-custom {
+        background-color: #96DC05;
+        border: none;
+    }
+    .btn-primary-custom:hover {
+        background-color: #7FBC00;
+    }
+    .edit-link {
+        color: #7FBC00;
+        cursor: pointer;
+    }
+</style>
+<div class="section section-breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">หน้าแรก</a></li>
+            <li class="breadcrumb-item active"><span>โปรไฟล์</span></li>
+        </ol>
+    </div><!--container-->
+</div>
+
+
+<div class="container">
+    
+    <div class="member-info-container">
+        <h5>ข้อมูลส่วนตัว  รหัสสมาชิก : @Model.wrapUserId</h5>
+        <form action="@Url.Action("Profile","User")" method="post">
+
+            @if(ViewBag.Error != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    @ViewBag.Error
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            }
+            <div class="form-row mt-4">
+
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label for="fullName">ชื่อ-นามสกุล</label>
+                        <input type="text" class="form-control" id="fullName" name="fullName" value="@Model.fullName">
+                        <span class="text-danger" asp-validation-for="fullName"></span>
+                            
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">เบอร์โทรศัพท์</label>
+                        <input type="text" class="form-control" id="phone" name="phone" value="@Model.phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">อีเมล</label>
+                        <input type="email" class="form-control" id="email" name="email" value="@Model.email">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">บ้านเลขที่</label>
+                        <input type="text" class="form-control" id="address" name="address" value="@Model.address">
+                    </div>
+                        
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="district">ตำบล/เขต</label>
+                        <input type="text" class="form-control" id="district"  name="district" value="@Model.district">
+                    </div>
+                    <div class="form-group">
+                        <label for="subDistrict">อำเภอ/แขวง</label>
+                        <input type="text" class="form-control" id="subDistrict" name="subDistrict" value="@Model.subDistrict">
+                    </div>
+                    <div class="form-group">
+                        <label for="province">จังหวัด</label>
+                        <input type="text" class="form-control" id="province" name="province" value="@Model.province">
+                    </div>
+                    <div class="form-group">
+                        <label for="zipCode">รหัสไปรษณีย์</label>
+                        <input type="text" class="form-control" id="zipCode" name="zipCode" value="@Model.zipCode">
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group text-right">
+              <a href="#" class="edit-link">เปลี่ยนรหัสผ่าน</a>
+            </div>
+            <div class="form-group text-right">
+                <button type="submit" class="btn btn-primary-custom">บันทึก</button>
+            </div>
+        </form>
+    </div>
+</div>
+

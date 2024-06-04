@@ -1,0 +1,292 @@
+
+@model ParkXUI.ViewModel.FindCarpark.ParkingSitesViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+<style>
+	.pricing-card {
+		border: 1px solid #ddd;
+		border-radius: 10px;
+		padding: 20px;
+		text-align: center;
+		margin-bottom: 20px;
+		background-color: #fff;
+	}
+	.pricing-card img {
+		width: 100%;
+		height: auto;
+		border-radius: 10px 10px 10px 10px;
+	}
+	.pricing-card h5 {
+		font-weight: bold;
+		margin-top: 20px;
+	}
+	.pricing-card .price {
+		font-size: 24px;
+		font-weight: bold;
+		margin: 10px 0;
+	}
+	.pricing-card .features {
+		list-style: none;
+		padding: 0;
+		text-align: left;
+	}
+	.pricing-card .features li {
+		margin: 10px 0;
+	}
+	.pricing-card .features li .icon {
+		margin-right: 10px;
+	}
+	.pricing-card .btn {
+		margin-top: 20px;
+	}
+	.banner-text h1 {
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: #7AE74A;
+	}
+	.banner-text p {
+		font-size: 1rem;
+		font-weight: bold;
+	}
+	.btn-book {
+		margin-top: 10px;
+		background-color: #7AE74A;
+		border: none;
+		font-weight: bold;
+	}
+	.btn .btn-success
+	{
+		background-color: #7AE74A;
+		border: none;
+		font-weight: bold;
+	}
+</style>
+
+<div class="section section-breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">HOME</a></li>
+            <li class="breadcrumb-item"><a asp-controller="FindCarpark" asp-action="Index">FIND A CAR PARK</a>
+            </li>
+            <li class="breadcrumb-item"><a href="#">PARK X SITES</a></li>
+            <!-- <li class="breadcrumb-item active"><span>PARK X UDOMSUK</span></li> -->
+        </ol>
+    </div><!--container-->
+</div>
+
+<div class="section section-findpark pb-0">
+	@if(ViewBag.Error != null)
+	{
+		<div class="alert alert-danger alert-dismissible fade show" role="alert">
+			@ViewBag.Error
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+	}
+	<div class="container">
+		<div class="section-group top">
+			<div class="section-title wow fadeIn">
+				<h2 class="title-lg">@Model.site.siteName</h2>
+			</div>
+
+			<!-- <ul class="nav nav-location justify-content-center wow fadeIn">
+				<li><a class=" " href=""></a></li>
+			</ul> -->
+			<div class="article has-icon wow fadeIn">
+				<div class="row h-100 align-items-center">
+					<div class="icon"><img alt="" src="/images/17d5f6cb.png"></div>
+					<div class="col">
+						<h6>@Model.site.siteName</h6>
+						<p>@Model.site.siteDescription</p>
+					</div>
+				</div>
+			</div>
+			<div class="background"></div>
+		</div><!--section-group-->
+
+		<div class="section-group">
+			<div class="imagebox tablet-full">
+				<div class="swiper-container  swiper-location ">
+					<div class="swiper-wrapper">
+						@foreach (var imagesSite in Model.site.siteImages)
+						{
+							<div class="swiper-slide">
+								<div class="image">
+									<img class="w-100" src="@imagesSite.image" alt="">
+									<div class="logo-location w-370 wow fadeInRight" style="z-index:999;">
+										<img class="w-100" src="@Model.site.siteLogo" alt="">
+									</div>
+								</div>
+							</div>
+						}
+					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+				<div class="swiper-pagination location-detail"></div>
+			</div><!--imagebox-->
+		</div><!--section-group-->
+	</div><!--container-->
+</div><!--section-findpark-->
+
+		<div class="section section-service">
+			<div class="container">
+				<div class="service-wrap">
+					<div class="row">
+						<div class="col-md-4 wow fadeIn">
+							<div class="card card-service">
+								<div class="card-header">
+									<div class="icon"><img alt="" src="/images/155fcf65.png"></div>
+
+									<h3 class="col">PARKING SERVICE REGULATIONS</h3>
+								</div>
+
+								<div class="card-body">
+									<ul>
+										@foreach(var item in Model.site.siteParkServiceRegulations)
+										{
+											<li>@item.regulation</li>
+										}
+										
+									</ul>
+								</div>
+								<!--card-body-->
+							</div>
+							<!--card-service-->
+						</div>
+						<!--col-md-4-->
+
+						<div class="col-md-4 wow fadeIn" data-wow-delay="0.2s">
+							<div class="card card-service">
+								<div class="card-header">
+									<div class="icon"><img alt="" src="/images/1665e302.png"></div>
+
+									<h3 class="col">PARKING &nbsp;RATE</h3>
+								</div>
+
+								<div class="card-body">
+									<table border="1" cellpadding="1" cellspacing="1" class="table table-bordered"
+										style="width: 100%; text-align: center;">
+										<tbody>
+										<tr style="width: 33.3%;">
+											<td style="text-align: left"><strong>Type of Car</strong></td>
+											<td><strong>Hourly</strong></td>
+											<td><strong>Monthly</strong></td>
+										</tr>
+										@foreach (var item in Model.site.siteParkServiceRates)
+										{
+											<tr style="width: 33.3%;">
+												<td style="text-align: left">@item.typeOfVehicle</td>
+												<td>@item.HourlyRate</td>
+												<td>@item.MonthlyRate</td>
+											</tr>
+										}
+										</tbody>
+									</table>
+								</div>
+								<!--card-body-->
+							</div>
+							<!--card-service-->
+						</div>
+						<!--col-md-4-->
+						<div class="col-md-4 wow fadeIn" data-wow-delay="0.3s">
+							<div class="card card-service">
+								<div class="card-header">
+									<div class="icon"><img alt="" src="/images/27ea6507.png"></div>
+									<h3 class="col">CONTACT US</h3>
+								</div>
+								<div class="card-body">
+									<p>Further information or service suggestion please contact.</p>
+
+									<h6>@Model.site.siteContact.contactName</h6>
+
+									<p>@Model.site.siteContact.address</p>
+
+									<h6>Tel</h6>
+
+									<p>@Model.site.siteContact.contactPhone</p>
+								</div>
+								<!--card-body-->
+							</div>
+							<!--card-service-->
+						</div>
+						<!--col-md-4-->
+					</div><!--row-->
+				</div><!--service-wrap-->
+
+				<div class="container mt-5">
+					<div class="row">
+						@foreach (var item in Model.packages)
+						{
+							<div class="col-md-4  wow fadeIn">
+								<div class="pricing-card">
+									<img src="/images/20230109205003-2023-01-09news204951.png" alt="">
+									<h5>@item.PackageName</h5>
+									<div class="price">@item.Price.ToString("N0") บาท/ @item.PackageType</div>
+									<ul class="features">
+										<li>@item.StartDay.ToString("MM/dd/yyyy") - @item.Endday.ToString("MM/dd/yyyy")</li>
+										<li>จอดรถพร้อมกันได้ @item.CoCurrent คัน</li>
+										<li> จำนวนรถสำหรับแพ็คเกจ @item.MaxCar คัน</li>
+										
+									</ul>
+									<a class="btn btn-success" asp-controller="Package" asp-action="PackageDetail" asp-route-packageId="@item.key">เลือก</a>
+								</div>
+							</div>
+
+						}
+						
+					</div>
+				</div>
+				<div class="nearby-places-wrap">
+					<h2 class="title-lg black wow fadeIn">NEARBY PLACES</h2>
+
+					<div class="row">
+						@foreach(var item in Model.site.siteNearbyPlaces)
+						{
+							<div class="col-md-6">
+								<div class="card card-places wow fadeIn">
+									<div class="card-icon"><img alt="" class="wow fadeInUp" src="@item.placeIcon"></div>
+
+									<div class="card-body">
+										<h3>@item.placeType</h3>
+
+										<ul>
+											@foreach(var place in item.places)
+											{
+												<li>@place.placeName</li>
+											}
+										</ul>
+									</div>
+								</div>
+								<!--card-places-->
+							</div>
+							<!--col-md-6-->
+						}
+						<!--col-md-6-->
+					</div><!--row-->
+				</div><!--nearby-places-wrap-->
+			</div><!--container-->
+			</div><!--section-service-->
+			
+			@section Scripts
+			{
+				<script>
+					$(document).ready(function () {
+						var swiper = new Swiper('.swiper-container', {
+							navigation: {
+								nextEl: '.swiper-button-next',
+								prevEl: '.swiper-button-prev',
+							},
+							pagination: {
+								el: '.swiper-pagination',
+								clickable: true,
+							},
+						});
+					
+					});
+				</script>
+			}

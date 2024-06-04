@@ -1,4 +1,4 @@
-@model dynamic
+@model ParkXUI.ViewModel.FindCarpark.FindCarparkViewModel
 
 @{
     ViewBag.Title = "title";
@@ -25,7 +25,7 @@
 		 	<ul class="nav nav-location justify-content-center wow fadeIn">
                                     <li><a  asp-controller="FindCarpark" asp-action="Index" class="active">พาร์คเอ็กซ์</a></li>
 				                    <li><a  asp-controller="FindCarpark" asp-action="ManagedByParkX" class="">บริหารโดยพาร์คเอ็กซ์</a></li>
-							</ul>
+		    </ul>
 
 			<div class="article wow fadeIn">
 				<p>กรุงเทพมหานคร ติดอันดับเมืองที่รถติดมากที่สุดของเอเชีย ผู้ใช้รถต้องเสียเวลาบนท้องถนนมากถึง 64 ชม.ต่อปีแล้วยังต้องเสียเวลากับการหาที่จอดรถอีก 20 นาที โดยประมาณ Solution ของเราจึงตอบโจทย์ปัญหาที่จอดรถไม่เพียงพอ และเป็นอีกหนึ่งทางเลือก ที่เพิ่มความคล่องตัวในการใช้ชีวิตสําหรับคนกรุงเทพมหานคร</p>
@@ -37,90 +37,50 @@
 		<div class="section-group">
 			<div class="tab-content tab-location-content">
 				<div class="tab-pane show active" style="margin-top:3%;">
-					    <br>
-						<br>
-						<h3>พาร์คเอ็กซ์ เอกมัย</h3>
-						<div class="row no-gutters wow fadeIn">
-							<div class="col-lg-7">
-								<div class="imagebox tablet-full pr-lg-3">
-									<a href="https://www.parkx.com/en/find-a-carpark/park-x-sites/park-x-ekkamai">
-										<img class="w-100" src="images/20211122150857-2021-11-22location150850.jpg" alt="">
-																					<div class="logo-location w-270 wow fadeInRight">
-												<img class="w-100" src="images/20200507142536-2020-05-07location141738.png" alt="">
-											</div>
-								<div class="img-note left wow fadeIn">ภาพจำลองใช้เพื่องานโฆษณาเท่านั้น</div>
-									</a>
-								</div>
-							</div><!--col-lg-7-->
-							<div class="col-lg-5">
-								<div class="map-content-wrap">
-									<ul class="nav nav-map">
-									  <li class="nav-item">
-									    <a class="nav-link active" data-toggle="tab" href="#tab-map-1-1">แผนที่ตั้ง</a>
-									  </li>
-									  <li class="nav-item">
-									    <a class="nav-link" data-toggle="tab" href="#tab-map-2-1">แผนที่เดินทาง</a>
-									  </li>
-									</ul>
-									<div class="tab-content tab-map-content">
-									  <div class="tab-pane fade show active" id="tab-map-1-1">
-									  	<a class="imagebox" data-fancybox="" href="https://www.parkx.com/uploads/find_carpark/20200510155059-2020-05-10find_carpark155055.jpg">
-									  		<div class="background" style="background-image: url(images/20200510155059-2020-05-10find_carpark155055.jpg);"></div>
-									  	</a>
-									  </div><!--tab-pane-->
+					@foreach (var item in Model.sites) 
+					{<br>
+					<br>
+					<h3>@item.siteName</h3>
+					<div class="row no-gutters wow fadeIn">
+						<div class="col-lg-7">
+							<div class="imagebox tablet-full pr-lg-3">
+								<a  asp-controller="ParkingSites" asp-action="Index"  asp-route-siteId="@item.siteId">
+									<img class="w-100" src="@item.siteImage" alt="">
+									<div class="logo-location w-270 wow fadeInRight">
+										<img class="w-100" src="@item.siteLogo" alt="">
+									</div>
+								   <!--	<div class="img-note left wow fadeIn">ภาพจำลองใช้เพื่องานโฆษณาเท่านั้น</div> -->
+								</a>
+							</div>
+						</div><!--col-lg-7-->
+						<div class="col-lg-5">
+							<div class="map-content-wrap">
+								<ul class="nav nav-map">
+									<li class="nav-item">
+										<a class="nav-link active" data-toggle="tab" href="#tab-map-1-1">แผนที่ตั้ง</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" data-toggle="tab" href="#tab-map-2-1">แผนที่เดินทาง</a>
+									</li>
+								</ul>
+								<div class="tab-content tab-map-content">
+									<div class="tab-pane fade show active" id="tab-map-1-1">
+										<a class="imagebox" data-fancybox="" href="@item.siteMapImage">
+											<div class="background" style="background-image: url(@item.siteMapImage);"></div>
+										</a>
+									</div><!--tab-pane-->
 
-									  <div class="tab-pane fade" id="tab-map-2-1">
-									  	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d968.9315497791495!2d100.58721572918155!3d13.735019599397397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29e4d09da4313%3A0xc4ee085ec8cc5ec5!2z4Lie4Liy4Lij4LmM4LiE4LmA4Lit4LmH4LiB4LiL4LmMIOC5gOC4reC4geC4oeC4seC4og!5e0!3m2!1sth!2sth!4v1617956770542!5m2!1sth!2sth" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-									  </div><!--tab-pane-->
-									</div><!--tab-map-content-->
+									<div class="tab-pane fade" id="tab-map-2-1">
+										<iframe src="@item.siteMapUrl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+									</div><!--tab-pane-->
+								</div><!--tab-map-content-->
 
-									<a class="btn btn-viewmore normal w-270 wow fadeInRight" data-wow-delay="0.2s" href="https://www.parkx.com/en/find-a-carpark/park-x-sites/park-x-ekkamai">เพิ่มเติม</a>
-								</div><!--map-content-wrap-->
-							</div><!--col-lg-5-->
-						</div><!--row-->
-											<br>
-						<br>
-						<h3>พาร์คเอ็กซ์ อุดมสุข</h3>
-						<div class="row no-gutters wow fadeIn">
-							<div class="col-lg-7">
-								<div class="imagebox tablet-full pr-lg-3">
-									<a href="https://www.parkx.com/en/find-a-carpark/park-x-sites/park-x-udomsuk">
-										<img class="w-100" src="images/20200531094307-2020-05-31location094305.jpg" alt="">
-																					<div class="logo-location w-270 wow fadeInRight">
-												<img class="w-100" src="images/20200507153605-2020-05-07location153604.png" alt="">
-											</div>
-																													</a>
-								</div>
-							</div><!--col-lg-7-->
-							<div class="col-lg-5">
-								<div class="map-content-wrap">
-									<ul class="nav nav-map">
-									  <li class="nav-item">
-									    <a class="nav-link active" data-toggle="tab" href="#tab-map-1-2">แผนที่ตั้ง</a>
-									  </li>
-									  <li class="nav-item">
-									    <a class="nav-link" data-toggle="tab" href="#tab-map-2-2">แผนที่เดินทาง</a>
-									  </li>
-									</ul>
-									<div class="tab-content tab-map-content">
-									  <div class="tab-pane fade show active" id="tab-map-1-2">
-									  	<a class="imagebox" data-fancybox="" href="https://www.parkx.com/uploads/find_carpark/20200512121337-2020-05-12find_carpark121336.jpg">
-									  		<div class="background" style="background-image: url(images/20200512121337-2020-05-12find_carpark121336.jpg);"></div>
-									  	</a>
-									  </div><!--tab-pane-->
-
-									  <div class="tab-pane fade" id="tab-map-2-2">
-										  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d242.2890996179959!2d100.6088276!3d13.6805158!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2a1efacf6a1b1%3A0xc6df25fe3fadb2a7!2z4Lie4Liy4Lij4LmM4LiE4LmA4Lit4LmH4LiB4LiL4LmMIOC4reC4uOC4lOC4oeC4quC4uOC4gg!5e0!3m2!1sth!2sth!4v1684464266552!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-										  </iframe>
-									  </div><!--tab-pane-->
-									</div><!--tab-map-content-->
-
-									<a class="btn btn-viewmore normal w-270 wow fadeInRight" data-wow-delay="0.2s" href="https://www.parkx.com/en/find-a-carpark/park-x-sites/park-x-udomsuk">เพิ่มเติม</a>
-								</div><!--map-content-wrap-->
-							</div><!--col-lg-5-->
-						</div><!--row-->
-									</div><!--tab-pane -->
-			<!--=====================[End] Ekkamai=======================-->
+								<a class="btn btn-viewmore normal w-270 wow fadeInRight" data-wow-delay="0.2s" asp-controller="ParkingSites" asp-action="Index" asp-route-siteId="@item.siteId" >เพิ่มเติม</a>
+							</div><!--map-content-wrap-->
+						</div><!--col-lg-5-->
+					</div><!--row-->
+					}
+				</div><!--tab-pane -->
 			</div><!--tab-location-content-->
 		</div><!--section-group-->
 	 </div><!--container-->

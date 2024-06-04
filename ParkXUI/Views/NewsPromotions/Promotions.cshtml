@@ -1,0 +1,133 @@
+@model dynamic
+
+@{
+   
+    Layout = "_Layout";
+}
+
+<div class="section section-breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">หน้าแรก</a></li>
+            <li class="breadcrumb-item">
+                
+                <a  asp-controller="NewsPromotions" asp-action="Promotions">ข่าวสารและโปรโมชั่น</a>
+            </li>
+            <li class="breadcrumb-item active"><span>โปรโมชั่น</span></li>
+        </ol>
+    </div><!--container-->
+</div>
+
+<div class="section section-banner normal wow fadeIn">
+    <div class="banner-texture">
+        <div class="texture-1 wow fadeInLeftBig" data-wow-duration="1.2s"
+             style="background-image: url(/images/banner-texture--1.svg);"></div>
+        <img class="texture-2 wow fadeInLeftBig" data-wow-duration="1.2s" src="/images/banner-texture--2.svg"
+             alt="">
+    </div>
+    <div class="background"
+         style="background-image: url(/images/20200507202129-2020-05-07news_category202128.jpg);">
+        <div class="note"> *�&nbsp;าพจำลองใช้เพื่องานโฆษณาเท่านั้น</div>
+    </div>
+
+    <div class="container">
+        <div class="page-title">
+            <h2 class="title-xl wow fadeInUp" data-wow-delay="0.35s">โปรโมชั่น</h2>
+            <!-- <p class="wow fadeInUp" data-wow-delay="0.45s">พาร์คเอ็กซ์</p> -->
+        </div>
+    </div><!--container-->
+</div><!--section-banner-->
+
+<div class="section section-body">
+			<div class="container">
+				<ul class="nav nav-news justify-content-center wow fadeIn">
+					<li class="  "><a  asp-controller="NewsPromotions" asp-action="Index" >ข่าวสาร</a></li>
+					<li class=" active "><a asp-controller="NewsPromotions" asp-action="Promotions">โปรโมชั่น</a>
+					</li>
+					<li class="bar"></li>
+				</ul>
+
+				<div class="row news-wrap">
+
+					<div class="col-md-4 col-sm-6">
+						<div class="card card-news wow fadeInUp">
+							<a class="card-photo"
+								href="https://www.parkx.com/th/news-promotions/promotions/2023-5-16-parkxekkamai-night">
+								<div class="photo"
+									style="background-image: url(/images/20230516112258-2023-05-16news112011.jpg);">
+									<img src="/images/20230516112258-2023-05-16news112011.jpg" alt="">
+								</div>
+							</a>
+
+							<div class="card-body">
+								<a href="https://www.parkx.com/th/news-promotions/promotions"><span
+										class="tag">โปรโมชั่น</span></a>
+
+								<h3><a
+										href="https://www.parkx.com/th/news-promotions/promotions/2023-5-16-parkxekkamai-night">พาร์คเอ็กซ์
+										เอกมัย - โปรโมชั่นเหมาจอด 6 ชม.</a></h3>
+								<p>ใหม่! โปรโมชั่นจอดรถกลางคืน เหมา 6 ชั่วโมง</p>
+								<p class="date">16-05-2023</p>
+							</div><!--card-body-->
+						</div><!--card-news-->
+					</div><!--col-md-4-->
+
+					<div class="col-md-4 col-sm-6">
+						<div class="card card-news wow fadeInUp">
+							<a class="card-photo"
+								href="https://www.parkx.com/th/news-promotions/promotions/2023-1-1-parkxudomsuk-daily">
+								<div class="photo"
+									style="background-image: url(/images/20230109205003-2023-01-09news204951.png);">
+									<img src="/images/20230109205003-2023-01-09news204951.png" alt="">
+								</div>
+							</a>
+
+							<div class="card-body">
+								<a href="https://www.parkx.com/th/news-promotions/promotions"><span
+										class="tag">โปรโมชั่น</span></a>
+
+								<h3><a
+										href="https://www.parkx.com/th/news-promotions/promotions/2023-1-1-parkxudomsuk-daily">พาร์คเอ็กซ์
+										อุดมสุข - โปรโมชั่นที่จอดรถรายวัน</a></h3>
+								<p>ใหม่! โปรโมชั่นส่วนลด 50%</p>
+								<p class="date">09-01-2023</p>
+							</div><!--card-body-->
+						</div><!--card-news-->
+					</div><!--col-md-4-->
+
+					<div class="col-md-4 col-sm-6">
+						<div class="card card-news wow fadeInUp">
+							<a class="card-photo"
+								href="https://www.parkx.com/th/news-promotions/promotions/2023-ekkamai-monthly-3-1">
+								<div class="photo"
+									style="background-image: url(/images/20230403141339-2023-04-03news141337.jpg);">
+									<img src="/images/20230403141339-2023-04-03news141337.jpg" alt="">
+								</div>
+							</a>
+
+							<div class="card-body">
+								<a href="https://www.parkx.com/th/news-promotions/promotions"><span
+										class="tag">โปรโมชั่น</span></a>
+
+								<h3><a
+										href="https://www.parkx.com/th/news-promotions/promotions/2023-ekkamai-monthly-3-1">แพ็กเกจ
+										สมาชิกรายเดือน 1 ทะเบียน</a></h3>
+								<p>สมาชิกที่จอดรถรายเดือน พาร์คเอ็กซ์ เอกมัย</p>
+								<p class="date">31-03-2022</p>
+							</div><!--card-body-->
+						</div><!--card-news-->
+					</div><!--col-md-4-->
+				</div><!--row-->
+
+				<div class="page-navigation wow fadeIn">
+					<div class="row">
+						<div class="col-lg-4">
+							<h5>แสดง 1 ถึง 3 จาก 3 รายการ</h5>
+						</div><!--col-lg-4-->
+						<div class="col-lg-8">
+						</div><!--col-lg-8-->
+					</div><!--row-->
+				</div><!--page-navigation-->
+
+			</div><!--container-->
+		</div><!--section-body-->

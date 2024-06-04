@@ -1,0 +1,215 @@
+@model dynamic
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<div class="section section-breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a  asp-controller="Home" asp-action="Index" >HOME</a></li>
+            <li class="breadcrumb-item active"><span>CONTACT US</span></li>
+        </ol>
+    </div><!--container-->
+</div>
+
+<div class="section section-banner normal wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+    <div class="banner-texture">
+        <div class="texture-1 wow fadeInLeftBig" data-wow-duration="1.2s" style="background-image: url(&quot;https://www.parkx.com/cc-content/themes/parkx/asset/img/thumb/banner-texture--1.svg&quot;); visibility: visible; animation-duration: 1.2s; animation-name: fadeInLeftBig;"></div> 
+        <img class="texture-2 wow fadeInLeftBig" data-wow-duration="1.2s" src="https://www.parkx.com/cc-content/themes/parkx/asset/img/thumb/banner-texture--2.svg" alt="" style="visibility: visible; animation-duration: 1.2s; animation-name: fadeInLeftBig;">
+    </div>
+    <div class="background bottom" style="background-image: url(https://www.parkx.com/uploads/contactus/20211214163227-2021-12-14contactus163222.jpg);"></div>	 
+
+    <div class="container">
+        <div class="page-title">
+            <h2 class="title-xl wow fadeInUp" data-wow-delay="0.35s" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">CONTACT US</h2>
+            <!-- <p class="wow fadeInUp" data-wow-delay="0.45s">PARK X</p> -->
+        </div>
+    </div><!--container-->
+</div>
+
+<div class="section section-body p-0" style="z-index: 100">
+	<div class="container">
+		<div class="contact-info-wrap">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card card-contact wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+						<a href="https://goo.gl/maps/BwSfky7tp6V9mMCdA" target="_blank"><div class="card-icon"><img class="wow fadeInUp" src="https://www.parkx.com/cc-content/themes/parkx/asset/img/icons/icon-location.svg" alt="" style="visibility: visible; animation-name: fadeInUp;"></div></a>
+
+						<div class="card-body">
+							<h3>ที่อยู่</h3>
+
+							<h4>บริษัท เพนต้า 591 จำกัด</h4>
+							<p>อาคาร สมัชชาวาณิช 2 <br>
+								591 ถนนสุขุมวิท (ซอย 33)<br>
+								แขวงคลองตันเหนือ เขตวัฒนา<br>
+								กรุงเทพฯ 10110</p>
+						</div>
+					</div><!--card-contact-->
+				</div><!--col-md-4-->
+
+				<div class="col-md-4">
+					<div class="card card-contact wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+						<a href="tel:+6627261999p1921"><div class="card-icon"><img class="wow fadeInUp" data-wow-delay="0.15s" src="https://www.parkx.com/cc-content/themes/parkx/asset/img/icons/icon-phone-2.svg" alt="" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeInUp;"></div></a>
+
+						<div class="card-body">
+							<h3>เบอร์โทร</h3> 
+							<p>02-4070777 ต่อ 5902-4</p>
+						</div>
+					</div><!--card-contact-->
+				</div><!--col-md-4-->
+
+				<div class="col-md-4">
+					<div class="card card-contact wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+						<a href="mailto:parkx@bhirajburi.co.th"><div class="card-icon"><img class="wow fadeInUp" data-wow-delay="0.20s" src="https://www.parkx.com/cc-content/themes/parkx/asset/img/icons/icon-email-2.svg" alt="" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;"></div></a>
+
+						<div class="card-body">
+							<h3>อีเมล</h3> 
+							<p><a href="mailto:parkx@bhirajburi.co.th">parkx@bhirajburi.co.th</a></p>
+						</div>
+					</div><!--card-contact-->
+				</div><!--col-md-4-->
+			</div><!--row-->
+		</div><!--contact-info-wrap-->
+
+		<div class="contact-form-wrap">
+			<div class="heading wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+				<h3 class="title-lg black">สอบถาม</h3>
+				<p>หากคุณมีคำถามใด ๆ<br>โปรดอย่าลังเลที่จะติดต่อเรา</p>
+			</div>
+			<form action="" role="form" class="form-contact wow fadeIn" id="form_contact" method="POST" accept-charset="utf-8" novalidate="novalidate" style="visibility: visible; animation-name: fadeIn;">
+				<input type="hidden" name="__sw8oc8sgg0c4oos4kcsoss8woo84ggwcg8s0s0kc" value="cef61fa20fe90e232f74941446e6604e">                                                                                      
+				<div class="row">
+					<div class="col-sm-12">
+					
+						<div class="input-block">
+							<span class="input-text">กรุณาเลือกหัวข้อที่ต้องการติดต่อ</span>
+							<select >
+								<option value="">กรุณาเลือกหัวข้อที่ต้องการติดต่อ</option>
+								<option value="5">สินค้าและบริการ</option>
+								<option value="6">ข้อแนะนำหรือข้อเสนอแนะ</option>
+								<option value="7">ความสัมพันธ์ทางธุรกิจ</option>
+								<option value="8">อื่นๆ</option>
+							</select>
+						</div>
+					</div><!--col-sm-12-->
+
+					<div class="col-sm-12">
+						<div class="input-block">
+							<span class="input-text">ชื่อ - นามสกุล</span>
+							<input class="form-control" type="text" placeholder="ชื่อ - นามสกุล" name="name" required="" aria-required="true">
+						</div>
+					</div><!--col-sm-12-->
+
+					<div class="col-sm-6">
+						<div class="input-block">
+							<span class="input-text">อีเมล</span>
+							<input class="form-control" type="text" placeholder="อีเมล" name="email" id="emails">
+						</div>
+					</div><!--col-sm-6-->
+
+					<div class="col-sm-6">
+						<div class="input-block">
+							<span class="input-text">เบอร์ติดต่อ</span>
+							<input class="form-control" type="text" placeholder="เบอร์ติดต่อ" name="phone" oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*)\./g, '$1');" required="" aria-required="true">
+						</div>
+					</div><!--col-sm-6-->
+
+					<div class="col-sm-12">
+						<div class="input-block">
+							<span class="input-text">ติดต่อเรื่อง</span>
+							<input class="form-control" type="text" placeholder="ติดต่อเรื่อง" name="subject" required="" aria-required="true">
+						</div>
+					</div><!--col-sm-12-->
+
+					<div class="col-sm-12">
+						<div class="input-block">
+							<span class="input-text">ข้อความ</span>
+							<textarea class="form-control" placeholder="ข้อความ" name="msg" required="" aria-required="true"></textarea>
+						</div>
+					</div><!--col-sm-12-->
+
+					<div class="col-sm-12">
+						<div class="input-block">
+							<span class="input-text">แนบไฟล์</span>
+							<div class="custom-file">
+								<input type="file" class="custom-file-input" id="customFile" name="filename[]" multiple="">
+								<label class="custom-file-label  form-control" for="customFile" style="color:#D5D5D5; ">แนบไฟล์</label>
+							</div> 
+						</div>
+					</div><!--col-sm-12-->
+
+					<div class="col-sm-12">
+						<div class="input-block">
+							<span class="input-text">ยินยอมในการประมวลผลข้อมูลส่วนบุคคล ( <a href="https://www.parkx.com/th/privacy-policy" target="_blank">นโยบายความเป็นส่วนตัว</a> ) </span>
+							<div class="checkbox-group">
+								<input id="agree" value="agree" name="agree" type="checkbox" required="" aria-required="true"> 
+								<label for="agree">ยินยอม</label>
+							</div>
+						</div>
+					</div><!--col-sm-12-->
+				</div><!--row-->
+
+				<div class="buttons">
+					<button class="btn w-270" type="button" id="submit_contact">ส่ง</button>
+				</div>
+			</form>		</div><!--contact-form-wrap-->
+
+		<div class="contact-map-wrap">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="map-item wow fadeIn" style="visibility: hidden; animation-name: none;">
+						<div class="title">แผนที่ตั้ง</div>
+						<div class="map-box">
+							<a href="https://www.parkx.com/uploads/contactus/20200520102223-2020-05-20contactus102222.jpg" data-fancybox="">
+								<img class="w-100" src="https://www.parkx.com/uploads/contactus/20200520102223-2020-05-20contactus102222.jpg" alt="">
+							</a>
+						</div>
+					</div><!--map-item-->
+				</div><!--col-md-6-->
+				<div class="col-md-6">
+					<div class="map-item googlemap wow fadeIn" style="visibility: hidden; animation-name: none;">
+						<div class="title">แผนที่เดินทาง</div>
+						<div class="map-box"> 
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.767552925662!2d100.56537071483024!3d13.732518190359974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f02720476ff%3A0xf9b869ab785a06ee!2z4Lit4Liy4LiE4Liy4Lij4Lii4Li54Lia4Li14LiL4Li1IDI!5e0!3m2!1sth!2sth!4v1589784068072!5m2!1sth!2sth" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>	
+						</div>
+					</div><!--map-item-->
+				</div><!--col-md-6-->
+			</div><!--row-->
+		</div><!--contact-map-wrap-->
+	</div><!--container-->
+</div>
+
+@section Scripts
+{
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		$("#form_contact").validate({
+			rule: {
+				contact_subject: "required",
+				name  : "required",
+				phone : {
+					required: true,
+				},
+				subject : "required",
+				msg		: "required",
+				agree	: "required",
+			},
+			messages:{
+				contact_subject: 'กรุณาเลือกหัวข้อ',
+				name  : 'กรุณากรอกชื่อ - นามสกุล',
+				phone : {
+					required: 'กรุณากรอกเบอร์โทร',
+				},
+				subject : 'กรุณากรอกเรื่อง',
+				msg		: 'กรุณากรอกรายละเอียด',
+				agree	: 'กรุณายอมรับข้อตกลง',
+			}
+		});
+
+	
+	});
+</script>
+}

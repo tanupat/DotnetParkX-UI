@@ -105,6 +105,18 @@
       "PackagePath": "staticwebassets/images/116a104e.png"
     },
     {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/155fcf65.png",
+      "PackagePath": "staticwebassets/images/155fcf65.png"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/1665e302.png",
+      "PackagePath": "staticwebassets/images/1665e302.png"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/17d5f6cb.png",
+      "PackagePath": "staticwebassets/images/17d5f6cb.png"
+    },
+    {
       "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200506000053-2020-05-06setting000050.png",
       "PackagePath": "staticwebassets/images/20200506000053-2020-05-06setting000050.png"
     },
@@ -143,6 +155,14 @@
     {
       "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200507155917-2020-05-07abountus155916.jpg",
       "PackagePath": "staticwebassets/images/20200507155917-2020-05-07abountus155916.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200507202129-2020-05-07news_category202128.jpg",
+      "PackagePath": "staticwebassets/images/20200507202129-2020-05-07news_category202128.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200507202135-2020-05-07news_category202135.jpg",
+      "PackagePath": "staticwebassets/images/20200507202135-2020-05-07news_category202135.jpg"
     },
     {
       "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200510145826-2020-05-10banner145823.jpg",
@@ -197,6 +217,30 @@
       "PackagePath": "staticwebassets/images/20200525155040-2020-05-25location155038.jpg"
     },
     {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200528150847-1-2020-05-28location150841.jpg",
+      "PackagePath": "staticwebassets/images/20200528150847-1-2020-05-28location150841.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200528150847-2-2020-05-28location150841.jpg",
+      "PackagePath": "staticwebassets/images/20200528150847-2-2020-05-28location150841.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200528150847-3-2020-05-28location150841.jpg",
+      "PackagePath": "staticwebassets/images/20200528150847-3-2020-05-28location150841.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200528150847-4-2020-05-28location150842.jpg",
+      "PackagePath": "staticwebassets/images/20200528150847-4-2020-05-28location150842.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200528150847-5-2020-05-28location150842.jpg",
+      "PackagePath": "staticwebassets/images/20200528150847-5-2020-05-28location150842.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200528150847-6-2020-05-28location150842.jpg",
+      "PackagePath": "staticwebassets/images/20200528150847-6-2020-05-28location150842.jpg"
+    },
+    {
       "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20200528155402-2020-05-28seo_setting155345.jpg",
       "PackagePath": "staticwebassets/images/20200528155402-2020-05-28seo_setting155345.jpg"
     },
@@ -229,8 +273,24 @@
       "PackagePath": "staticwebassets/images/20200619095834-2020-06-19social095833.svg"
     },
     {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20210311094209-2021-03-11news094206.jpg",
+      "PackagePath": "staticwebassets/images/20210311094209-2021-03-11news094206.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20210713123806-2021-07-13news123414.jpg",
+      "PackagePath": "staticwebassets/images/20210713123806-2021-07-13news123414.jpg"
+    },
+    {
       "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20211122150857-2021-11-22location150850.jpg",
       "PackagePath": "staticwebassets/images/20211122150857-2021-11-22location150850.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20220715172154-2022-07-15news172113.jpg",
+      "PackagePath": "staticwebassets/images/20220715172154-2022-07-15news172113.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20230109205003-2023-01-09news204951.png",
+      "PackagePath": "staticwebassets/images/20230109205003-2023-01-09news204951.png"
     },
     {
       "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20230314115802-2023-03-14location112625.jpg",
@@ -239,6 +299,46 @@
     {
       "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20230403133334-2023-04-03find_carpark133324.jpg",
       "PackagePath": "staticwebassets/images/20230403133334-2023-04-03find_carpark133324.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20230403141339-2023-04-03news141337.jpg",
+      "PackagePath": "staticwebassets/images/20230403141339-2023-04-03news141337.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20230516112258-2023-05-16news112011.jpg",
+      "PackagePath": "staticwebassets/images/20230516112258-2023-05-16news112011.jpg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/20ae583a.png",
+      "PackagePath": "staticwebassets/images/20ae583a.png"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/21f1b522.png",
+      "PackagePath": "staticwebassets/images/21f1b522.png"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/22993d2f.png",
+      "PackagePath": "staticwebassets/images/22993d2f.png"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/23ee2f40.png",
+      "PackagePath": "staticwebassets/images/23ee2f40.png"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/2454e0c7.png",
+      "PackagePath": "staticwebassets/images/2454e0c7.png"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/27ea6507.png",
+      "PackagePath": "staticwebassets/images/27ea6507.png"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/GoogleLogo.png",
+      "PackagePath": "staticwebassets/images/GoogleLogo.png"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/LINE_logo.png",
+      "PackagePath": "staticwebassets/images/LINE_logo.png"
     },
     {
       "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/TitlingGothicFBComp-Med.svg",
@@ -251,6 +351,10 @@
     {
       "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/banner-texture--2.svg",
       "PackagePath": "staticwebassets/images/banner-texture--2.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/bg-package.png",
+      "PackagePath": "staticwebassets/images/bg-package.png"
     },
     {
       "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/fa-brands-400.svg",
@@ -327,6 +431,10 @@
     {
       "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/icon-phone.svg",
       "PackagePath": "staticwebassets/images/icon-phone.svg"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/loginFB.png",
+      "PackagePath": "staticwebassets/images/loginFB.png"
     },
     {
       "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/images/logo-white.svg",

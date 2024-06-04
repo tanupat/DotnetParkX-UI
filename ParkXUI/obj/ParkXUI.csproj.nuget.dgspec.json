@@ -4,6 +4,55 @@
     "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/ParkXUI.csproj": {}
   },
   "projects": {
+    "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/line-login-csharp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/line-login-csharp.csproj",
+        "projectName": "LineLoginCSharp",
+        "projectPath": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/line-login-csharp.csproj",
+        "packagesPath": "/Users/tanupat/.nuget/packages/",
+        "outputPath": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/tanupat/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard1.3"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard1.3": {
+            "targetAlias": "netstandard1.3",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard1.3": {
+          "targetAlias": "netstandard1.3",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.6.1, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/ParkXUI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -25,7 +74,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/line-login-csharp.csproj": {
+                "projectPath": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/line-login-csharp/line-login-csharp.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -37,6 +90,24 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "LineAuthentication": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

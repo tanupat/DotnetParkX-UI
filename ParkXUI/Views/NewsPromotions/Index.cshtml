@@ -1,0 +1,138 @@
+@model dynamic
+
+@{
+    
+    Layout = "_Layout";
+}
+
+<div class="section section-breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">หน้าแรก</a></li>
+            <li class="breadcrumb-item"><a
+                                            asp-controller="NewsPromotions" asp-action="Index"  >ข่าวสารและโปรโมชั่น</a></li>
+            <li class="breadcrumb-item active"><span>ข่าวสาร</span></li>
+        </ol>
+    </div><!--container-->
+</div>
+
+<div class="section section-banner normal wow fadeIn">
+    <div class="banner-texture">
+        <div class="texture-1 wow fadeInLeftBig" data-wow-duration="1.2s"
+             style="background-image: url(images/banner-texture--1.svg);"></div>
+        <img class="texture-2 wow fadeInLeftBig" data-wow-duration="1.2s" src="images/banner-texture--2.svg"
+             alt="">
+    </div>
+    <div class="background"
+         style="background-image: url(images/20200507202135-2020-05-07news_category202135.jpg);">
+        <div class="note"> ภาพจำลองใช้เพื่องานโฆษณาเท่านั้น</div>
+    </div>
+
+    <div class="container">
+        <div class="page-title">
+            <h2 class="title-xl wow fadeInUp" data-wow-delay="0.35s">ข่าวสาร</h2>
+            <!-- <p class="wow fadeInUp" data-wow-delay="0.45s">พาร์คเอ็กซ์</p> -->
+        </div>
+    </div><!--container-->
+</div><!--section-banner-->
+
+<div class="section section-body">
+			<div class="container">
+				<ul class="nav nav-news justify-content-center wow fadeIn">
+					<li class=" active "><a asp-controller="NewsPromotions" asp-action="Index" >ข่าวสาร</a></li>
+					<li class="  "><a asp-controller="NewsPromotions" asp-action="Promotions" >โปรโมชั่น</a></li>
+					<li class="bar"></li>
+				</ul>
+
+				<div class="row news-wrap">
+
+					<div class="col-md-4 col-sm-6">
+						<div class="card card-news wow fadeInUp">
+							<a class="card-photo"
+								href="https://www.parkx.com/th/news-promotions/news/park-x-ekkamai-and-muvmi">
+								<div class="photo"
+									style="background-image: url(images/20220715172154-2022-07-15news172113.jpg);">
+									<img src="/images/20220715172154-2022-07-15news172113.jpg" alt="">
+								</div>
+							</a>
+
+							<div class="card-body">
+								<a href="https://www.parkx.com/th/news-promotions/news"><span
+										class="tag">ข่าวสาร</span></a>
+
+								<h3><a href="https://www.parkx.com/th/news-promotions/news/park-x-ekkamai-and-muvmi">มูฟมี
+										เปิดเส้นทางใหม่ ณ พาร์คเอ็กซ์เอกมัย วิ่งรอบ "ทองหล่อ - เอกมัย"</a></h3>
+								<p>พิธีการเปิดให้บริการ เส้นทางวิ่งรถตุ๊กตุ๊กไฟฟ้า พลังงานสะอาด เส้นทางใหม่ "ทองหล่อ -
+									เอกมัย"</p>
+								<p class="date">15-07-2022</p>
+							</div><!--card-body-->
+						</div><!--card-news-->
+					</div><!--col-md-4-->
+
+					<div class="col-md-4 col-sm-6">
+						<div class="card card-news wow fadeInUp">
+							<a class="card-photo"
+								href="https://www.parkx.com/th/news-promotions/news/parkx-ekkamai-lg-floor">
+								<div class="photo"
+									style="background-image: url(images/20210713123806-2021-07-13news123414.jpg);">
+									<img src="images/20210713123806-2021-07-13news123414.jpg" alt="">
+								</div>
+							</a>
+
+							<div class="card-body">
+								<a href="https://www.parkx.com/th/news-promotions/news"><span
+										class="tag">ข่าวสาร</span></a>
+
+								<h3><a href="https://www.parkx.com/th/news-promotions/news/parkx-ekkamai-lg-floor">Perspective
+										"พาร์คเอ็กซ์ เอกมัย" ชั้น LG</a></h3>
+								<p>PARKX EKKAMAI ตั้งอยู่บนถนนสุขุมวิท 63 ระหว่างซอยเอกมัย 15 และ 17
+									ให้บริการที่จอดรถบนทําเลใจกลางเมือง ที่มีสิ่งอํานวยความสะดวกครบ สถานที่สะอาด
+									และมีความปลอด�&nbsp;ัยสูง พร้อมพื้นที่ค้าปลีกให้เช่า ที่ชั้น LG และ ชั้น G</p>
+								<p class="date">13-07-2021</p>
+							</div><!--card-body-->
+						</div><!--card-news-->
+					</div><!--col-md-4-->
+
+					<div class="col-md-4 col-sm-6">
+						<div class="card card-news wow fadeInUp">
+							<a class="card-photo"
+								href="https://www.parkx.com/th/news-promotions/news/topping_off_ceremony">
+								<div class="photo"
+									style="background-image: url(images/20210311094209-2021-03-11news094206.jpg);">
+									<img src="images/20210311094209-2021-03-11news094206.jpg" alt="">
+								</div>
+							</a>
+
+							<div class="card-body">
+								<a href="https://www.parkx.com/th/news-promotions/news"><span
+										class="tag">ข่าวสาร</span></a>
+
+								<h3><a href="https://www.parkx.com/th/news-promotions/news/topping_off_ceremony">พิธีเทคอนกรีตปิดงานที่ยอดอาคาร
+										PARK X EKKAMAI</a></h3>
+								<p>Topping Off Ceremony - กลุ่มบริษัท�&nbsp;ิรัชบุรี เทคอนกรีตปิดงานที่ยอดอาคาร PARK X
+									EKKAMAI</p>
+								<p class="date">11-03-2021</p>
+							</div><!--card-body-->
+						</div><!--card-news-->
+					</div><!--col-md-4-->
+				</div><!--row-->
+
+			<!--	<div class="page-navigation wow fadeIn">
+					<div class="row">
+						<div class="col-lg-4">
+							<h5>แสดง 1 ถึง 3 จาก 5 รายการ</h5>
+						</div>
+						<div class="col-lg-8">
+							<ul class="pagination justify-content-end">
+								<li><a class="page-link active" href="javascript:">1</a></li>
+								<li><a href="https://www.parkx.com/th/news-promotions/news?&amp;per_page=3"
+										class="page-link" data-ci-pagination-page="2">2</a></li>
+								<li><a href="https://www.parkx.com/th/news-promotions/news?&amp;per_page=3"
+										class="page-link" data-ci-pagination-page="2" rel="next">ถัดไป</a></li>
+							</ul>
+						</div>
+					</div>
+				</div> -->
+
+			</div><!--container-->
+		</div><!--section-body-->

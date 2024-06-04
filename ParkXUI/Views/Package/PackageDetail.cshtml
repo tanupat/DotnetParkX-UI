@@ -1,0 +1,168 @@
+@model  ParkXUI.ViewModel.Package.PackageDetailViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+<style>
+    .stats-card {
+        background-color: #0d3b66;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .stats-card h5 {
+        margin-bottom: 0;
+    }
+    .package-card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: #fff;
+        margin-top: 20px;
+        justify-items: center;
+    }
+    .package-header img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    .package-header h5 {
+        font-weight: bold;
+        margin-top: 15px;
+    }
+    .package-header .price {
+        font-size: 24px;
+        font-weight: bold;
+        color: #7AE74A;
+    }
+    .steps-indicator {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+    }
+    .steps-indicator div {
+        flex: 1;
+        text-align: center;
+    }
+    .steps-indicator div.active {
+        font-weight: bold;
+        color: #96DC04;
+    }
+    .package-detail h6 {
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    .package-detail table {
+        width: 100%;
+    }
+    .package-detail table th, .package-detail table td {
+        text-align: left;
+        padding: 10px;
+    }
+    .btn-group {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .btn-group .btn {
+        width: 48%;
+        font-weight: bold;
+    }
+    .purchase-btn {
+        background-color: #96DC04;
+        border: none;
+        color: white;
+    }
+    .back-btn {
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+    }
+    .btn{
+        background: #1c3359;
+    }
+    .btn:hover{
+        background-color: #dee2e6;
+        color: #000;
+    }
+</style>
+
+@await Component.InvokeAsync("CardSummary")
+
+
+ <div class="container mt-5 mb-5">
+        
+        <div class="package-card">
+           
+            <div class="package-detail">
+                <h6>รายละเอียด</h6>
+                <table>
+                    <tr>
+                        <th>Package Name:</th>
+                        <td>@Model.Package.PackageName</td>
+                    </tr>
+                    <tr>
+                        <th>Member Type:</th>
+                        <td>@Model.Package.MemberType</td>
+                    </tr>
+                    <tr>
+                        <th>Package Type:</th>
+                        <td>@Model.Package.PackageType</td>
+                    </tr>
+                    <tr>
+                        <th>Vehicle Type:</th>
+                        <td>@Model.Package.VehicleType</td>
+                    </tr>
+                    <tr>
+                        <th>Price:</th>
+                        <td>@Model.Package.Price.ToString("N0")</td>
+                    </tr>
+                    <tr>
+                        <th>Qty of car:</th>
+                        <td>@Model.Package.MaxCar.ToString("N0")</td>
+                    </tr>
+                    <tr>
+                        <th>Slot of car:</th>
+                        <td>@Model.Package.CoCurrent.ToString("N0")</td>
+                    </tr>
+                    <tr>
+                        <th>Overnight Charge Rate:</th>
+                        <td>@Model.Package.NightRate.ToString("N0")</td>
+                    </tr>
+                    <tr>
+                        <th>Deposited Rate:</th>
+                        <td>@Model.Package.Deposite.ToString("N0")</td>
+                    </tr>
+                    <tr>
+                        <th>Additional Price:</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>+ Add Slot of car:</th>
+                        <td>@Model.Package.PricePerCar.ToString("N0")</td>
+                    </tr>
+                    <tr>
+                        <th>+ Add Qty of car:</th>
+                        <td>@Model.Package.PricePerCarMax.ToString("N0")</td>
+                    </tr>
+                    <tr>
+                        <th>Site Available:</th>
+                        <td>@Model.Package.Site.Count Site's</td>
+                    </tr>
+                    @for(int i = 0; i < Model.Package.Site.Count; i++)
+                    {
+                        <tr>
+                            <th>@(i+1). @Model.Package.Site[i].SiteName</th>
+                            <td></td>
+                        </tr>
+                    }
+                    
+                   
+                </table>
+            </div>
+            <div class="btn-group">
+                <a class="btn purchase-btn" asp-controller="Package" asp-action="PurchasePackage" asp-route-packageId="@Model.Package.key">ซื้อแพ็กเกจ</a>
+            </div>
+        </div>
+    </div>

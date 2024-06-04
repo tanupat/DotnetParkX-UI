@@ -1,0 +1,65 @@
+@model ParkXUI.ViewModel.Components.CardSummaryViewModel
+
+<style>
+    .card-custom {
+        background-color: #102A44; /* Dark blue background */
+        color: white; /* White text */
+        border-radius: 10px;
+        padding: 5px;
+        text-align: center;
+    }
+    .card-custom .icon-wrapper {
+        background-color: #031830; /* Darker blue background for icon */
+        border-radius: 50%;
+        padding: 5px;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+    .card-custom .icon {
+        font-size: 30px;
+    }
+</style>
+
+<div class="container my-4">
+    <div class="row">
+        <div class="col-md-6  mb-4">
+            <div class="card-custom">
+                <div class="icon-wrapper">
+                    <i class="fas fa-car icon"></i>
+                </div>
+                <div>@Model.vehicleCount.ToString("N0")</div>
+                <div>ยานพาหนะ</div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card-custom">
+                <div class="icon-wrapper">
+                    <i class="fas fa-parking icon"></i>
+                </div>
+                <div>@Model.packagesCount.ToString("N0")</div>
+                <div>แพคเกจ</div>
+            </div>
+        </div>
+        
+    <!--
+    <div class="col-md-3 mb-4">
+            <div class="card-custom">
+                <div class="icon-wrapper">
+                    <i class="fas fa-file-invoice icon"></i>
+                </div>
+                <div>0</div>
+                <div>ใบแจ้งหนี้</div>
+            </div>
+        </div>
+    <div class="col-md-3 mb-4">
+        <div class="card-custom">
+            <div class="icon-wrapper">
+                <i class="fas fa-sync-alt icon"></i>
+            </div>
+            <div>0</div>
+            <div>เวลาที่จอด</div>
+        </div>
+    </div>
+    -->
+    </div>
+</div>

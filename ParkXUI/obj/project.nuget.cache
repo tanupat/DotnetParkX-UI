@@ -1,8 +1,30 @@
 {
   "version": 2,
-  "dgSpecHash": "yPzLEd+uQuK8o43ONyB9ZRkJX6pvHkeyVC44mL1y71s7zYsr9ttP923aIdd6md5i/JStQQFuziAb8R6b4+Dsow==",
+  "dgSpecHash": "bib5T1ZMP1PdRvoZmReLnwapYgqEDTKVPq6IQnX98K/jbbP8mVrBVzgi1bTj1+Tupg2ivM40HCE3r6tKgaWS1g==",
   "success": true,
   "projectFilePath": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/ParkXUI.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/tanupat/.nuget/packages/lineauthentication/2.0.0/lineauthentication.2.0.0.nupkg.sha512",
+    "/Users/tanupat/.nuget/packages/microsoft.aspnetcore.authentication.google/8.0.5/microsoft.aspnetcore.authentication.google.8.0.5.nupkg.sha512",
+    "/Users/tanupat/.nuget/packages/microsoft.aspnetcore.cryptography.internal/8.0.5/microsoft.aspnetcore.cryptography.internal.8.0.5.nupkg.sha512",
+    "/Users/tanupat/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/8.0.5/microsoft.aspnetcore.cryptography.keyderivation.8.0.5.nupkg.sha512",
+    "/Users/tanupat/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/8.0.5/microsoft.aspnetcore.identity.entityframeworkcore.8.0.5.nupkg.sha512",
+    "/Users/tanupat/.nuget/packages/microsoft.entityframeworkcore/8.0.5/microsoft.entityframeworkcore.8.0.5.nupkg.sha512",
+    "/Users/tanupat/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.5/microsoft.entityframeworkcore.abstractions.8.0.5.nupkg.sha512",
+    "/Users/tanupat/.nuget/packages/microsoft.entityframeworkcore.analyzers/8.0.5/microsoft.entityframeworkcore.analyzers.8.0.5.nupkg.sha512",
+    "/Users/tanupat/.nuget/packages/microsoft.entityframeworkcore.relational/8.0.5/microsoft.entityframeworkcore.relational.8.0.5.nupkg.sha512",
+    "/Users/tanupat/.nuget/packages/microsoft.extensions.caching.abstractions/8.0.0/microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
+    "/Users/tanupat/.nuget/packages/microsoft.extensions.caching.memory/8.0.0/microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
+    "/Users/tanupat/.nuget/packages/microsoft.extensions.configuration.abstractions/8.0.0/microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "/Users/tanupat/.nuget/packages/microsoft.extensions.dependencyinjection/8.0.0/microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "/Users/tanupat/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/tanupat/.nuget/packages/microsoft.extensions.identity.core/8.0.5/microsoft.extensions.identity.core.8.0.5.nupkg.sha512",
+    "/Users/tanupat/.nuget/packages/microsoft.extensions.identity.stores/8.0.5/microsoft.extensions.identity.stores.8.0.5.nupkg.sha512",
+    "/Users/tanupat/.nuget/packages/microsoft.extensions.logging/8.0.0/microsoft.extensions.logging.8.0.0.nupkg.sha512",
+    "/Users/tanupat/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "/Users/tanupat/.nuget/packages/microsoft.extensions.options/8.0.2/microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "/Users/tanupat/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "/Users/tanupat/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

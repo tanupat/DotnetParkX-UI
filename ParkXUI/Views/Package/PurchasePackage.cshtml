@@ -1,0 +1,818 @@
+@model ParkXUI.ViewModel.Package.PurchasePackageViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+    var modelJson = Json.Serialize(Model);
+    var packageDetail = Json.Serialize(Model.Package);
+}
+
+<style>
+    .stats-card {
+        background-color: #0d3b66;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .stats-card h5 {
+        margin-bottom: 0;
+    }
+    .package-card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: #fff;
+        margin-top: 20px;
+        justify-items: center;
+    }
+    .package-header img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    .package-header h5 {
+        font-weight: bold;
+        margin-top: 15px;
+    }
+    .package-header .price {
+        font-size: 24px;
+        font-weight: bold;
+        color: #7AE74A;
+    }
+    .steps-indicator {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+    }
+    .steps-indicator div {
+        flex: 1;
+        text-align: center;
+    }
+    .steps-indicator div.active {
+        font-weight: bold;
+        color: #96DC04;
+    }
+    .package-detail h6 {
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    .package-detail table {
+        width: 100%;
+    }
+    .package-detail table th, .package-detail table td {
+        text-align: left;
+        padding: 10px;
+    }
+    .btn-group {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .btn-group .btn {
+        width: 48%;
+        font-weight: bold;
+    }
+    .purchase-btn {
+        background-color: #96DC04;
+        border: none;
+        color: white;
+    }
+    .back-btn {
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+    }
+    .btn{
+        background: #1c3359;
+    }
+    .btn:hover{
+        background-color: #dee2e6;
+        color: #000;
+    }
+    .input-block .checkbox-group label {
+        font-weight: 400;
+        font-size: 14px;
+        color: rgb(0 0 0);
+        padding-left: 35px;
+        padding-top: 2px;
+    }
+    .btn-add-car {
+        background-color: #1c3359;
+        border: none;
+        color: white;
+        border-radius: 10px 10px 10px 10px;
+        padding: 10px;
+    }
+    .btn-add-car:hover {
+        background-color: #dee2e6;
+        color: #000;
+    }
+    .btn-modal {
+        background-color: #1c3359;
+        border: none;
+        color: white;
+        border-radius: 10px 10px 10px 10px;
+        padding: 10px;
+    }
+    .btn-modal:hover {
+        background-color: #dee2e6;
+        color: #000;
+    }
+    .btn-modal-close {
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        color: #000;
+        border-radius: 10px 10px 10px 10px;
+        padding: 10px;
+    }
+    .btn-modal-close:hover {
+        background-color: #dee2e6;
+        color: #000;
+    }
+    .text-header {
+        font-weight: bold;
+        font-size: 20px;
+        color: #0c63e4;
+    }
+</style>
+@await Component.InvokeAsync("CardSummary")
+
+<div class="container mt-5 mb-5">
+    <div class="contact-form-wrap">
+        <input type="hidden" id="packageDetail" name="packageDetail" value='@modelJson' />
+       @if(Model.SummaryPayment != null && Model.PaymentPayload != null)
+        {
+           <form  role="form" class="form-contact needs-validation"  accept-charset="utf-8" style="visibility: visible;" novalidate>
+            <input id="packageId" name="packageId" value="@Model.Package.key" hidden="hidden"/>
+            <input id="selectedVehicles" name="selectedVehicles" hidden="hidden"/>
+            <input id="maxCarData" name="maxCarData" hidden="hidden"/>
+            <input id="coCurrentData" name="coCurrentData" hidden="hidden"/>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="input-block">
+                        <span class="input-text">ชื่อ Package</span>
+                        <input class="form-control" type="text" placeholder="ชื่อ Package" name="name" value="@Model.SummaryPayment.PackageName" readonly="readonly">
+                    </div>
+                </div><!--col-sm-12-->
+
+                <div class="col-sm-6">
+                    <div class="input-block">
+                        <span class="input-text">ประเภท Package</span>
+                        <input class="form-control" type="text" name="packageType"  id="packageType" value="@Model.SummaryPayment.PackageType" readonly="readonly">
+                    </div>
+                </div><!--col-sm-6-->
+
+                <div class="col-sm-6">
+                    <div class="input-block">
+                        <span class="input-text">ราคา</span>
+                        <input class="form-control" type="text" id="price" name="price" value="@Model.SummaryPayment.price" readonly="readonly">
+                    </div>
+                </div><!--col-sm-6-->
+
+                <div class="col-sm-6">
+                    <div class="input-block">
+                        <span class="input-text">วันที่เริ่มต้น</span>
+                        <input class="form-control" type="date"  value="@Model.SummaryPayment.startDate"  readonly="readonly">
+                        <div class="invalid-feedback">กรุณาเลือกวันที่เริ่มต้น</div>
+                    </div>
+                </div><!--col-sm-6-->
+
+                <div class="col-sm-6">
+                    <div class="input-block">
+                        <span class="input-text">วันที่สิ้นสุด</span>
+                        <input class="form-control" type="date" value="@Model.SummaryPayment.endDate" readonly="readonly" required="required">
+                    </div>
+                </div><!--col-sm-6-->
+
+                <div class="col-sm-12">
+                    <div class="input-block">
+                        <span class="input-text">Cars: (<span >@Model.SummaryPayment.vehicles.Count.ToString()</span> of <span id="maxCar" name="maxCar">@Model.SummaryPayment.maxCar.ToString() </span> Max)  เข้าจอดพร้อมกันได้ (<span >@Model.SummaryPayment.coCurrent.ToString()</span> คัน)</span>
+                    </div>
+                </div><!--col-sm-12-->
+    
+                <div class="col-sm-12">
+                    <div class="input-block">
+                        <span class="input-text">รายละเอียดยานพาหนะ</span>
+                        <ul>
+                            @foreach (var vehicle in Model.SummaryPayment.vehicles)
+                            {
+                                <li>@vehicle.licensePlate @vehicle.province </li>
+                            }
+                        </ul>
+                    </div>
+                </div><!--col-sm-12-->
+                 @if (Model.SummaryPayment.PaymentMethod == "qr")
+                { 
+                    <!--  
+                    <form method="post" action="PostPayment">
+                        <input
+                            type="hidden"
+                            name="amount"
+                            value="@Model.PaymentPayload.amount"
+                        />
+                        <input type="hidden" name="currency" value="@Model.PaymentPayload.currency" />
+                        <input
+                            type="hidden"
+                            name="payment-methods"
+                            value="@Model.PaymentPayload.paymentMethods"
+                        />
+                        <input type="hidden" name="name" value="@Model.PaymentPayload.name" />
+                        <input
+                            type="hidden"
+                            name="mid"
+                            value="@Model.PaymentPayload.mid"
+                        />
+                        <input
+                            type="hidden"
+                            name="ref-number"
+                            value="@Model.PaymentPayload.refNumber"
+                        />
+                        <input
+                            type="hidden"
+                            name="order-id"
+                            value="@Model.PaymentPayload.orderId"
+                        />
+
+                        <input
+                            type="hidden"
+                            name="ref_1"
+                            value="@Model.PaymentPayload.ref_1"
+                        />
+                        <input
+                            type="hidden"
+                            name="ref_2"
+                            value="@Model.PaymentPayload.ref_2"
+                        />
+                       
+                  
+                    </form>  
+                    -->
+                    <script
+                        type="text/javascript"
+                        src="@Model.PaymentPayload.srcScript"
+                        data-apikey="@Model.PaymentPayload.apikey"
+                        data-amount="@Model.PaymentPayload.amount"
+                        data-currency="@Model.PaymentPayload.currency"
+                        data-payment-methods="@Model.PaymentPayload.paymentMethods"
+                        data-name="@Model.PaymentPayload.name"
+                        data-order-id="@Model.PaymentPayload.orderId"
+                        data-ref-number="@Model.PaymentPayload.refNumber"
+                        data-mid="@Model.PaymentPayload.mid"
+                    ></script>
+                }else if(Model.SummaryPayment.PaymentMethod == "card")
+                {
+                    <form method="post" action="Package/PostPayment">
+                        <input
+                            type="hidden"
+                            name="amount"
+                            value="@Model.PaymentPayload.amount"
+                        />
+                        <input type="hidden" name="currency" value="@Model.PaymentPayload.currency" />
+                        <input
+                            type="hidden"
+                            name="payment-methods"
+                            value="@Model.PaymentPayload.paymentMethods"
+                        />
+                        <input type="hidden" name="name" value="@Model.PaymentPayload.name" />
+                        <input
+                            type="hidden"
+                            name="mid"
+                            value="@Model.PaymentPayload.mid"
+                        />
+                        <input
+                            type="hidden"
+                            name="ref-number"
+                            value="@Model.PaymentPayload.refNumber"
+                        />
+                        <input
+                            type="hidden"
+                            name="order-id"
+                            value="@Model.PaymentPayload.orderId"
+                        />
+
+                        <input
+                            type="hidden"
+                            name="ref_1"
+                            value="@Model.PaymentPayload.ref_1"
+                        />
+                        <input
+                            type="hidden"
+                            name="ref_2"
+                            value="@Model.PaymentPayload.ref_2"
+                        />
+                        <script
+                            type="text/javascript"
+                            src="@Model.PaymentPayload.srcScript"
+                            data-apikey="@Model.PaymentPayload.apikey"
+                            data-amount="@Model.PaymentPayload.amount"
+                            data-currency="@Model.PaymentPayload.currency"
+                            data-payment-methods="@Model.PaymentPayload.paymentMethods"
+                            data-name="@Model.PaymentPayload.name"
+                            data-ref-number="@Model.PaymentPayload.refNumber"
+                            data-mid="@Model.PaymentPayload.mid"
+                        ></script>
+                  
+                    </form>  
+                    
+                }
+                
+            </div><!--row-->
+        </form>
+        }
+        else
+        { 
+            <form action="@Url.Action("PurchasePackage", "Package")" role="form" class="form-contact needs-validation" id="form_purchase" method="POST" accept-charset="utf-8" style="visibility: visible;" novalidate>
+            <input id="packageId" name="packageId" value="@Model.Package.key" hidden="hidden"/>
+            <input id="selectedVehicles" name="selectedVehicles" hidden="hidden"/>
+            <input id="maxCarData" name="maxCarData" hidden="hidden"/>
+            <input id="coCurrentData" name="coCurrentData" hidden="hidden"/>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="input-block">
+                        <span class="input-text">ชื่อ Package</span>
+                        <input class="form-control" type="text" placeholder="ชื่อ Package" name="name" value="@Model.Package.PackageName" readonly="readonly">
+                    </div>
+                </div><!--col-sm-12-->
+
+                <div class="col-sm-6">
+                    <div class="input-block">
+                        <span class="input-text">ประเภท Package</span>
+                        <input class="form-control" type="text" name="packageType"  id="packageType" value="@Model.Package.PackageType" readonly="readonly">
+                    </div>
+                </div><!--col-sm-6-->
+
+                <div class="col-sm-6">
+                    <div class="input-block">
+                        <span class="input-text">ราคา</span>
+                        <input class="form-control" type="text" id="price" name="price" value="@Model.Package.Price.ToString("N0")" readonly="readonly">
+                    </div>
+                </div><!--col-sm-6-->
+
+                <div class="col-sm-6">
+                    <div class="input-block">
+                        <span class="input-text">วันที่เริ่มต้น</span>
+                        <input class="form-control" type="date" id="startDate" name="startDate" onchange="purchasePackage.onchangeStartDate()" required="required">
+                        <div class="invalid-feedback">กรุณาเลือกวันที่เริ่มต้น</div>
+                    </div>
+                </div><!--col-sm-6-->
+
+                <div class="col-sm-6">
+                    <div class="input-block">
+                        <span class="input-text">วันที่สิ้นสุด</span>
+                        <input class="form-control" type="date" id="endDate" name="endDate" readonly="readonly" required="required">
+                        <div class="invalid-feedback">กรุณาเลือกวันที่สิ้นสุด</div>
+                    </div>
+                </div><!--col-sm-6-->
+
+                <div class="col-sm-12">
+                    <div class="input-block">
+                        <span class="input-text">Cars: (<span id="countVehicle" name="countVehicle"></span> of <span id="maxCar" name="maxCar">@Model.Package.MaxCar </span> Max)</span>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn" onclick="purchasePackage.onClickMinusMaxCar(1)">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-solid fa-minus"></i>
+                                </div>
+                            </button>
+                            <button type="button" class="btn" onclick="purchasePackage.onClickPlusMaxCar(1)">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-solid fa-plus"></i>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div><!--col-sm-12-->
+
+                <div class="col-sm-12">
+                    <div class="input-block">
+                        <div class="checkbox-group" id="vehicleListGroup" name="vehicleListGroup">
+                            <!-- Dynamically generated checkboxes will be added here -->
+                        </div>
+                    </div>
+
+                </div><!--col-sm-12-->
+
+                <div class="col-sm-12">
+                    (ราคาเพิ่มจำนวนรถ + @Model.Package.PricePerCarMax.ToString("N0") /คัน)
+                    <div class="input-block">
+                        <button type="button" class="text-sm-start btn-add-car" data-toggle="modal" data-target="#modalAddVehicle"> <i class="fas fa-solid fa-plus"></i> เพิ่มทะเบียนรถ </button>
+                    </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <div class="input-block">
+                        <span class="input-text">Lot: (Max <span id="coCurrent" name="coCurrent">@Model.Package.CoCurrent</span> )</span>
+                        <span class="text-sm-start">- จำนวนรถเข้าจอดพร้อมกันสูงสุด @Model.Package.CoCurrent (+@Model.Package.PricePerCar บาท/คัน) </span>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+
+                            <button type="button" class="btn" id="minusCoCurrent" name="minusCoCurrent" onclick="purchasePackage.clickMinusCoCurrent()">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-solid fa-minus"></i>
+                                </div>
+                            </button>
+                            <button type="button" class="btn" id="plusCoCurrent" name="plusCoCurrent" onclick="purchasePackage.clickPlusCoCurrent()">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-solid fa-plus"></i>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div><!--col-sm-12-->
+            </div><!--row-->
+
+            <div class="col-sm-12">
+                <div class="input-block">
+                    <span class="input-text">รูปแบบการชำระเงิน</span>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentType" id="qr"  value="qr" checked="checked">
+                            <label class="form-check-label" for="qr">
+                                <i class="fas fa-solid fa-qrcode"></i> จ่ายผ่าน QR Code
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentType" id="card" value="card" >
+                            <label class="form-check-label" for="card">
+                                <i class="fas fa-solid fa-credit-card"></i> จ่ายผ่านบัตรเครดิต
+                            </label>
+                        </div>
+                    </div>
+                    <div class="invalid-feedback">กรุณาเลือกรูปแบบการชำระเงิน</div>
+                </div>
+            </div><!--col-sm-12-->
+
+            <div class="buttons">
+                <button class="btn w-270" type="button" id="btnPayment" onclick="purchasePackage.onsubmit()">
+                    <i class="fas fa-solid fa-money-bill"></i>
+                    ยืนยันการชำระ
+                </button>
+            </div>
+        </form>
+        }
+        
+        </div><!--contact-form-wrap-->
+</div>
+
+<div class="modal fade" id="modalAddVehicle" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">เพิ่มยานพาหนะ</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" id="formVehicle" name="formVehicle" novalidate>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-block">
+                                <span class="input-text">ทะเบียนรถ</span>
+                                <input class="form-control" type="text" placeholder="ทะเบียนรถ" id="licensePlate" name="licensePlate" required>
+                                <div class="invalid-feedback">กรุณาเลือกวันที่สิ้นสุด</div>
+                            </div>
+                        </div><!--col-sm-6-->
+
+                        <div class="col-sm-6">
+                            <div class="input-block">
+                                <span class="input-text">จังหวัด</span>
+                                <input class="form-control" type="text" placeholder="จังหวัด" id="province" name="province" required>
+                                <div class="invalid-feedback">กรุณาเลือกจังหวัด</div>
+                            </div>
+                        </div><!--col-sm-6-->
+
+                        <div class="col-sm-6">
+                            <div class="input-block">
+                                <span class="input-text">ยี่ห้อรถ</span>
+                                <input class="form-control" type="text" placeholder="ยี่ห้อรถ" id="maker" name="maker" required>
+                                <div class="invalid-feedback">กรุณาเลือกยี่ห้อรถ</div>
+                            </div>
+                        </div><!--col-sm-6-->
+
+                        <div class="col-sm-6">
+                            <div class="input-block">
+                                <span class="input-text">รุ่น</span>
+                                <input class="form-control" type="text" placeholder="รุ่น" id="model" name="model" required>
+                                <div class="invalid-feedback">กรุณาเลือกรุ่น</div>
+                            </div>
+                        </div><!--col-sm-6-->
+
+                        <div class="col-sm-6">
+                            <div class="input-block">
+                                <span class="input-text">ปี</span>
+                                <input class="form-control" type="text" placeholder="ปี" id="year" name="year" required>
+                                <div class="invalid-feedback">กรุณาเลือกปี</div>
+                            </div>
+                        </div><!--col-sm-6-->
+
+                        <div class="col-sm-6">
+                            <div class="input-block">
+                                <span class="input-text">สี</span>
+                                <input class="form-control" type="text" placeholder="สี" id="color" name="color" required>
+                                <div class="invalid-feedback">กรุณาเลือกสี</div>
+                            </div>
+                        </div><!--col-sm-6-->
+
+                        <div class="col-sm-6">
+                            <div class="input-block">
+                                <span class="input-text">ประเภทยานพาหนะ</span>
+                                <select class="form-control" id="vehicleType" name="vehicleType" required>
+                                    <option value="Car">รถยนต์</option>
+                                    <option value="Motorcycle">รถจักรยานยนต์</option>
+                                </select>
+                                <div class="invalid-feedback">กรุณาเลือกประเภทยานพาหนะ</div>
+                            </div>
+                        </div><!--col-sm-6-->
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-modal-close" data-dismiss="modal">ปิด</button>
+                <button type="button" class="btn-modal" onclick="purchasePackage.submitFormVehicle()"> <i class="fas fa-solid fa-plus"></i> เพิ่มยานพาหนะ</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalMessages" tabindex="-1" role="dialog" aria-labelledby="modalMessagesModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMessagesModalCenterTitle">แจ้งเตือน</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center ">
+                <!-- Message will be displayed here -->
+                <h5  class="contentMes"></h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-modal-close" data-dismiss="modal">ปิด</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        var purchasePackage = (function () {
+            var startDate = document.getElementById('startDate');
+            var endDate = document.getElementById('endDate');
+            var maxCarElement = document.getElementById('maxCar');
+            var packageDetail = JSON.parse(document.getElementById('packageDetail').value);
+           // let vehicleList =  JSON.parse(localStorage.getItem(''))  // Get the vehicle list from local storage
+           let  vehicleList = JSON.parse(localStorage.getItem('vehicleList')) || [];
+            var countVehicle = document.getElementById('countVehicle');
+            var messageModal = document.getElementById('modalMessages');
+            const vehicleListGroup = document.getElementById('vehicleListGroup');
+            const pricePerCar = packageDetail.package.pricePerCar;
+            const pricePerCoCurrent = packageDetail.package.pricePerCoCurrent;
+            const price = packageDetail.package.price;
+            const packageMaxCar = packageDetail.package.maxCar;
+            let priceElement = document.getElementById('price');
+            let selectedVehiclesElement = document.getElementById('selectedVehicles');
+            let maxCarData = document.getElementById('maxCarData');
+            let coCurrentData = document.getElementById('coCurrentData');
+            return {
+                init: function () {
+                    countVehicle.textContent = 0;
+                    if (packageDetail.memberVehicles.length > 0) 
+                    {
+                        localStorage.setItem('vehicleList', JSON.stringify(packageDetail.memberVehicles));
+                        maxCarData.value = packageDetail.package.maxCar;
+                        coCurrentData.value = packageDetail.package.coCurrent;
+                        purchasePackage.onsetVehicleListGroup();
+                    }
+                },
+                onchangeStartDate: function () {
+                    var start = new Date(startDate.value);
+                    if (!isNaN(start.getTime())) {
+                        // Set endDate to the last day of the month of startDate
+                        // Calculate the last day of the month
+                        var year = start.getFullYear();
+                        var month = start.getMonth();
+                        var lastDay = new Date(year, month + 1, 0); // Get the last day of the month
+                        // Adjust for time zone (if necessary)
+                        var offset = lastDay.getTimezoneOffset();
+                        lastDay = new Date(lastDay.getTime() - offset * 60000); // Convert offset to milliseconds and adjust
+                        endDate.value = lastDay.toISOString().split('T')[0];
+                    } else {
+                        endDate.value = '';
+                    }
+                },
+                onClickPlusMaxCar: function (value) {
+                    let maxCar = parseInt(maxCarElement.textContent);
+                    maxCar += value;
+                    maxCarElement.textContent = maxCar;
+                    maxCarData.value = maxCar;
+                },
+                onClickMinusMaxCar: function (value) {
+                    let maxCar = parseInt(maxCarElement.textContent);
+                    maxCar -= value;
+                    if (packageDetail.package.maxCar > maxCar) {
+                      
+                         messageModal.querySelector('.contentMes').textContent = 'You cannot select more than ' + packageDetail.package.maxCar + ' vehicles.';
+                            $('#modalMessages').modal('show');
+                       
+                        return;
+                    }
+
+                    // If reducing maxCar, uncheck the last checked checkbox if needed
+                    const checkboxes = vehicleListGroup.querySelectorAll('input[type="checkbox"]:checked');
+                    if (checkboxes.length > maxCar) {
+                        const lastChecked = checkboxes[checkboxes.length - 1];
+                        lastChecked.checked = false;
+                        // Update the count of checked vehicles
+                        purchasePackage.updateCountVehicle();
+                    }
+                    
+                    maxCarElement.textContent = maxCar;
+                    maxCarData.value = maxCar;
+                    
+             
+                },
+                onsetVehicleListGroup: function () {
+                    const checkedValues = [];
+                    const checkboxes = vehicleListGroup.querySelectorAll('input[type="checkbox"]:checked');
+                    checkboxes.forEach((checkbox) => {
+                        checkedValues.push(checkbox.id);
+                    });
+                    
+                    vehicleListGroup.innerHTML = ''; // Clear existing content
+                    vehicleList.forEach((vehicle, index) => {
+                        const input = document.createElement('input');
+                        input.id = `vehicle${index}`;
+                        input.name = `vehicle${index}`;
+                        input.type = 'checkbox';
+                        input.required = true;
+                        input.setAttribute('aria-required', true);
+                        // Restore the checked state if it was previously checked
+                        if (checkedValues.includes(input.id)) {
+                            input.checked = true;
+                        }
+
+                        const label = document.createElement('label');
+                        label.htmlFor = `vehicle${index}`;
+                        label.textContent = `${vehicle.licensePlate} ${vehicle.province} ${vehicle.vehicleType}`;
+                       
+                       input.addEventListener('change', purchasePackage.updateCountVehicle);
+
+                        vehicleListGroup.appendChild(input);
+                        vehicleListGroup.appendChild(label);
+                    });
+                },
+                updateCountVehicle: function () {
+                    const vehicleListGroup = document.getElementById('vehicleListGroup');
+                    const checkboxes = vehicleListGroup.querySelectorAll('input[type="checkbox"]:checked');
+
+                    var maxCar = parseInt(maxCarElement.textContent); // Get the max car value
+                    if (checkboxes.length > maxCar && event.target.checked) {
+                        messageModal.querySelector('.contentMes').textContent = 'You cannot select more than ' + maxCar + ' vehicles.';
+                        $('#modalMessages').modal('show');
+                        event.preventDefault(); // Prevent the checkbox from being checked
+                        event.target.checked = false; // Ensure it remains unchecked
+                    } else {
+                        document.getElementById('countVehicle').textContent = checkboxes.length;
+                        priceElement.value = purchasePackage.showPrice();
+                        priceElement.textContent = purchasePackage.showPrice();
+                    }
+        
+                },
+                clickPlusCoCurrent:function () {
+                    const vehicleListGroup = document.getElementById('vehicleListGroup');
+                    const checkboxes = vehicleListGroup.querySelectorAll('input[type="checkbox"]:checked');
+                    var coCurrent = document.getElementById('coCurrent');
+
+                    var value = parseInt(coCurrent.textContent);
+                    if (value >= checkboxes.length) {
+                        messageModal.querySelector('.contentMes').textContent = 'You cannot select more than ' + checkboxes.length + ' vehicles.';
+                        $('#modalMessages').modal('show');
+                        return;
+                    }
+
+                    value++;
+                    coCurrent.textContent = value;
+                    coCurrentData.value = value;
+                    priceElement.value =  purchasePackage.showPrice();
+                    priceElement.textContent = purchasePackage.showPrice();
+                },
+                clickMinusCoCurrent: function () {
+                    var coCurrent = document.getElementById('coCurrent');
+                    var value = parseInt(coCurrent.textContent);
+
+                    if (value <= packageDetail.package.coCurrent) {
+                        messageModal.querySelector('.contentMes').textContent = 'You cannot select less than ' + packageDetail.package.coCurrent + ' vehicles.';
+                        $('#modalMessages').modal('show');
+                        return;
+                    }
+
+                    value--;
+                    coCurrent.textContent = value;
+                    coCurrentData.value = value;
+                    priceElement.value = purchasePackage.showPrice();
+                    priceElement.textContent = purchasePackage.showPrice();
+                    
+                },
+                submitFormVehicle: function () {
+                    const formVehicle = document.getElementById('formVehicle');
+                    if (formVehicle.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else {
+                        const licensePlate = document.getElementById('licensePlate').value;
+                        const province = document.getElementById('province').value;
+                        const maker = document.getElementById('maker').value;
+                        const model = document.getElementById('model').value;
+                        const year = document.getElementById('year').value;
+                        const color = document.getElementById('color').value;
+                        const vehicleType = document.getElementById('vehicleType').value;
+
+                        const vehicle = {
+                            key: '',
+                            memberKey: '',
+                            licensePlate: licensePlate,
+                            province: province,
+                            maker: maker,
+                            model: model,
+                            year: year,
+                            color: color,
+                            vehicleType: vehicleType
+                        };
+
+                        vehicleList.push(vehicle);
+                        localStorage.setItem('vehicleList', JSON.stringify(vehicleList));
+                        purchasePackage.onsetVehicleListGroup();
+
+                        formVehicle.reset();
+                        $('#modalAddVehicle').modal('hide');
+                    }
+                    formVehicle.classList.add('was-validated');
+                },
+                showPrice: function (){
+                    const carCount = document.getElementById('vehicleListGroup').querySelectorAll('input[type="checkbox"]:checked').length;
+                    const coCurrentCount = parseInt(document.getElementById('coCurrent').textContent);
+                    var price =
+                        packageDetail.package.price +
+                        (carCount <= packageDetail.package.maxCar
+                            ? 0
+                            : (carCount - packageDetail.package.maxCar) * packageDetail.package.pricePerCarMax) +
+                        (packageDetail.package.coCurrent >= coCurrentCount
+                            ? 0
+                            : (coCurrentCount - packageDetail.package.coCurrent) * packageDetail.package.pricePerCar);
+                    return price.toLocaleString();
+        }, 
+        onsubmit: function () {
+                    const form = document.getElementById('form_purchase');
+                        // Get the selected vehicles
+                        const vehicleListGroup = document.getElementById('vehicleListGroup');
+                        const checkboxes = vehicleListGroup.querySelectorAll('input[type="checkbox"]:checked');
+                        const selectedVehicles = [];
+                        checkboxes.forEach((checkbox) => {
+                            const index = parseInt(checkbox.id.replace('vehicle', ''));
+                            selectedVehicles.push(vehicleList[index]);
+                        });
+                        // Get the selected lot
+                        const coCurrent = document.getElementById('coCurrent').textContent;
+                        // Get the selected start and end dates
+                        const startDate = document.getElementById('startDate').value;
+                        const endDate = document.getElementById('endDate').value;
+                        // Get the selected payment method
+                        const paymentMethod = document.querySelector('input[name="paymentType"]:checked').id;
+                        //validate
+                        if (startDate === '' || endDate === '') {
+                            messageModal.querySelector('.contentMes').textContent = 'Please select the start and end dates.';
+                            $('#modalMessages').modal('show');
+                            return;
+                        }
+                        if (selectedVehicles.length === 0) {
+                            messageModal.querySelector('.contentMes').textContent = 'Please select at least one vehicle.';
+                            $('#modalMessages').modal('show');
+                            return;
+                        }
+                        selectedVehiclesElement.value = JSON.stringify(selectedVehicles);
+                        form.submit();
+                }
+            }
+        })();
+
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+
+        $(document).ready(function () {
+            purchasePackage.init();
+        });
+    </script>
+}

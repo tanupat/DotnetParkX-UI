@@ -54,10 +54,23 @@
     <link href="~/css/solid.css" rel="stylesheet">
     <link href="~/css/dev.css" rel="stylesheet">
     <script src="~/js/jquery-1.12.4.min.js"></script>
-    
+    <!--  <link href="~/css/output.css" rel="stylesheet" /> -->
+   
     <!-- <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/ParkXUI.styles.css" asp-append-version="true"/> -->
+    
+    <style>
+        .profile-button {
+            display: flex;
+            align-items: center;
+            background-color: #1E3A8A;
+            color: white;
+            border-radius: 30px;
+            padding: 1px 2px;
+        }
+        
+    </style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -127,7 +140,7 @@
                             <ul class="nav nav-main">
                                 <li class=""><a asp-area="" asp-controller="FindCarpark" asp-action="Index">@localizer["FindCar"]</a></li>
                                 <li class="">
-                                  <!--  onclick="window.location = ('https://www.parkx.com/th/parking-solutions/about-park-x');" -->
+                                    <!--  onclick="window.location = ('https://www.parkx.com/th/parking-solutions/about-park-x');" -->
                                     <a data-toggle="dropdown"
                                        asp-controller="ParkingSolutions"
                                        asp-action="AboutParkX">โซลูชั่นที่จอดรถ</a>
@@ -142,21 +155,51 @@
                                     </div>
                                 </li>
                                 <li class="">
-                                    <a data-toggle="dropdown" href="https://www.parkx.com/th/news-promotions" onclick="window.location = ('https://www.parkx.com/th/news-promotions');">ข่าวสารและโปรโมชั่น</a>
+                                    <a data-toggle="dropdown"  asp-controller="NewsPromotions" asp-action="Index"  >ข่าวสารและโปรโมชั่น</a>
                                     <div class="dropdown-menu show">
                                         <div class="arrow up"></div>
                                         <ul>
                                             <li>
-                                                <a href="https://www.parkx.com/th/news-promotions/news">ข่าว</a>
+                                                <a asp-controller="NewsPromotions" asp-action="Index" >ข่าว</a>
                                             </li>
                                             <li>
-                                                <a href="https://www.parkx.com/th/news-promotions/promotions">โปรโมชั่น</a>
+                                                <a asp-controller="NewsPromotions" asp-action="Promotions">โปรโมชั่น</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </li>
-                                <li class=""><a href="https://www.parkx.com/th/contact-us">ติดต่อเรา</a></li>
+                                <li class=""><a asp-controller="ContactUS" asp-action="Index">ติดต่อเรา</a></li>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <li>
+                                        <a  href="#">
+                                            <!--   <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Profile Picture"> -->
+                                            <b> @User.Identity.Name</b> 
+                                        </a>
+                                        <div class="dropdown-menu show">
+                                            <div class="arrow up"></div>
+                                            <ul>
+                                                <li>
+                                                    <a asp-controller="User" asp-action="Profile" >จัดการข้อมูลส่วนตัว</a>
+                                                </li>
+                                                <li>
+                                                    <a asp-controller="Auth" asp-action="Logout">ออกจากระบบ</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    
+                                }
+                                else
+                                {
+                                    <li>
+                                        <a  asp-controller="Auth" asp-action="Login" >เข้าสู่ระบบ</a>
+                                    </li>
+                                }
+                               
+                                
                             </ul>
+                            
                             <div class="d-block d-md-none">
                                 <div class="lang">
                                 <a class="th" href="javascript:void(0);" onclick="setCulture('th');" >
