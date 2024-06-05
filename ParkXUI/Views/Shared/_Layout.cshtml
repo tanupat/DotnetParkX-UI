@@ -115,10 +115,12 @@
                                 <a href="mailto:parkx@bhirajburi.co.th">parkx@bhirajburi.co.th</a></li>
                             <li class="nav-lang">
                                 <a href="javascript:void(0);" onclick="setCulture('en');" id="en-flag" style="display: none;">
-                                    <img src="~/images/flag-en.svg" alt="">
+                                 <!--   <img src="~/images/flag-en.svg" alt=""> -->
+                                    <h6 class="text-white">EN</h6>
                                 </a>
                                 <a href="javascript:void(0);" onclick="setCulture('th');" id="th-flag">
-                                    <img src="~/images/flag-th.svg" alt="Thai">
+                                    <!--   <img src="~/images/flag-th.svg" alt="Thai"> -->
+                                    <h6 class="text-white">TH</h6>
                                 </a>
                                 </li>
                            
@@ -183,6 +185,12 @@
                                                     <a asp-controller="User" asp-action="Profile" >จัดการข้อมูลส่วนตัว</a>
                                                 </li>
                                                 <li>
+                                                    <a asp-controller="Package" asp-action="PackageMember">ข้อมูลแพ็กเกจ</a>
+                                                </li>
+                                                <li>
+                                                    <a asp-controller="User" asp-action="MemberVehicle">จัดการข้อมูลรถ</a>
+                                                </li>
+                                                <li>
                                                     <a asp-controller="Auth" asp-action="Logout">ออกจากระบบ</a>
                                                 </li>
                                             </ul>
@@ -203,12 +211,12 @@
                             <div class="d-block d-md-none">
                                 <div class="lang">
                                 <a class="th" href="javascript:void(0);" onclick="setCulture('th');" >
-                                        <img src="~/images/flag-th.svg" alt="">
+                                    <h6 class="text-white">TH</h6>   <!--  <img src="~/images/flag-th.svg" alt=""> -->
                                     </a> 
                                     <a class="en" href="javascript:void(0);" onclick="setCulture('en');">
-                                        <img src="~/images/flag-en.svg" alt="">
-                                    </a> 
-                                    <!--  <partial name="_CulturePartial"/> -->
+                                        <h6 class="text-white">EN</h6>  <!-- <img src="~/images/flag-en.svg" alt=""> -->
+                                     </a> 
+                                     <!--  <partial name="_CulturePartial"/> -->
                                </div>
                                <div class="buttons">
                                    <a class="btn" href="mailto:parkx@bhirajburi.co.th">

@@ -108,6 +108,7 @@ builder.Services.AddLogging(config =>
 
 builder.Services.AddScoped<IAuth, AuthService>();
 builder.Services.AddScoped<IPaymentService, PaymentService>();
+builder.Services.AddScoped<IVehicle, VehicleService>();
 
 // Add session services
 builder.Services.AddSession(options =>

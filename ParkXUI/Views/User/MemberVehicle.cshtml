@@ -1,0 +1,48 @@
+@model ParkXUI.ViewModel.User.MemberVehicleViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Member Vehicle</h2>
+            <hr />
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="container mt-5">
+            <div class="table-responsive">
+                <table class="table table-striped" id="vehicleTable">
+                    <thead>
+                    <tr>
+                        <th>ทะเบียนรถ</th>
+                        <th>จังหวัด</th>
+                        <th>ยี่ห้อ</th>
+                        <th>รุ่น</th>
+                        <th>ปี</th>
+                        <th>สี</th>
+                        <th>ประเภทยานพาหนะ</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach(var item in Model.vehicles)
+                    {
+                        <tr>
+                            <td>@item.licensePlate</td>
+                            <td>@item.province</td>
+                            <td>@item.maker</td>
+                            <td>@item.model</td>
+                            <td>@item.year</td>
+                            <td>@item.color</td>
+                            <td>@item.vehicleType</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

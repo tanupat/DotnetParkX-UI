@@ -1,0 +1,111 @@
+@model ParkXUI.ViewModel.Package.PackageMemberViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+<style>
+    .pricing-card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        background-color: #fff;
+    }
+    .pricing-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px 10px 10px 10px;
+    }
+    .pricing-card h5 {
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    .pricing-card .price {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+    .pricing-card .features {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+    }
+    .pricing-card .features li {
+        margin: 10px 0;
+    }
+    .pricing-card .features li .icon {
+        margin-right: 10px;
+    }
+    .pricing-card .btn {
+        margin-top: 20px;
+    }
+    .banner-text h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #7AE74A;
+    }
+    .banner-text p {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .btn-book {
+        margin-top: 10px;
+        background-color: #7AE74A;
+        border: none;
+        font-weight: bold;
+    }
+    .btn .btn-success
+    {
+        background-color: #7AE74A;
+        border: none;
+        font-weight: bold;
+    }
+</style>
+<div class="section section-breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">HOME</a></li>
+            <li class="breadcrumb-item"><a >PACKAGE MEMBER</a>
+            </li>
+        </ol>
+    </div><!--container-->
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        @foreach (var orderMember in Model.PackageMembers)
+        {
+            foreach (var itemPackage in orderMember.package)
+            {
+                <div class="col-md-4  wow fadeIn">
+                    <div class="pricing-card">
+                        <img src="/images/20230109205003-2023-01-09news204951.png" alt="">
+                        <h5>@itemPackage.PackageName</h5>
+                        <div class="price">@orderMember.packageId</div>
+                        <div >OrderID @orderMember.orderId</div>
+                        <ul class="features">
+                            <li>วันหมดอายุ @orderMember.expireDate</li>
+                            <li>จำนวนรถสำหรับแพ็คเกจ @itemPackage.MaxCar คัน</li>		
+                            <li>จอดรถพร้อมกันได้ @itemPackage.CoCurrent คัน</li>
+                            <li>ราคา @itemPackage.Price บาท/ @itemPackage.PackageType</li>
+                        </ul>
+                       
+                        <ul class="features">
+                            <p>สถานที่เข้าจอด</p>
+                            @foreach(var site in itemPackage.Site)
+                            {
+                                <li>
+                                    @site.SiteName
+                                </li>
+                            }
+                            
+                        </ul>
+                      
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>

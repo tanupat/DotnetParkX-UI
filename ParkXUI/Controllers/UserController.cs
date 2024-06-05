@@ -1,21 +1,30 @@
+using System.Net;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using ParkXUI.Interfaces;
 using ParkXUI.Models.Auth;
+using ParkXUI.Models.Vehicles;
 using ParkXUI.Utility;
 using ParkXUI.ViewModel.User;
+
 
 namespace ParkXUI.Controllers;
 
 public class UserController : Controller
 {
     private readonly IAuth _authService;
-    
-    public UserController(IAuth authService)
+    private readonly HttpClientUtility _httpClientUtility;
+    private readonly IVehicle _vehicleService;
+    public UserController(IAuth authService, HttpClientUtility httpClientUtility, IVehicle vehicleService)
     {
         _authService = authService;
+        _httpClientUtility = httpClientUtility;
+        _vehicleService = vehicleService;
     }
+  
+    
     // GET
     [Authorize(Policy = PolicyLogin.Member)]
    public async Task<IActionResult> Profile()
@@ -46,6 +55,15 @@ public class UserController : Controller
         var user = await _authService.GetUserDetail(userId);
       
         return View(userModel);
+    }
+    
+    public async Task<IActionResult> MemberVehicle()
+    {
+        MemberVehicleViewModel memberVehicle = new MemberVehicleViewModel();
+        var userId =   HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+        var user = await _authService.GetUserDetail(userId);
+        memberVehicle.vehicles = await _vehicleService.GetVehiclesMember(user.memberKey);
+        return View(memberVehicle);
     }
     
 }

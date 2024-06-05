@@ -2,7 +2,7 @@ namespace ParkXUI.Models.Vehicles;
 
 public class VehicleModel
 {
-    public string key { get; set; }
+    public string rowKey { get; set; }
     public string memberKey { get; set; }
     public string licensePlate { get; set; }
     public string province { get; set; }

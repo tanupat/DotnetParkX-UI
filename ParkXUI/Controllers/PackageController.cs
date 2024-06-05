@@ -91,8 +91,8 @@ public class PackageController : Controller
             ChargePostResultApi chargePostResultApi = JsonConvert.DeserializeObject<ChargePostResultApi>(json);
             if (chargePostResultApi.status == "success")
             {
-              //  return RedirectToAction("PaymentSuccess");
-              ViewBag.error = "Payment failed. Please try again.";
+                return RedirectToAction("PaymentSuccess", "Package");
+              //ViewBag.error = "Payment failed. Please try again.";
             }
             else
             {
@@ -240,6 +240,22 @@ public class PackageController : Controller
             ViewBag.error = "Payment failed. Please try again.";
         }
         return View(purchasePackageViewModel);
+    }
+    
+    public IActionResult PackageMember()
+    {
+        PackageMemberViewModel packageMemberViewModel = new PackageMemberViewModel();
+        var userId =   HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+      
+        
+        var  packageUser = _httpClientUtility.GetAsync("Packages/PackageMember?memberIdOrKey="+userId).Result;
+
+        if (packageUser.HttpStatus == HttpStatusCode.OK)
+        {
+            packageMemberViewModel.PackageMembers = JsonConvert.DeserializeObject<List<PackageMemberModel>>(packageUser.Data);
+        }
+        
+        return View(packageMemberViewModel);
     }
 
     [AllowAnonymous]
