@@ -1,69 +1,16 @@
-
 @model ParkXUI.ViewModel.FindCarpark.ParkingSitesViewModel
 
 @{
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
-<style>
-	.pricing-card {
-		border: 1px solid #ddd;
-		border-radius: 10px;
-		padding: 20px;
-		text-align: center;
-		margin-bottom: 20px;
-		background-color: #fff;
-	}
-	.pricing-card img {
-		width: 100%;
-		height: auto;
-		border-radius: 10px 10px 10px 10px;
-	}
-	.pricing-card h5 {
-		font-weight: bold;
-		margin-top: 20px;
-	}
-	.pricing-card .price {
-		font-size: 24px;
-		font-weight: bold;
-		margin: 10px 0;
-	}
-	.pricing-card .features {
-		list-style: none;
-		padding: 0;
-		text-align: left;
-	}
-	.pricing-card .features li {
-		margin: 10px 0;
-	}
-	.pricing-card .features li .icon {
-		margin-right: 10px;
-	}
-	.pricing-card .btn {
-		margin-top: 20px;
-	}
-	.banner-text h1 {
-		font-size: 1.5rem;
-		font-weight: bold;
-		color: #7AE74A;
-	}
-	.banner-text p {
-		font-size: 1rem;
-		font-weight: bold;
-	}
-	.btn-book {
-		margin-top: 10px;
-		background-color: #7AE74A;
-		border: none;
-		font-weight: bold;
-	}
-	.btn .btn-success
-	{
-		background-color: #7AE74A;
-		border: none;
-		font-weight: bold;
-	}
-</style>
+@section Styles
+{
+ <link rel="stylesheet" href="~/css/ParkingSite/parking-sites.css" />
+ <link rel="stylesheet" href="~/css/ParkingSite/compare-footer.css" />	
+	
+}
+
 
 <div class="section section-breadcrumb">
     <div class="container">
@@ -72,10 +19,10 @@
             <li class="breadcrumb-item"><a asp-controller="FindCarpark" asp-action="Index">FIND A CAR PARK</a>
             </li>
             <li class="breadcrumb-item"><a href="#">PARK X SITES</a></li>
-            <!-- <li class="breadcrumb-item active"><span>PARK X UDOMSUK</span></li> -->
         </ol>
     </div><!--container-->
 </div>
+
 
 <div class="section section-findpark pb-0">
 	@if(ViewBag.Error != null)
@@ -90,18 +37,14 @@
 	<div class="container">
 		<div class="section-group top">
 			<div class="section-title wow fadeIn">
-				<h2 class="title-lg">@Model.site.siteName</h2>
+				<h2 class="title-lg">@Model.sites.CompanyName</h2>
 			</div>
-
-			<!-- <ul class="nav nav-location justify-content-center wow fadeIn">
-				<li><a class=" " href=""></a></li>
-			</ul> -->
 			<div class="article has-icon wow fadeIn">
 				<div class="row h-100 align-items-center">
 					<div class="icon"><img alt="" src="/images/17d5f6cb.png"></div>
 					<div class="col">
-						<h6>@Model.site.siteName</h6>
-						<p>@Model.site.siteDescription</p>
+						<h6>@Model.sites.CompanyName</h6>
+						<p>@Model.sites.siteDescription</p>
 					</div>
 				</div>
 			</div>
@@ -112,13 +55,13 @@
 			<div class="imagebox tablet-full">
 				<div class="swiper-container  swiper-location ">
 					<div class="swiper-wrapper">
-						@foreach (var imagesSite in Model.site.siteImages)
+						@foreach (var imagesSite in Model.sites.SiteImages)
 						{
 							<div class="swiper-slide">
 								<div class="image">
-									<img class="w-100" src="@imagesSite.image" alt="">
+									<img class="w-100" src="@imagesSite.Image" alt="">
 									<div class="logo-location w-370 wow fadeInRight" style="z-index:999;">
-										<img class="w-100" src="@Model.site.siteLogo" alt="">
+										<img class="w-100" src="@Model.sites.siteLogo" alt="">
 									</div>
 								</div>
 							</div>
@@ -136,6 +79,32 @@
 		<div class="section section-service">
 			<div class="container">
 				<div class="service-wrap">
+					<div class="container mb-3">
+						<div class="row">
+							@foreach (var item in Model.packages)
+							{
+								<div class="col-md-4  wow fadeIn">
+									<div class="pricing-card">
+										<img src="/images/20230109205003-2023-01-09news204951.png" alt="">
+										<h5 id="packageName-@item.key"  name="packageName-@item.key" >@item.PackageName</h5>
+										<div class="price">@item.Price.ToString("N0") บาท/ @item.PackageType</div>
+										<ul class="features">
+											<li>@item.StartDay.ToString("MM/dd/yyyy") - @item.Endday.ToString("MM/dd/yyyy")</li>
+											<li>จอดรถพร้อมกันได้ @item.CoCurrent คัน</li>
+											<li> จำนวนรถสำหรับแพ็คเกจ @item.MaxCar คัน</li>
+
+										</ul>
+										<div class="compare-checkbox">
+											<input type="checkbox" id="compare-@item.key" name="compare" value="@item.key" onchange="parkingSites.onCheckCompare()">
+											<label for="compare-@item.key">เปรียบเทียบ</label>
+										</div>
+										<a class="btn btn-success" asp-controller="Package" asp-action="PackageDetail" asp-route-packageId="@item.key">เลือก</a>
+									</div>
+								</div>
+							}
+						
+					</div>
+					
 					<div class="row">
 						<div class="col-md-4 wow fadeIn">
 							<div class="card card-service">
@@ -147,11 +116,11 @@
 
 								<div class="card-body">
 									<ul>
-										@foreach(var item in Model.site.siteParkServiceRegulations)
+										@foreach (var item in Model.sites.SiteRegulations)
 										{
-											<li>@item.regulation</li>
+											<li>@item</li>
 										}
-										
+
 									</ul>
 								</div>
 								<!--card-body-->
@@ -170,17 +139,17 @@
 
 								<div class="card-body">
 									<table border="1" cellpadding="1" cellspacing="1" class="table table-bordered"
-										style="width: 100%; text-align: center;">
+									       style="width: 100%; text-align: center;">
 										<tbody>
 										<tr style="width: 33.3%;">
 											<td style="text-align: left"><strong>Type of Car</strong></td>
 											<td><strong>Hourly</strong></td>
 											<td><strong>Monthly</strong></td>
 										</tr>
-										@foreach (var item in Model.site.siteParkServiceRates)
+										@foreach (var item in Model.sites.SiteRates)
 										{
 											<tr style="width: 33.3%;">
-												<td style="text-align: left">@item.typeOfVehicle</td>
+												<td style="text-align: left">@item.VehicleType</td>
 												<td>@item.HourlyRate</td>
 												<td>@item.MonthlyRate</td>
 											</tr>
@@ -201,14 +170,14 @@
 								</div>
 								<div class="card-body">
 									<p>Further information or service suggestion please contact.</p>
+									@foreach (var item in Model.sites.SiteContact)
+									{
+										<h6>@item.ContactName</h6>
+										<p>@item.Address</p>
+										<h6>Tel</h6>
+										<p>@item.Phone</p>
+									}
 
-									<h6>@Model.site.siteContact.contactName</h6>
-
-									<p>@Model.site.siteContact.address</p>
-
-									<h6>Tel</h6>
-
-									<p>@Model.site.siteContact.contactPhone</p>
 								</div>
 								<!--card-body-->
 							</div>
@@ -218,46 +187,21 @@
 					</div><!--row-->
 				</div><!--service-wrap-->
 
-				<div class="container mt-5">
-					<div class="row">
-						@foreach (var item in Model.packages)
-						{
-							<div class="col-md-4  wow fadeIn">
-								<div class="pricing-card">
-									<img src="/images/20230109205003-2023-01-09news204951.png" alt="">
-									<h5>@item.PackageName</h5>
-									<div class="price">@item.Price.ToString("N0") บาท/ @item.PackageType</div>
-									<ul class="features">
-										<li>@item.StartDay.ToString("MM/dd/yyyy") - @item.Endday.ToString("MM/dd/yyyy")</li>
-										<li>จอดรถพร้อมกันได้ @item.CoCurrent คัน</li>
-										<li> จำนวนรถสำหรับแพ็คเกจ @item.MaxCar คัน</li>
-										
-									</ul>
-									<a class="btn btn-success" asp-controller="Package" asp-action="PackageDetail" asp-route-packageId="@item.key">เลือก</a>
-								</div>
-							</div>
-
-						}
-						
-					</div>
-				</div>
+			
 				<div class="nearby-places-wrap">
 					<h2 class="title-lg black wow fadeIn">NEARBY PLACES</h2>
-
 					<div class="row">
-						@foreach(var item in Model.site.siteNearbyPlaces)
+						@foreach(var item in Model.sites.SiteNearby)
 						{
 							<div class="col-md-6">
 								<div class="card card-places wow fadeIn">
-									<div class="card-icon"><img alt="" class="wow fadeInUp" src="@item.placeIcon"></div>
-
+									<div class="card-icon"><img alt="" class="wow fadeInUp" src="@item.PlaceIcon"></div>
 									<div class="card-body">
-										<h3>@item.placeType</h3>
-
+										<h3>@item.PlaceType</h3>
 										<ul>
-											@foreach(var place in item.places)
+											@foreach(var place in item.Places)
 											{
-												<li>@place.placeName</li>
+												<li>@place.PlaceName</li>
 											}
 										</ul>
 									</div>
@@ -270,23 +214,98 @@
 					</div><!--row-->
 				</div><!--nearby-places-wrap-->
 			</div><!--container-->
-			</div><!--section-service-->
-			
-			@section Scripts
-			{
-				<script>
-					$(document).ready(function () {
-						var swiper = new Swiper('.swiper-container', {
-							navigation: {
-								nextEl: '.swiper-button-next',
-								prevEl: '.swiper-button-prev',
-							},
-							pagination: {
-								el: '.swiper-pagination',
-								clickable: true,
-							},
-						});
-					
-					});
-				</script>
+		</div><!--section-service  cookie-content -->
+
+<div class="compare-content compare-hide">
+	<div class="container">
+		<form id="compareForm" action="@Url.Action("ComparePackages")" method="post">
+			<div id="packageCompareList" class="compare-list"></div>
+		</form>
+	</div>
+</div><!--compare-content-->
+		</div>
+
+@section Scripts
+{
+	<script>
+		$(document).ready(function () {
+			if ($('.swiper-container').length) {
+				var swiper = new Swiper('.swiper-container', {
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev',
+					},
+					pagination: {
+						el: '.swiper-pagination',
+						clickable: true,
+					},
+				});
 			}
+
+			parkingSites.init();
+		});
+
+		var parkingSites = (function () {
+			var values = [];
+			var packageNameList = [];
+
+			return {
+				init: function () {
+					this.onCheckCompare();
+					this.onRemoveCompare();
+				},
+				onCheckCompare: function () {
+					$(".compare-checkbox input").change(function () {
+						var checked = $(".compare-checkbox input:checked");
+						values = [];
+						packageNameList = [];
+						//get value of checked
+					
+						if (checked.length > 0) {
+							$(".compare-content").removeClass("compare-hide").addClass("compare-show");
+							checked.each(function () {
+								packageNameList.push($("#packageName-" + $(this).val()).text());
+								values.push($(this).val());
+							});
+							//add ui to packageCompareList
+							var html = "<input type='hidden' name='SiteID' value='@Model.sites.SiteID' />";
+							for (var i = 0; i < values.length; i++) {
+								html += "<div class='compare-item'>";
+								html += "<input type='hidden' name='PackageIds[]' value='" + values[i] + "' />";
+								html += "<span class='compare-name'>" + packageNameList[i] + "</span>";
+								html += "<a href='#' class='remove-compare-item' data-id='" + values[i] + "'>X</a>";
+								html += "</div>";
+							}
+							html += "<button type='submit' class='compare-button'>เปรียบเทียบ</button>";
+							
+							$("#packageCompareList").html(html);
+						
+						} else {
+							$(".compare-content").removeClass("compare-show").addClass("compare-hide");
+						}
+					});
+				},
+				onRemoveCompare: function () {
+					$(document).on('click', '.remove-compare-item', function (e) {
+						e.preventDefault();
+						var id = $(this).data("id");
+						// Uncheck the corresponding checkbox
+						$("#compare-" + id).prop('checked', false);
+
+						var index = values.indexOf(id.toString());
+						if (index > -1) {
+							values.splice(index, 1);
+							packageNameList.splice(index, 1);
+						}
+
+						$(this).parent().remove();
+						if ($(".compare-checkbox input:checked").length === 0) {
+							
+							$(".compare-content").removeClass("compare-show").addClass("compare-hide");
+						}
+					});
+				}
+			};
+})();
+   </script>
+}

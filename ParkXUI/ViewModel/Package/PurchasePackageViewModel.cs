@@ -6,6 +6,7 @@ namespace ParkXUI.ViewModel.Package;
 
 public class PurchasePackageViewModel
 {
+    public string userId { get; set; }
     public PackageModel Package { get; set; }
     public List<MemberVehicle> MemberVehicles { get; set; }
     

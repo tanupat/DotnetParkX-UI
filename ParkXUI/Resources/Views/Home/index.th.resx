@@ -24,4 +24,53 @@
     <data name="HomeMenu" xml:space="preserve">
         <value>เมนูหลัก</value>
     </data>
+    <data name="ParkXDescription" xml:space="preserve">
+        <value>พาร์คเอ็กซ์ สะดวก สะอาด ปลอดภัย &lt;br&gt;
+ตอบโจทย์ ตรงจุด ชีวิตคนเมือง</value>
+    </data>
+    <data name="FindCarpark" xml:space="preserve">
+        <value>หาที่จอดรถ</value>
+    </data>
+    <data name="Location" xml:space="preserve">
+        <value>ทำเลที่ตั้ง</value>
+    </data>
+    <data name="LocationDescription" xml:space="preserve">
+        <value>บริการที่จอดรถบนทําเลสำคัญย่านธุรกิจใจกลางเมือง
+															ที่มีสิ่งอํานวยความสะดวกครบครัน
+															สถานที่สะอาดและมีความปลอดภัยสูง</value>
+    </data>
+    <data name="more" xml:space="preserve">
+        <value>เพิ่มเติม</value>
+    </data>
+    <data name="ReceiveNews" xml:space="preserve">
+        <value>รับข่าวสาร</value>
+    </data>
+    <data name="RegisterNew" xml:space="preserve">
+        <value>ลงทะเบียนเพื่อรับข่าวสารและโปรโมชั่น ข้อเสนอพิเศษ</value>
+    </data>
+    <data name="Register" xml:space="preserve">
+        <value>ลงทะเบียน</value>
+    </data>
+    <data name="yourEmail" xml:space="preserve">
+        <value>อีเมลของคุณ</value>
+    </data>
+    <data name="cookie-des" xml:space="preserve">
+        <value>เราใช้คุกกี้เพื่อให้แน่ใจว่าเราได้มอบประสบการณ์ที่ดีที่สุดในการใช้งานเว็บไซต์ของเราหากคุณใช้เว็บไซต์ต่อ
+								หรือปิดข้อความนี้ลงเราถือว่าคุณยอมรับการใช้งานคุกกี้</value>
+    </data>
+    <data name="PleaseRead" xml:space="preserve">
+        <value>กรุณาอ่าน</value>
+    </data>
+    <data name="TermsAndConditions" xml:space="preserve">
+        <value>ข้อตกลงและเงื่อนไข</value>
+    </data>
+    <data name="And" xml:space="preserve">
+        <value>และ</value>
+    </data>
+    <data name="PrivacyPolicy" xml:space="preserve">
+        <value>นโยบายความเป็นส่วนตัว</value>
+    </data>
+    <data name="Accept" xml:space="preserve">
+        <value>ยอมรับ</value>
+    </data>
 </root>

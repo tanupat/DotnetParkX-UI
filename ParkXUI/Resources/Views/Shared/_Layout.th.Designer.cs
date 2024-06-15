@@ -56,5 +56,77 @@ namespace ParkXUI.Resources.Views.Shared {
                 return ResourceManager.GetString("FindCar", resourceCulture);
             }
         }
+        
+        internal static string FooterDes {
+            get {
+                return ResourceManager.GetString("FooterDes", resourceCulture);
+            }
+        }
+        
+        internal static string CompanyName {
+            get {
+                return ResourceManager.GetString("CompanyName", resourceCulture);
+            }
+        }
+        
+        internal static string Building {
+            get {
+                return ResourceManager.GetString("Building", resourceCulture);
+            }
+        }
+        
+        internal static string street {
+            get {
+                return ResourceManager.GetString("street", resourceCulture);
+            }
+        }
+        
+        internal static string Subdistrict {
+            get {
+                return ResourceManager.GetString("Subdistrict", resourceCulture);
+            }
+        }
+        
+        internal static string province {
+            get {
+                return ResourceManager.GetString("province", resourceCulture);
+            }
+        }
+        
+        internal static string Tel {
+            get {
+                return ResourceManager.GetString("Tel", resourceCulture);
+            }
+        }
+        
+        internal static string specialDes {
+            get {
+                return ResourceManager.GetString("specialDes", resourceCulture);
+            }
+        }
+        
+        internal static string Home {
+            get {
+                return ResourceManager.GetString("Home", resourceCulture);
+            }
+        }
+        
+        internal static string PARKING_SOLUTIONS {
+            get {
+                return ResourceManager.GetString("PARKING_SOLUTIONS", resourceCulture);
+            }
+        }
+        
+        internal static string NEWS_PROMOTIONS {
+            get {
+                return ResourceManager.GetString("NEWS_PROMOTIONS", resourceCulture);
+            }
+        }
+        
+        internal static string CONTACT_US {
+            get {
+                return ResourceManager.GetString("CONTACT_US", resourceCulture);
+            }
+        }
     }
 }

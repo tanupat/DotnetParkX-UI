@@ -53,6 +53,7 @@
     <link href="~/css/brands.css" rel="stylesheet">
     <link href="~/css/solid.css" rel="stylesheet">
     <link href="~/css/dev.css" rel="stylesheet">
+    <link href="~/css/park-x.css" rel="stylesheet"/>
     <script src="~/js/jquery-1.12.4.min.js"></script>
     <!--  <link href="~/css/output.css" rel="stylesheet" /> -->
    
@@ -71,6 +72,9 @@
         }
         
     </style>
+
+    
+    await @RenderSectionAsync("Styles", required: false)
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -275,8 +279,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="company-infos">
                             <img class="logo" src="/images/logo-white.svg" alt="">
-                            <p>บริการที่จอดรถบนทําเลสําคัญ ย่านธุรกิจใจกลางเมือง
-                                มีสิ่งอํานวยความสะดวก ครบครัน สะดวก สะอาด ปลอดภัย </p>
+                            <p>@localizer["FooterDes"] </p>
                         </div>
                     </div><!--col-lg-3-->
 
@@ -284,16 +287,16 @@
                         <ul class="company-contact">
                             <li>
                                 <span class="icons icon-home"></span>
-                                <h4>บริษัท เพนต้า 591 จำกัด</h4>
-                                อาคาร สมัชชาวาณิช 2 <br>
-                                591 ถนนสุขุมวิท (ซอย 33)<br>
-                                แขวงคลองตันเหนือ เขตวัฒนา<br>
-                                กรุงเทพฯ 10110
+                                <h4>@localizer["CompanyName"]</h4>
+                                @localizer["Building"] <br>
+                                @localizer["street"]<br>
+                                @localizer["Subdistrict"]<br>
+                                @localizer["province"]
                             </li>
 
                             <li>
                                 <span class="icons icon-headphone"></span>
-                                <p>02-4070777 ต่อ 5902-4</p>
+                                <p>@localizer["Tel"]</p>
                             </li>
 
                             <li>
@@ -307,25 +310,24 @@
 
                     <div class="col-lg-3 col-md-6">
                         <ul class="footer-links">
-                            <li><a href="https://www.parkx.com/en">หน้าแรก</a></li>
+                            <li><a href="https://www.parkx.com/en">@localizer["Home"]</a></li>
                             <li><a
-                                    href="https://www.parkx.com/en/find-a-carpark">หาที่จอดรถ</a>
+                                    href="https://www.parkx.com/en/find-a-carpark">@localizer["FindCar"]</a>
                             </li>
                             <li><a
-                                    href="https://www.parkx.com/en/parking-solutions/about-park-x">โซลูชั่นที่จอดรถ</a>
+                                    href="https://www.parkx.com/en/parking-solutions/about-park-x">@localizer["PARKING_SOLUTIONS"]</a>
                             </li>
                             <li><a
-                                    href="https://www.parkx.com/en/news-promotions">ข่าวสารและโปรโมชั่น</a>
+                                    href="https://www.parkx.com/en/news-promotions">@localizer["NEWS_PROMOTIONS"]</a>
                             </li>
-                            <li><a href="https://www.parkx.com/en/contact-us">ติดต่อเรา</a>
+                            <li><a href="https://www.parkx.com/en/contact-us">@localizer["CONTACT_US"]</a>
                             </li>
                         </ul>
                     </div><!--col-lg-3-->
 
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-infos">
-                            <p>กดติดตามบัญชีอย่างเป็นทางการของเรา
-                                เพื่อรับข่าวสารและโปรโมชั่น</p>
+                            <p>@localizer["specialDes"]</p>
                             <div class="followus dark">
                                 <a class="facebook social"
                                    href="https://www.facebook.com/parkxsolutions/"

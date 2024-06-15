@@ -139,7 +139,8 @@
 
 <div class="container mt-5 mb-5">
     <div class="contact-form-wrap">
-        <input type="hidden" id="packageDetail" name="packageDetail" value='@modelJson' />
+    <input type="hidden" id="packageDetail" name="packageDetail" value='@modelJson' />
+    <input type="hidden" id="userId" name="userId" value="@Model.userId" />
        @if(Model.SummaryPayment != null && Model.PaymentPayload != null)
         {
            <form  role="form" class="form-contact needs-validation"  accept-charset="utf-8" style="visibility: visible;" novalidate>
@@ -203,50 +204,7 @@
                 </div><!--col-sm-12-->
                  @if (Model.SummaryPayment.PaymentMethod == "qr")
                 { 
-                    <!--  
-                    <form method="post" action="PostPayment">
-                        <input
-                            type="hidden"
-                            name="amount"
-                            value="@Model.PaymentPayload.amount"
-                        />
-                        <input type="hidden" name="currency" value="@Model.PaymentPayload.currency" />
-                        <input
-                            type="hidden"
-                            name="payment-methods"
-                            value="@Model.PaymentPayload.paymentMethods"
-                        />
-                        <input type="hidden" name="name" value="@Model.PaymentPayload.name" />
-                        <input
-                            type="hidden"
-                            name="mid"
-                            value="@Model.PaymentPayload.mid"
-                        />
-                        <input
-                            type="hidden"
-                            name="ref-number"
-                            value="@Model.PaymentPayload.refNumber"
-                        />
-                        <input
-                            type="hidden"
-                            name="order-id"
-                            value="@Model.PaymentPayload.orderId"
-                        />
-
-                        <input
-                            type="hidden"
-                            name="ref_1"
-                            value="@Model.PaymentPayload.ref_1"
-                        />
-                        <input
-                            type="hidden"
-                            name="ref_2"
-                            value="@Model.PaymentPayload.ref_2"
-                        />
-                       
-                  
-                    </form>  
-                    -->
+                   
                     <script
                         type="text/javascript"
                         src="@Model.PaymentPayload.srcScript"
@@ -560,8 +518,10 @@
             var endDate = document.getElementById('endDate');
             var maxCarElement = document.getElementById('maxCar');
             var packageDetail = JSON.parse(document.getElementById('packageDetail').value);
+            var userId = document.getElementById('userId').value;
            // let vehicleList =  JSON.parse(localStorage.getItem(''))  // Get the vehicle list from local storage
-           let  vehicleList = JSON.parse(localStorage.getItem('vehicleList')) || [];
+          // let  vehicleList = JSON.parse(localStorage.getItem('vehicleList')) || [];
+            let  vehicleList = [];
             var countVehicle = document.getElementById('countVehicle');
             var messageModal = document.getElementById('modalMessages');
             const vehicleListGroup = document.getElementById('vehicleListGroup');
@@ -578,7 +538,8 @@
                     countVehicle.textContent = 0;
                     if (packageDetail.memberVehicles.length > 0) 
                     {
-                        localStorage.setItem('vehicleList', JSON.stringify(packageDetail.memberVehicles));
+                        purchasePackage.onLoadVehicleList();
+                        //localStorage.setItem('vehicleList', JSON.stringify(packageDetail.memberVehicles));
                         maxCarData.value = packageDetail.package.maxCar;
                         coCurrentData.value = packageDetail.package.coCurrent;
                         purchasePackage.onsetVehicleListGroup();
@@ -740,7 +701,7 @@
                         };
 
                         vehicleList.push(vehicle);
-                        localStorage.setItem('vehicleList', JSON.stringify(vehicleList));
+                       // localStorage.setItem('vehicleList', JSON.stringify(vehicleList));
                         purchasePackage.onsetVehicleListGroup();
 
                         formVehicle.reset();
@@ -761,6 +722,23 @@
                             : (coCurrentCount - packageDetail.package.coCurrent) * packageDetail.package.pricePerCar);
                     return price.toLocaleString();
         }, 
+        onLoadVehicleList: function () {
+           $.ajax({
+                url: '@Url.Action("GetVehicleById", "User", new { memberId = Model.userId })',
+                type: 'GET',
+                success: function (data) {
+                    console.log('data vehicle',data);
+                   vehicleList = data;
+                   
+                 //   localStorage.setItem('vehicleList', JSON.stringify(vehicleList));
+                    purchasePackage.onsetVehicleListGroup();
+                },
+                error: function (error) {
+                   messageModal.querySelector('.contentMes').textContent = 'An error occurred while retrieving the vehicle list.';
+                    $('#modalMessages').modal('show');
+                }
+            });
+        },
         onsubmit: function () {
                     const form = document.getElementById('form_purchase');
                         // Get the selected vehicles

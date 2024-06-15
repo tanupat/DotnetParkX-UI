@@ -20,9 +20,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddAuthorization(options =>
 {
-    options.AddPolicy(PolicyLogin.Member.ToString(), policy => policy.RequireAssertion(context =>
-        context.User.IsInRole(PolicyLogin.Admin.ToString()) || context.User.IsInRole(PolicyLogin.Member.ToString())));
-
+    options.AddPolicy(PolicyLogin.Member.ToString(), policy => policy.RequireAssertion(context => context.User.IsInRole(PolicyLogin.Admin.ToString()) || context.User.IsInRole(PolicyLogin.Member.ToString())));
     options.AddPolicy(PolicyLogin.Admin.ToString(), policy => policy.RequireRole(PolicyLogin.Admin.ToString()));
 });
 
@@ -109,6 +107,7 @@ builder.Services.AddLogging(config =>
 builder.Services.AddScoped<IAuth, AuthService>();
 builder.Services.AddScoped<IPaymentService, PaymentService>();
 builder.Services.AddScoped<IVehicle, VehicleService>();
+builder.Services.AddScoped<ISites, SitesService>();
 
 // Add session services
 builder.Services.AddSession(options =>

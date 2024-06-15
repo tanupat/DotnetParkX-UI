@@ -24,4 +24,50 @@
     <data name="HomeMenu" xml:space="preserve">
         <value>HomeMenu1</value>
     </data>
+    <data name="ParkXDescription" xml:space="preserve">
+        <value>Urban Parking Solutions &lt;br&gt;
+Clean, Safe and Convenient Parking Facilities</value>
+    </data>
+    <data name="FindCarpark" xml:space="preserve">
+        <value>Find a car park</value>
+    </data>
+    <data name="Location" xml:space="preserve">
+        <value>Location</value>
+    </data>
+    <data name="LocationDescription" xml:space="preserve">
+        <value>Parking solutions that integrate with the public transport system and well located. Convenience, clean and secure parking space with good services and facilities.</value>
+    </data>
+    <data name="more" xml:space="preserve">
+        <value>more</value>
+    </data>
+    <data name="ReceiveNews" xml:space="preserve">
+        <value>SUBSCRIBE</value>
+    </data>
+    <data name="RegisterNew" xml:space="preserve">
+        <value>Stay up to date with our special offers and promotions.</value>
+    </data>
+    <data name="Register" xml:space="preserve">
+        <value>Register</value>
+    </data>
+    <data name="yourEmail" xml:space="preserve">
+        <value>Your e-mail</value>
+    </data>
+    <data name="cookie-des" xml:space="preserve">
+        <value>We use cookies to ensure that we give you the best experience on our website. By continuing to browse the site or close this message, you agree to our use</value>
+    </data>
+    <data name="PleaseRead" xml:space="preserve">
+        <value>Please Read</value>
+    </data>
+    <data name="TermsAndConditions" xml:space="preserve">
+        <value>Terms and Conditions</value>
+    </data>
+    <data name="And" xml:space="preserve">
+        <value>And</value>
+    </data>
+    <data name="PrivacyPolicy" xml:space="preserve">
+        <value>Privacy Policy</value>
+    </data>
+    <data name="Accept" xml:space="preserve">
+        <value>accept</value>
+    </data>
 </root>

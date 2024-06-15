@@ -24,4 +24,40 @@
     <data name="FindCar" xml:space="preserve">
         <value>หาที่จอดรถ</value>
     </data>
+    <data name="FooterDes" xml:space="preserve">
+        <value>บริการที่จอดรถบนทําเลสําคัญ ย่านธุรกิจใจกลางเมือง มีสิ่งอํานวยความสะดวก ครบครัน สะดวก สะอาด ปลอดภัย</value>
+    </data>
+    <data name="CompanyName" xml:space="preserve">
+        <value>บริษัท เพนต้า 591 จำกัด</value>
+    </data>
+    <data name="Building" xml:space="preserve">
+        <value>อาคาร สมัชชาวาณิช 2</value>
+    </data>
+    <data name="street" xml:space="preserve">
+        <value>591 ถนนสุขุมวิท (ซอย 33)</value>
+    </data>
+    <data name="Subdistrict" xml:space="preserve">
+        <value>แขวงคลองตันเหนือ เขตวัฒนา</value>
+    </data>
+    <data name="province" xml:space="preserve">
+        <value>กรุงเทพฯ 10110</value>
+    </data>
+    <data name="Tel" xml:space="preserve">
+        <value>02-4070777 ต่อ 5902-4</value>
+    </data>
+    <data name="specialDes" xml:space="preserve">
+        <value>กดติดตามบัญชีอย่างเป็นทางการของเรา เพื่อรับข่าวสารและโปรโมชั่น</value>
+    </data>
+    <data name="Home" xml:space="preserve">
+        <value>หน้าแรก</value>
+    </data>
+    <data name="PARKING_SOLUTIONS" xml:space="preserve">
+        <value>โซลูชั่นที่จอดรถ</value>
+    </data>
+    <data name="NEWS_PROMOTIONS" xml:space="preserve">
+        <value>ข่าวสารและโปรโมชั่น</value>
+    </data>
+    <data name="CONTACT_US" xml:space="preserve">
+        <value>ติดต่อเรา</value>
+    </data>
 </root>

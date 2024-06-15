@@ -53,6 +53,7 @@ public class PackageController : Controller
         PurchasePackageViewModel purchasePackageViewModel = new PurchasePackageViewModel();
         var userId =   HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
         var userModel =  _authService.GetUserDetail(userId).Result;
+        purchasePackageViewModel.userId = userId;
         
         var apiPackageResult = await _httpClientUtility.GetAsync("Packages/Packages?packageIdOrKey=" + packageId);
         purchasePackageViewModel.MemberVehicles = userModel.memberVehicle;

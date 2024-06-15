@@ -88,7 +88,7 @@ namespace ParkXUI.Controllers
                         };
                         await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
                             new ClaimsPrincipal(claimsIdentity), authProperties);
-                        return RedirectToAction("Profile", "User");
+                        return RedirectToAction("Index", "FindCarpark");
                     }
                 }
             }
@@ -186,7 +186,7 @@ namespace ParkXUI.Controllers
                 };
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
                     new ClaimsPrincipal(claimsIdentity), authProperties);
-                return RedirectToAction("Profile", "User");
+                return RedirectToAction("Index", "FindCarpark");
             }
             else
             {
@@ -254,7 +254,7 @@ namespace ParkXUI.Controllers
                         };
                         await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
                             new ClaimsPrincipal(claimsIdentity), authProperties);
-                        return RedirectToAction("Profile", "User");
+                        return RedirectToAction("Index", "FindCarpark");
                     }
                     else
                     {

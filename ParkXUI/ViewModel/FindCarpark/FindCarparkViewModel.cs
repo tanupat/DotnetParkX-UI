@@ -5,6 +5,6 @@ namespace ParkXUI.ViewModel.FindCarpark;
 
 public class FindCarparkViewModel
 {
-    public List<SiteModel> sites { get; set; }
+    public List<LocalizedSite> sites { get; set; }
    
 }

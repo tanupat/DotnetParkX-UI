@@ -1,0 +1,62 @@
+@model ParkXUI.ViewModel.ParkingSites.ComparePackagesViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+@section Styles
+{
+ <link rel="stylesheet" href="~/css/ParkingSite/parking-sites.css" />
+}
+
+<div class="section section-breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">HOME</a></li>
+            <li class="breadcrumb-item"><a asp-controller="FindCarpark" asp-action="Index">FIND A CAR PARK</a>
+            </li>
+            <li class="breadcrumb-item"><a asp-controller="ParkingSites" asp-action="Index" asp-route-siteId="@Model.SiteID">PARK X SITES</a></li>
+            <li class="breadcrumb-item"><a href="#">COMPARE PACKAGE</a></li>
+        </ol>
+    </div><!--container-->
+</div>
+<div class="section section-findpark pb-0">
+    @if(ViewBag.Error != null)
+    {
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @ViewBag.Error
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    }
+
+    <div class="section section-service">
+        <div class="container">
+            <div class="service-wrap">
+                <div class="container mb-3">
+                    <div class="row">
+                        @foreach (var item in Model.packages)
+                        {
+                            <div class="col-md-4  wow fadeIn">
+                                <div class="pricing-card">
+                                    <img src="/images/20230109205003-2023-01-09news204951.png" alt="">
+                                    <h5 id="packageName-@item.key"  name="packageName-@item.key" >@item.PackageName</h5>
+                                    <div class="price">@item.Price.ToString("N0") บาท/ @item.PackageType</div>
+                                    <ul class="features">
+                                        <li>@item.StartDay.ToString("MM/dd/yyyy") - @item.Endday.ToString("MM/dd/yyyy")</li>
+                                        <li>จอดรถพร้อมกันได้ @item.CoCurrent คัน</li>
+                                        <li> จำนวนรถสำหรับแพ็คเกจ @item.MaxCar คัน</li>
+
+                                    </ul>
+                                    <a class="btn btn-success" asp-controller="Package" asp-action="PackageDetail" asp-route-packageId="@item.key">เลือก</a>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

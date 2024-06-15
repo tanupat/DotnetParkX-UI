@@ -1,4 +1,5 @@
 ﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@model ParkXUI.ViewModel.Home.HomeViewModel
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -17,10 +18,9 @@
         <div class="banner-caption">
             <div class="inner">
                 <h2>
-                    <span class="wow fadeInLeft">พาร์คเอ็กซ์ สะดวก สะอาด ปลอดภัย<br>
-                        ตอบโจทย์ ตรงจุด ชีวิตคนเมือง</span>
+                    <span class="wow fadeInLeft">@localizer["ParkXDescription"]</span>
                 </h2>
-                <a class="btn w-270 wow fadeInUp" href="https://www.parkx.com/en/find-a-carpark" >หาที่จอดรถ</a>
+                <a class="btn w-270 wow fadeInUp" href="@Url.Action("Index","FindCarpark")"  >@localizer["FindCarpark"]</a>
             </div>
         </div>
     </div>
@@ -30,256 +30,70 @@
         <div class="images">
             <img class="w-100 d-none d-md-block" id="ShowIMG1"
                  src="images/20200510145826-2020-05-10banner145823.jpg" alt="">
-            <div class="background d-block d-md-none"
-                 style="background-image: url(images/20200510145826-2020-05-10banner145823.jpg);">
+            <div class="background d-block d-md-none" style="background-image: url(images/20200510145826-2020-05-10banner145823.jpg);">
             </div>
         </div>
 
         <div class="banner-caption">
             <div class="inner">
                 <h2>
-                    <span class="wow fadeInLeft">พาร์คเอ็กซ์ สะดวก สะอาด ปลอดภัย<br>
-                        ตอบโจทย์ ตรงจุด ชีวิตคนเมือง</span>
+                    <span class="wow fadeInLeft">@localizer["ParkXDescription"]</span>
                 </h2>
-                <a class="btn w-270 wow fadeInUp" href="https://www.parkx.com/en/find-a-carpark" >หาที่จอดรถ</a>
+                <a class="btn w-270 wow fadeInUp" href="@Url.Action("Index","FindCarpark")" >@localizer["FindCarpark"]</a>
             </div>
         </div>
     </div>
-
-				
-					
-
-
 </div><!--section-banner-->
-<div class=" section section-location pb-100">
+                                   <div class=" section section-location pb-100">
 										<div class="container wow fadeIn">
 											<div class="section-inner">
 
 												<div class="article f20 top d-flex">
-													<h2 class="title-lg wow fadeInUp">ทำเลที่ตั้ง</h2>
+													<h2 class="title-lg wow fadeInUp">@localizer["Location"]</h2>
 													<div class="col wow fadeInUp">
-														<p class="mb-0">บริการที่จอดรถบนทําเลสำคัญย่านธุรกิจใจกลางเมือง
-															ที่มีสิ่งอํานวยความสะดวกครบครัน
-															สถานที่สะอาดและมีความปลอดภัยสูง</p>
+														<p class="mb-0">@localizer["LocationDescription"]</p>
 													</div>
 												</div>
-
-												<div class="swiper-container swiper-location wow fadeInUp"
-													data-wow-delay="0.2s">
-													<div class="swiper-wrapper">
-														<div class="swiper-slide">
-															<div class="image">
-																<a
-																	href="https://www.parkx.com/en/find-a-carpark/park-x-sites/park-x-ekkamai">
-																	<img class="w-100"
-																		src="images/20211122150857-2021-11-22location150850.jpg"
-																		alt="">
-																	<div class="logo"><img
-																			src="images/20200507142536-2020-05-07location141738.png"
-																			alt=""></div>
-																	<p class="note">
-																		*ภาพจำลองใช้เพื่องานโฆษณาเท่านั้น</p>
-																</a>
-															</div>
-															<div class="article f20">
-																<a
-																	href="https://www.parkx.com/en/find-a-carpark/park-x-sites/park-x-ekkamai">
-																	<h3>พาร์คเอ็กซ์ เอกมัย</h3>
-																</a>
-																<p>ตั้งอยู่บนทําเลที่สะดวกสบาย บนถนนสุขุมวิท ซอย 63
-																	(เอกมัย) อยู่ระหว่างซอย 15 และซอย 17
-																	สามารถเข้าถึงได้ง่าย ทั้งจาก
-																	ถนนสุขุมวิทและถนนเพชรบุรี
-																	และยังสามารถเชื่อมต่อผ่านทางสุขุมวิท 71
-																	เพื่อทะลุไปยังถนนพัฒนาการและถนนรามคําแหงได้ง่ายอีกด้วย
-																	พร้อมทั้งมีพื้นที่ค้าปลีกให้เช่า ที่ชั้น Basement
-																	และ ชั้น G;</p>
-																<div class="buttons">
-																	<a class="btn w-270"
-																		href="https://www.parkx.com/en/find-a-carpark/park-x-sites/park-x-ekkamai">เพิ่มเติม</a>
+											
+											<div class="swiper-container swiper-location wow fadeInUp" data-wow-delay="0.2s">
+												<div class="swiper-wrapper">
+												  
+												@if (Model.sites != null)
+												{
+													if (Model.sites.Count > 0)
+													{
+														@foreach (var item in Model.sites)
+														{
+															<div class="swiper-slide">
+																<div class="image">
+																	<a href="@Url.Action("Index","ParkingSites",new { siteId = item.SiteID.ToString() })">
+																		<img class="w-100"
+																		     src="@item.SiteImages.FirstOrDefault().Image"
+																		     alt="">
+																		<div class="logo">
+																			<img
+																				src="@item.siteLogo"
+																				alt=""></div>
+																		<p class="note">
+																			*ภาพจำลองใช้เพื่องานโฆษณาเท่านั้น</p>
+																	</a>
 																</div>
-															</div>
-														</div><!--swiper-slide-->
-														<div class="swiper-slide">
-															<div class="image">
-																<a
-																	href="https://www.parkx.com/en/find-a-carpark/park-x-sites/park-x-udomsuk">
-																	<img class="w-100"
-																		src="images/20200531094307-2020-05-31location094305.jpg"
-																		alt="">
-																	<div class="logo"><img
-																			src="images/20200507153605-2020-05-07location153604.png"
-																			alt=""></div>
-																</a>
-															</div>
-															<div class="article f20">
-																<a
-																	href="https://www.parkx.com/en/find-a-carpark/park-x-sites/park-x-udomsuk">
-																	<h3>พาร์คเอ็กซ์ อุดมสุข</h3>
-																</a>
-																<p dir="auto">ตั้งอยู่บนถนนสุขุมวิท ซอย
-																	66/1ใกล้กับสถานีรถไฟฟ้าบีทีเอสอุดมสุข
-																	และใช้เวลาเพียง 10นาที
-																	โดยรถยนต์ถึงทางพิเศษเฉลิมมหานคร และทางด่วนบูรพาวิถี
-																	ทั้งยังเชื่อมต่อถนนสุขุมวิทกับถนนศรีนครินทร์</p>
-																<div class="buttons">
-																	<a class="btn w-270"
-																		href="https://www.parkx.com/en/find-a-carpark/park-x-sites/park-x-udomsuk">เพิ่มเติม</a>
+																<div class="article f20">
+																	<a
+																		href="@Url.Action("Index","ParkingSites",new { siteId = item.SiteID.ToString() })">
+																		<h3>@item.CompanyName</h3>
+																	</a>
+																	<p>@item.siteDescription</p>
+																	<div class="buttons">
+																		<a class="btn w-270"
+																		   href="@Url.Action("Index","ParkingSites",new { siteId = item.SiteID.ToString() })">@localizer["more"]</a>
+																	</div>
 																</div>
-															</div>
-														</div><!--swiper-slide-->
-														<div class="swiper-slide">
-															<div class="image">
-																<a
-																	href="https://www.parkx.com/en/find-a-carpark/park-x-sites/bhiraj-tower-at-sathon">
-																	<img class="w-100"
-																		src="images/20200525153700-2020-05-25location153659.jpg"
-																		alt="">
-																</a>
-															</div>
-															<div class="article f20">
-																<a
-																	href="https://www.parkx.com/en/find-a-carpark/park-x-sites/bhiraj-tower-at-sathon">
-																	<h3>รัชทาวเวอร์ แอท สาทร</h3>
-																</a>
-																ตั้งอยู่บนถนนสุขุมวิท ซอย
-																66/1 ใกล้กับสถานีรถไฟฟ้าบีทีเอสอุดมสุข
-																และใช้เวลาเพียง 10นาที โดยรถยนต์ถึงทางพิเศษเฉลิมมหานคร
-																และทางด่วนบูรพาวิถี
-																ทั้งยังเชื่อมต่อถนนสุขุมวิทกับถนนศรีนครินทร์ <div
-																	class="buttons">
-																	<a class="btn w-270"
-																		href="https://www.parkx.com/en/find-a-carpark/park-x-sites/bhiraj-tower-at-sathon">เพิ่มเติม</a>
-																</div>
-															</div>
-														</div><!--swiper-slide-->
-														<div class="swiper-slide">
-															<div class="image">
-																<a
-																	href="https://www.parkx.com/en/find-a-carpark/park-x-sites/bhiraj-tower-at-emquartier">
-																	<img class="w-100"
-																		src="images/20200525155040-2020-05-25location155038.jpg"
-																		alt="">
-																</a>
-															</div>
-															<div class="article f20">
-																<a
-																	href="https://www.parkx.com/en/find-a-carpark/park-x-sites/bhiraj-tower-at-emquartier">
-																	<h3>อาคาร รัชทาวเวอร์ แอท เอ็มควอเทียร์</h3>
-																</a>
-																ตั้งอยู่บนถนนสุขุมวิท ซอย
-																66/1 ใกล้กับสถานีรถไฟฟ้าบีทีเอสอุดมสุข
-																และใช้เวลาเพียง 10นาที โดยรถยนต์ถึงทางพิเศษเฉลิมมหานคร
-																และทางด่วนบูรพาวิถี
-																ทั้งยังเชื่อมต่อถนนสุขุมวิทกับถนนศรีนครินทร์ <div
-																	class="buttons">
-																	<a class="btn w-270"
-																		href="https://www.parkx.com/en/find-a-carpark/park-x-sites/bhiraj-tower-at-emquartier">เพิ่มเติม</a>
-																</div>
-															</div>
-														</div><!--swiper-slide-->
-														<div class="swiper-slide">
-															<div class="image">
-																<a
-																	href="https://www.parkx.com/en/find-a-carpark/park-x-sites/bhiraj-tower-at-bitec">
-																	<img class="w-100"
-																		src="images/20200525154935-2020-05-25location154933.jpg"
-																		alt="">
-																</a>
-															</div>
-															<div class="article f20">
-																<a
-																	href="https://www.parkx.com/en/find-a-carpark/park-x-sites/bhiraj-tower-at-bitec">
-																	<h3>รัชทาวเวอร์ แอท ไบเทค</h3>
-																</a>
-																ตั้งอยู่บนถนนสุขุมวิท ซอย
-																66/1 ใกล้กับสถานีรถไฟฟ้าบีทีเอสอุดมสุข
-																และใช้เวลาเพียง 10นาที โดยรถยนต์ถึงทางพิเศษเฉลิมมหานคร
-																และทางด่วนบูรพาวิถี
-																ทั้งยังเชื่อมต่อถนนสุขุมวิทกับถนนศรีนครินทร์ <div
-																	class="buttons">
-																	<a class="btn w-270"
-																		href="https://www.parkx.com/en/find-a-carpark/park-x-sites/bhiraj-tower-at-bitec">เพิ่มเติม</a>
-																</div>
-															</div>
-														</div><!--swiper-slide-->
-														<div class="swiper-slide">
-															<div class="image">
-																<a
-																	href="https://www.parkx.com/en/find-a-carpark/park-x-sites/united-business-center-2">
-																	<img class="w-100"
-																		src="images/20200525154807-2020-05-25location154805.jpg"
-																		alt="">
-																</a>
-															</div>
-															<div class="article f20">
-																<a
-																	href="https://www.parkx.com/en/find-a-carpark/park-x-sites/united-business-center-2">
-																	<h3>อาคารสมัชชาวาณิช 2</h3>
-																</a>
-																ตั้งอยู่บนถนนสุขุมวิท ซอย
-																66/1 ใกล้กับสถานีรถไฟฟ้าบีทีเอสอุดมสุข
-																และใช้เวลาเพียง 10นาที โดยรถยนต์ถึงทางพิเศษเฉลิมมหานคร
-																และทางด่วนบูรพาวิถี
-																ทั้งยังเชื่อมต่อถนนสุขุมวิทกับถนนศรีนครินทร์ <div
-																	class="buttons">
-																	<a class="btn w-270"
-																		href="https://www.parkx.com/en/find-a-carpark/park-x-sites/united-business-center-2">เพิ่มเติม</a>
-																</div>
-															</div>
-														</div><!--swiper-slide-->
-														<div class="swiper-slide">
-															<div class="image">
-																<a
-																	href="https://www.parkx.com/en/find-a-carpark/park-x-sites/summer-lasalle">
-																	<img class="w-100"
-																		src="images/20200525154613-2020-05-25location154611.jpg"
-																		alt="">
-																</a>
-															</div>
-															<div class="article f20">
-																<a
-																	href="https://www.parkx.com/en/find-a-carpark/park-x-sites/summer-lasalle">
-																	<h3>ซัมเมอร์ ลาซาล</h3>
-																</a>
-																ตั้งอยู่บนถนนสุขุมวิท ซอย
-																66/1 ใกล้กับสถานีรถไฟฟ้าบีทีเอสอุดมสุข
-																และใช้เวลาเพียง 10นาที โดยรถยนต์ถึงทางพิเศษเฉลิมมหานคร
-																และทางด่วนบูรพาวิถี
-																ทั้งยังเชื่อมต่อถนนสุขุมวิทกับถนนศรีนครินทร์ <div
-																	class="buttons">
-																	<a class="btn w-270"
-																		href="https://www.parkx.com/en/find-a-carpark/park-x-sites/summer-lasalle">เพิ่มเติม</a>
-																</div>
-															</div>
-														</div><!--swiper-slide-->
-														<div class="swiper-slide">
-															<div class="image">
-																<a
-																	href="https://www.parkx.com/en/find-a-carpark/park-x-sites/bitec">
-																	<img class="w-100"
-																		src="images/20230314115802-2023-03-14location112625.jpg"
-																		alt="">
-																	<p class="note">
-																		ภาพจำลองใช้เพื่องานโฆษณาเท่านั้น</p>
-																</a>
-															</div>
-															<div class="article f20">
-																<a
-																	href="https://www.parkx.com/en/find-a-carpark/park-x-sites/bitec">
-																	<h3>ศูนย์นิทรรศการและการประชุมไบเทค</h3>
-																</a>
-																ศูนย์นิทรรศการและการประชุมไบเทค เลขที่ 88
-																ถนนเทพรัตน์ แขวงบางนาใต้ เขตบางนา กรุงเทพมหานคร
-																10260<br>
-																ใกล้กับรถไฟฟ้าบีทีเอสบางนา <div class="buttons">
-																	<a class="btn w-270"
-																		href="https://www.parkx.com/en/find-a-carpark/park-x-sites/bitec">เพิ่มเติม</a>
-																</div>
-															</div>
-														</div><!--swiper-slide-->
-													</div><!--swiper-wrapper-->
-
+															</div><!--swiper-slide-->
+														}
+													}
+												}
+												</div><!--swiper-wrapper-->
 													<div class="swiper-pagination location"></div>
 												</div><!--swiper-location-->
 
@@ -289,17 +103,17 @@
 											</div><!--section-inner-->
 										</div><!--container-->
 										</div><!--section-location-->
-<div class="section section-newsletter">
+                                        <div class="section section-newsletter">
 											<div class="container">
 												<div class="row align-items-center wow fadeIn">
 													<div class="col-lg-5">
 														<div class="article f20">
-															<h3 class="title-lg mt-0">รับข่าวสาร</h3>
-															<p>ลงทะเบียนเพื่อรับข่าวสารและโปรโมชั่น ข้อเสนอพิเศษ</p>
+															<h3 class="title-lg mt-0">@localizer["ReceiveNews"]</h3>
+															<p>@localizer["RegisterNew"]</p>
 														</div>
 													</div>
 													<div class="col-lg-7">
-														<form action="https://www.parkx.com/th" role="form"
+														<form action="#" role="form"
 														      class="form form-newsletter" id="form_newsletter" method="POST"
 														      accept-charset="utf-8">
 															<input type="hidden"
@@ -308,31 +122,28 @@
 															<div class="input-flex">
 																<div class="input">
 																	<input type="text" class="form-control" name="mailregis"
-																	       id="mailregis" placeholder="อีเมลของคุณ">
+																	       id="mailregis" placeholder="@localizer["yourEmail"]">
 																</div>
 																<button class="btn btn-outline" type="button"
-																        id="btn_mailregis">สมัคร</button>
+																        id="btn_mailregis">@localizer["Register"]</button>
 															</div>
 														</form>
 													</div><!--col-lg-7-->
 												</div><!--row-->
 											</div><!--container-->
-</div><!--section-newsletter-->
+						          </div><!--section-newsletter-->
 
-<div class="cookie-content">
-	<div class="container">
-		เราใช้คุกกี้เพื่อให้แน่ใจว่าเราได้มอบประสบการณ์ที่ดีที่สุดในการใช้งานเว็บไซต์ของเราหากคุณใช้เว็บไซต์ต่อ
-		หรือปิดข้อความนี้ลงเราถือว่าคุณยอมรับการใช้งานคุกกี้ <br
-			class="d-none d-xl-block"> กรุณาอ่าน <a
-			href="https://www.parkx.com/en/terms-and-conditions">ข้อตกลงและเงื่อนไข</a>
-		และ <a href="https://www.parkx.com/en/privacy-policy"> นโยบายความเป็นส่วนตัว</a>
-		ของเรา <div class="button">
-			<button class="btn btn-accept normal" type="button"
-			        id="acp_ck">ยอมรับ</button>
-			<button class="btn btn-close normal" type="button" id="acp_ck2"></button>
-		</div>
-	</div>
-</div><!--cookie-content-->										
+						<div class="cookie-content">
+							<div class="container">
+								@localizer["cookie-des"] <br class="d-none d-xl-block"> @localizer["PleaseRead"] <a href="https://www.parkx.com/en/terms-and-conditions">@localizer["TermsAndConditions"]</a>
+								@localizer["And"] <a href="https://www.parkx.com/en/privacy-policy"> @localizer["PrivacyPolicy"]</a>
+								 <div class="button">
+									<button class="btn btn-accept normal" type="button"
+									        id="acp_ck">@localizer["Accept"]</button>
+									<button class="btn btn-close normal" type="button" id="acp_ck2"></button>
+								</div>
+							</div>
+						</div><!--cookie-content-->										
 @section Scripts {
 	<script>
 	$(document).ready(function () {
@@ -362,12 +173,28 @@
 <script>
 	$(document).ready(function () {
 		$("#acp_ck").on('click', function () {
-			document.cookie = "acp_cookie=1;expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/"
+			var expireDate = new Date();
+			expireDate.setFullYear(expireDate.getFullYear() + 1); // Set expiration date to one year from now
+			document.cookie = "acp_cookie=1;expires=" + expireDate.toUTCString() + ";path=/";
+			console.log("Cookie set: acp_cookie=1;expires=" + expireDate.toUTCString() + ";path=/");
 		});
 
 		$("#acp_ck2").on('click', function () {
-			document.cookie = "acp_cookie=1;expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/"
+			var expireDate = new Date();
+			expireDate.setFullYear(expireDate.getFullYear() + 1); // Set expiration date to one year from now
+			document.cookie = "acp_cookie=1;expires=" + expireDate.toUTCString() + ";path=/";
+			console.log("Cookie set: acp_cookie=1;expires=" + expireDate.toUTCString() + ";path=/");
 		});
+
+		// Check if the cookie is set
+		var acpCookie = document.cookie.split('; ').find(row => row.startsWith('acp_cookie='));
+		if (acpCookie) {
+			console.log("Cookie found: " + acpCookie);
+			$(".cookie-content").hide();
+		} else {
+			console.log("Cookie not found");
+			$(".cookie-content").show();
+		}
 	});
 
 </script>

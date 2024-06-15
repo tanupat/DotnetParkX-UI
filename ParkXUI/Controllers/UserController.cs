@@ -2,6 +2,7 @@ using System.Net;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 using ParkXUI.Interfaces;
 using ParkXUI.Models.Auth;
@@ -64,6 +65,96 @@ public class UserController : Controller
         var user = await _authService.GetUserDetail(userId);
         memberVehicle.vehicles = await _vehicleService.GetVehiclesMember(user.memberKey);
         return View(memberVehicle);
+    }
+    
+    public IActionResult AddVehicle()
+    {
+        AddVehicleViewModel addVehicle = new AddVehicleViewModel();
+        addVehicle.vehicleType = _vehicleService.GetVehicleType();
+        return View(addVehicle);
+    }
+    
+    [HttpPost]
+    public async Task<IActionResult> AddVehicle(AddVehicleViewModel addVehicle)
+    {
+        try
+        {
+            
+            addVehicle.vehicleType = _vehicleService.GetVehicleType();
+            var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var user = await _authService.GetUserDetail(userId);
+            if (addVehicle.file != null)
+            {
+                addVehicle.vehicle.filename = addVehicle.file.FileName;
+                addVehicle.vehicle.attach = await _vehicleService.ConvertToBase64Async(addVehicle.file);
+            }
+            addVehicle.vehicle.memberIdOrKey = user.memberKey;
+            addVehicle.vehicle.delete = false;
+            await _vehicleService.ActionVehicle(addVehicle.vehicle);
+            return RedirectToAction("MemberVehicle");
+        }
+        catch (Exception e)
+        {
+            ViewBag.error = e.Message;
+            return View(addVehicle);
+        }
+    }
+    
+    public async Task<IActionResult> EditVehicle(string vehicleId)
+    {
+        EditVehicleViewModel addVehicle = new EditVehicleViewModel();
+        var userId =   HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+        var vehicle = await _vehicleService.GetVehiclesMember(userId);
+        addVehicle.vehicle = vehicle.FirstOrDefault(x => x.rowKey == vehicleId);
+        addVehicle.vehicleType = _vehicleService.GetVehicleType();
+    
+        
+
+        return View(addVehicle);
+    }
+    
+    [HttpPost]
+    public async Task<IActionResult> EditVehicle(EditVehicleViewModel editVehicle)
+    {
+        try
+        {
+            editVehicle.vehicleType = _vehicleService.GetVehicleType();
+            
+                var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+                var vehicle = await _vehicleService.GetVehiclesMember(userId);
+                // editVehicle.vehicle = editVehicle.vehicle; //vehicle.FirstOrDefault(x => x.rowKey == editVehicle.vehicle.rowKey);
+                if (editVehicle.file != null)
+                {
+                    editVehicle.vehicle.filename = editVehicle.file.FileName;
+                    editVehicle.vehicle.attach = await _vehicleService.ConvertToBase64Async(editVehicle.file);
+                }
+                 editVehicle.vehicle.delete = false;
+                 editVehicle.vehicle.memberIdOrKey = userId;
+                 editVehicle.vehicle.rowKey = editVehicle.vehicle.rowKey;
+                await _vehicleService.ActionVehicle(editVehicle.vehicle);
+                
+            return RedirectToAction("MemberVehicle");
+        }catch (Exception e)
+        {
+            ViewBag.error = e.Message;
+            return View(editVehicle);
+        }
+
+   
+    }
+    
+    public async Task<IActionResult> GetVehicleById(string memberId)
+    {
+        try
+        {
+            var result = await _vehicleService.GetVehiclesMember(memberId);
+        
+            return Ok(result);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
     }
     
 }

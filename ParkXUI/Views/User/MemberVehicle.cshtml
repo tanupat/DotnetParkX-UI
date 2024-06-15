@@ -4,6 +4,10 @@
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
+@section Styles {
+    <link rel="stylesheet" href="~/css/user/member-vehicle.css" />
+}
+    
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -14,6 +18,13 @@
     
     <div class="row">
         <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-6 mb-2">
+                    <a class="btn-primary-parking" asp-controller="User" asp-action="AddVehicle">
+                        <i class="fa fa-plus"></i> เพิ่มยานพาหนะ
+                    </a>
+                </div>
+            </div>
             <div class="table-responsive">
                 <table class="table table-striped" id="vehicleTable">
                     <thead>
@@ -23,12 +34,12 @@
                         <th>ยี่ห้อ</th>
                         <th>รุ่น</th>
                         <th>ปี</th>
-                        <th>สี</th>
                         <th>ประเภทยานพาหนะ</th>
+                        <th>แก้ไข/ลบ</th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach(var item in Model.vehicles)
+                    @foreach (var item in Model.vehicles)
                     {
                         <tr>
                             <td>@item.licensePlate</td>
@@ -36,8 +47,20 @@
                             <td>@item.maker</td>
                             <td>@item.model</td>
                             <td>@item.year</td>
-                            <td>@item.color</td>
                             <td>@item.vehicleType</td>
+                            <td>
+                                <div class="btn-container">
+                                    <a asp-controller="User" asp-action="EditVehicle" asp-route-vehicleId="@item.rowKey" class="btn-edit">
+                                        <i class="fa fa-edit"></i>
+                                        แก้ไข
+                                    </a>
+                                    <a href="#" class="btn-delete">
+                                        <i class="fa fa-trash"></i>
+                                        ลบ
+                                    </a>
+                                </div>
+
+                            </td>
                         </tr>
                     }
                     </tbody>

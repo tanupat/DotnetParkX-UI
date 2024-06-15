@@ -4,5 +4,5 @@ namespace ParkXUI.ViewModel.User;
 
 public class MemberVehicleViewModel
 {
-    public List<VehicleModel> vehicles { get; set; }
+    public List<VehicleModel?> vehicles { get; set; }
 }
