@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets/ParkXUI.bundle.scp.css"
     },
     {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/FindCarPark/find-car-park.css",
+      "PackagePath": "staticwebassets/css/FindCarPark/find-car-park.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/ParkingSite/compare-footer.css",
+      "PackagePath": "staticwebassets/css/ParkingSite/compare-footer.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/ParkingSite/parking-sites.css",
+      "PackagePath": "staticwebassets/css/ParkingSite/parking-sites.css"
+    },
+    {
       "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/animate.css",
       "PackagePath": "staticwebassets/css/animate.css"
     },
@@ -37,6 +49,10 @@
       "PackagePath": "staticwebassets/css/jquery.fancybox.css"
     },
     {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/park-x.css",
+      "PackagePath": "staticwebassets/css/park-x.css"
+    },
+    {
       "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
@@ -47,6 +63,14 @@
     {
       "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/swiper.css",
       "PackagePath": "staticwebassets/css/swiper.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/user/member-vehicle-edit.css",
+      "PackagePath": "staticwebassets/css/user/member-vehicle-edit.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/user/member-vehicle.css",
+      "PackagePath": "staticwebassets/css/user/member-vehicle.css"
     },
     {
       "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/favicon.ico",

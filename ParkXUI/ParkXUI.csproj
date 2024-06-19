@@ -4,6 +4,8 @@
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <AssemblyVersion>1.0.0.1</AssemblyVersion>
+        <FileVersion>1.0.0.1</FileVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -38,6 +40,22 @@
       <EmbeddedResource Update="Resources\Views\Shared\_Layout.th.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>_Layout.th.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views\ParkingSolutions\AboutParkX.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>AboutParkX.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views\FindCarpark\index.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>index.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views\ParkingSites\index.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>index.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views\ParkingSites\ComparePackages.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>ComparePackages.Designer.cs</LastGenOutput>
       </EmbeddedResource>
     </ItemGroup>
 
@@ -81,6 +99,26 @@
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>_Layout.th.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views\ParkingSolutions\AboutParkX.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>AboutParkX.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views\FindCarpark\index.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>index.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views\ParkingSites\index.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>index.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views\ParkingSites\ComparePackages.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ComparePackages.resx</DependentUpon>
       </Compile>
     </ItemGroup>
 

@@ -1,5 +1,5 @@
 @model ParkXUI.ViewModel.FindCarpark.FindCarparkViewModel
-
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 @{
     ViewBag.Title = "title";
     Layout = "_Layout";
@@ -8,9 +8,9 @@
 <div class="section section-breadcrumb">
     <div class="container">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a  asp-controller="Home" asp-action="Index">หน้าแรก</a></li>
-            <li class="breadcrumb-item active"><span>หาที่จอดรถ</span></li>
-            <li class="breadcrumb-item active"><span>พาร์คเอ็กซ์</span></li>
+            <li class="breadcrumb-item"><a  asp-controller="Home" asp-action="Index">@localizer["menu_home"]</a></li>
+            <li class="breadcrumb-item active"><span>@localizer["menu_findCarPark"]</span></li>
+            <li class="breadcrumb-item active"><span>@localizer["parkX"]</span></li>
         </ol>
     </div><!--container-->
 </div>
@@ -22,11 +22,11 @@
 		 		<h2 class="title-lg">หาที่จอดรถ</h2>
 		 	</div>
 		 	<ul class="nav nav-location justify-content-center wow fadeIn">
-			       <li><a  asp-controller="FindCarpark" asp-action="Index" class="active">พาร์คเอ็กซ์</a></li>
-			       <li><a  asp-controller="FindCarpark" asp-action="ManagedByParkX" class="">บริหารโดยพาร์คเอ็กซ์</a></li>
+			       <li><a  asp-controller="FindCarpark" asp-action="Index" class="active">@localizer["parkX"]</a></li>
+			       <li><a  asp-controller="FindCarpark" asp-action="ManagedByParkX" class="">@localizer["ManagedParkX"]</a></li>
 		    </ul>
 			<div class="article wow fadeIn">
-				<p>กรุงเทพมหานคร ติดอันดับเมืองที่รถติดมากที่สุดของเอเชีย ผู้ใช้รถต้องเสียเวลาบนท้องถนนมากถึง 64 ชม.ต่อปีแล้วยังต้องเสียเวลากับการหาที่จอดรถอีก 20 นาที โดยประมาณ Solution ของเราจึงตอบโจทย์ปัญหาที่จอดรถไม่เพียงพอ และเป็นอีกหนึ่งทางเลือก ที่เพิ่มความคล่องตัวในการใช้ชีวิตสําหรับคนกรุงเทพมหานคร</p>
+				<p>@localizer["description"]</p>
 			</div>
 			<div class="background"></div>
 		</div><!--section-group-->
@@ -57,10 +57,10 @@
                                 <div class="map-content-wrap">
                                     <ul class="nav nav-map">
                                         <li class="nav-item">
-                                            <a class="nav-link active" data-toggle="tab" href="#tab-map-1-1-@item.SiteID">แผนที่ตั้ง</a>
+                                            <a class="nav-link active" data-toggle="tab" href="#tab-map-1-1-@item.SiteID">@localizer["mapImage"]</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#tab-map-2-1-@item.SiteID">แผนที่เดินทาง</a>
+                                            <a class="nav-link" data-toggle="tab" href="#tab-map-2-1-@item.SiteID">@localizer["map"]</a>
                                         </li>
                                     </ul>
                                     <div class="tab-content tab-map-content">
@@ -73,7 +73,7 @@
                                             <iframe src="@item.siteMapUrl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                                         </div><!--tab-pane-->
                                     </div><!--tab-map-content-->
-                                    <a class="btn btn-viewmore normal w-270 wow fadeInRight" data-wow-delay="0.2s" asp-controller="ParkingSites" asp-action="Index" asp-route-siteId="@item.SiteID" >เพิ่มเติม</a>
+                                    <a class="btn btn-viewmore normal w-270 wow fadeInRight" data-wow-delay="0.2s" asp-controller="ParkingSites" asp-action="Index" asp-route-siteId="@item.SiteID" >@localizer["more"]</a>
                                 </div><!--map-content-wrap-->
                             </div><!--col-lg-5-->
                         </div><!--row-->

@@ -60,4 +60,49 @@
     <data name="CONTACT_US" xml:space="preserve">
         <value>ติดต่อเรา</value>
     </data>
+    <data name="menu_parksolution" xml:space="preserve">
+        <value>โซลูชั่นที่จอดรถ</value>
+    </data>
+    <data name="menu_about" xml:space="preserve">
+        <value>ข้อมูลสถานที่จอด</value>
+    </data>
+    <data name="menu_newAndPromotions" xml:space="preserve">
+        <value>ข่าวสารและโปรโมชั่น</value>
+    </data>
+    <data name="menu_new" xml:space="preserve">
+        <value>ข่าว</value>
+    </data>
+    <data name="menu_promotions" xml:space="preserve">
+        <value>โปรโมชั่น</value>
+    </data>
+    <data name="menu_contactUS" xml:space="preserve">
+        <value>ติดต่อเรา</value>
+    </data>
+    <data name="menu_personal_menage" xml:space="preserve">
+        <value>จัดการข้อมูลส่วนตัว</value>
+    </data>
+    <data name="menu_package_info" xml:space="preserve">
+        <value>ข้อมูลแพ็กเกจ</value>
+    </data>
+    <data name="menu_vehicle_info" xml:space="preserve">
+        <value>จัดการข้อมูลรถ</value>
+    </data>
+    <data name="menu_logout" xml:space="preserve">
+        <value>ออกจากระบบ</value>
+    </data>
+    <data name="menu_login" xml:space="preserve">
+        <value>เข้าสู่ระบบ</value>
+    </data>
+    <data name="company" xml:space="preserve">
+        <value>สงวนลิขสิทธิ์ © 2563 บริษัท เพนต้า 591 จำกัด </value>
+    </data>
+    <data name="TermsAndConditions" xml:space="preserve">
+        <value>ข้อตกลงและเงื่อนไข</value>
+    </data>
+    <data name="PrivacyPolicy" xml:space="preserve">
+        <value>นโยบายความเป็นส่วนตัว</value>
+    </data>
+    <data name="version" xml:space="preserve">
+        <value>เวอร์ชั่น</value>
+    </data>
 </root>

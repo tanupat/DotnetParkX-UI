@@ -1,0 +1,45 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="CompanyName" xml:space="preserve">
+        <value>&lt;h3&gt;Park X&lt;/h3&gt;</value>
+    </data>
+    <data name="ParkDescription" xml:space="preserve">
+        <value>&lt;p&gt;Focusing on customer’s need by providing clean, safe, convenient parking services and good facilities. Urban parking solutions that integrate with the public transport system and well located, which contributes to society's well-being.&lt;/p&gt;
+
+&lt;p&gt;With the aim of seeking solutions to solve a classic problem of big cities that cannot support a large amount of vehicles.&lt;/p&gt;
+
+&lt;p&gt;PARK X provides people more choice by increasing space for car parking at strategic locations, high technology parking system with cashless payment solutions that enhance customers parking experience.&lt;/p&gt;
+
+&lt;p&gt;Help and support is available for 24 hours.&lt;/p&gt;</value>
+    </data>
+    <data name="ParkList" xml:space="preserve">
+        <value>&lt;ul class="list"&gt;
+	&lt;li&gt;At strategic locations that easy to connect with the public transport system.&amp;nbsp;&lt;/li&gt;
+	&lt;li&gt;Clean, safe and convenience&amp;nbsp;&lt;/li&gt;
+	&lt;li&gt;24 hour guard monitoring and CCTV.&lt;/li&gt;
+	&lt;li&gt;Automated parking systems&amp;nbsp;&lt;/li&gt;
+	&lt;li&gt;License plate recognition technology&amp;nbsp;&lt;/li&gt;
+	&lt;li&gt;Mobile payment technology&amp;nbsp;&lt;/li&gt;
+&lt;/ul&gt;</value>
+    </data>
+    <data name="vision" xml:space="preserve">
+        <value>PARK X is no.1 of choice for urban parking solutions</value>
+    </data>
+    <data name="mission" xml:space="preserve">
+        <value>Focusing on customer’s need by providing parking services and good facilities.</value>
+    </data>
+    <data name="ourvalue" xml:space="preserve">
+        <value>Clean, safe, convenience</value>
+    </data>
+</root>

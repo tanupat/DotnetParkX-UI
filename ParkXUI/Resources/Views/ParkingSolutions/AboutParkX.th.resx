@@ -1,0 +1,46 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="CompanyName" xml:space="preserve">
+        <value>&lt;h3&gt;พาร์คเอ็กซ์&lt;/h3&gt;</value>
+    </data>
+    <data name="ParkDescription" xml:space="preserve">
+        <value>
+&lt;p&gt;ตอบโจทย์ความต้องการของลูกค้า โดยการให้บริการที่จอดรถบนทําเลใจกลางเมือง ที่มีสิ่งอํานวยความสะดวกครบ สถานที่สะอาด และมีความปลอดภัยสูง เชื่อมต่อกับระบบขนส่งสาธารณะ ตอบรับความเป็นสังคมเมืองของผู้อยู่อาศัย และเพิ่มความคล่องตัวในการใช้ชีวิตให้กับคนกรุงเทพมหานคร&lt;/p&gt;
+
+&lt;p&gt;จากแนวคิดที่หวังจะแก้ไขปัญหาเรื่องที่จอดรถ ซึ่งเป็นปัญหาคลาสสิคของเมืองใหญ่ ที่ไม่สามารถรองรับปริมาณรถที่มีอยู่อย่างมากมาย&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;พาร์คเอ็กซ์&amp;nbsp; จึงลงทุนในการสร้างพื้นที่ใหม่ ด้วยการจัดพื้นที่จอดรถ และสร้างระบบที่สะดวกกับผู้ใช้ ช่วยประหยัดเวลา โดยไม่ต้องกังวลกับการวนหาที่จอดรถอีกต่อไป&lt;/p&gt;</value>
+    </data>
+    <data name="ParkList" xml:space="preserve">
+        <value>&lt;ul class="list"&gt;
+                            &lt;li&gt;พร้อมให้ความช่วยเหลือและอํานวยความสะดวกต่างๆ ตลอด 24 ชั่วโมง&lt;/li&gt;
+                            &lt;li&gt;ทําเลที่ตั้ง มีการเชื่อมต่อกับระบบขนส่งสาธารณะที่หลากหลาย&lt;/li&gt;
+                            &lt;li&gt;สะดวก สะอาด และมีความปลอดภัยสูง&lt;/li&gt;
+                            &lt;li&gt;ควบคุมและรักษาความปลอดภัย ตลอด 24ภชั่วโมงภด้วยระบบกล้องวงจรปิดทั่วบริเวณ&lt;/li&gt;
+                            &lt;li&gt;ระบบที่จอดรถอัตโนมัติ ช่วยปลดล็อคปัญหาพื้นที่จอดรถในเมือง ไม่เปลืองเวลา&lt;/li&gt;
+                            &lt;li&gt;ไม้กั้นอัตโนมัติ ตรวจจับทะเบียนป้ายที่บันทึกไว้ในระบบ&lt;/li&gt;
+                            &lt;li&gt;รองรับการชําระค่าบริการแบบไร้เงินสดภสามารถชําระเงินผ่านโทรศัพท์มือถือได้ โดยไม่ต้องกังวลกับการเตรียมเงินสดเพื่อชําระค่าจอด&lt;/li&gt;
+                        &lt;/ul&gt;</value>
+    </data>
+    <data name="vision" xml:space="preserve">
+        <value>พาร์คเอ็กซ์ ทางเลือกอันดับ 1 ในใจ คนเมือง</value>
+    </data>
+    <data name="mission" xml:space="preserve">
+        <value>ตอบทุกโจทย์ความต้องการของลูกค้าพร้อมด้วยสิ่งอำนวยความสะดวกครบครัน</value>
+    </data>
+    <data name="ourvalue" xml:space="preserve">
+        <value>เดินทางสะดวก&lt;br&gt;
+                            สถานที่สะอาดมีความปลอดภัยสูง</value>
+    </data>
+</root>

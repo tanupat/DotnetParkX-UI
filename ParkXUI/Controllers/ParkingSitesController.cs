@@ -41,8 +41,8 @@ public class ParkingSitesController : Controller
                ViewBag.error = e.Message;
            }
          
-           // var apiResultPackages = await _httpClientUtility.GetAsync($"Packages/Packages?active=Y&siteId={siteId}");
-           var apiResultPackages = await _httpClientUtility.GetAsync($"Packages/Packages?siteId={siteId}");
+            var apiResultPackages = await _httpClientUtility.GetAsync($"Packages/Packages?active=Y&siteId={siteId}");
+          // var apiResultPackages = await _httpClientUtility.GetAsync($"Packages/Packages?siteId={siteId}");
             if(apiResultPackages.HttpStatus == HttpStatusCode.OK)
             {
              

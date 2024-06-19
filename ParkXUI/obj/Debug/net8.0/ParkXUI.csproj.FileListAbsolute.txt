@@ -61,3 +61,12 @@
 /Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/bin/Debug/net8.0/LineLoginCSharp.pdb
 /Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/bin/Debug/net8.0/MockData/sites.json
 /Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/obj/Debug/net8.0/ParkXUI.sourcelink.json
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/obj/Debug/net8.0/ParkXUI.Resources.Views.ParkingSolutions.AboutParkX.resources
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/obj/Debug/net8.0/ParkXUI.Resources.Views.ParkingSolutions.AboutParkX.en.resources
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/obj/Debug/net8.0/ParkXUI.Resources.Views.ParkingSolutions.AboutParkX.th.resources
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/obj/Debug/net8.0/ParkXUI.Resources.Views.FindCarpark.index.resources
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/obj/Debug/net8.0/ParkXUI.Resources.Views.FindCarpark.index.en.resources
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/obj/Debug/net8.0/ParkXUI.Resources.Views.FindCarpark.index.th.resources
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/obj/Debug/net8.0/ParkXUI.Resources.Views.ParkingSites.index.resources
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/obj/Debug/net8.0/ParkXUI.Resources.Views.ParkingSites.index.en.resources
+/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/obj/Debug/net8.0/ParkXUI.Resources.Views.ParkingSites.index.th.resources

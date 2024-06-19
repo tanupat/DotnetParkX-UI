@@ -1,0 +1,38 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="menu_home" xml:space="preserve">
+        <value>หน้าแรก</value>
+    </data>
+    <data name="menu_findCarPark" xml:space="preserve">
+        <value>หาที่จอดรถ</value>
+    </data>
+    <data name="parkX" xml:space="preserve">
+        <value>พาร์คเอ็กซ์</value>
+    </data>
+    <data name="ManagedParkX" xml:space="preserve">
+        <value>บริหารโดยพาร์คเอ็กซ์</value>
+    </data>
+    <data name="description" xml:space="preserve">
+        <value>กรุงเทพมหานคร ติดอันดับเมืองที่รถติดมากที่สุดของเอเชีย ผู้ใช้รถต้องเสียเวลาบนท้องถนนมากถึง 64 ชม.ต่อปีแล้วยังต้องเสียเวลากับการหาที่จอดรถอีก 20 นาที โดยประมาณ Solution ของเราจึงตอบโจทย์ปัญหาที่จอดรถไม่เพียงพอ และเป็นอีกหนึ่งทางเลือก ที่เพิ่มความคล่องตัวในการใช้ชีวิตสําหรับคนกรุงเทพมหานคร</value>
+    </data>
+    <data name="mapImage" xml:space="preserve">
+        <value>แผนที่ตั้ง</value>
+    </data>
+    <data name="map" xml:space="preserve">
+        <value>แผนที่เดินทาง</value>
+    </data>
+    <data name="more" xml:space="preserve">
+        <value>เพิ่มเติม</value>
+    </data>
+</root>

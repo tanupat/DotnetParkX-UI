@@ -128,5 +128,95 @@ namespace ParkXUI.Resources.Views.Shared {
                 return ResourceManager.GetString("CONTACT_US", resourceCulture);
             }
         }
+        
+        internal static string menu_parksolution {
+            get {
+                return ResourceManager.GetString("menu_parksolution", resourceCulture);
+            }
+        }
+        
+        internal static string menu_about {
+            get {
+                return ResourceManager.GetString("menu_about", resourceCulture);
+            }
+        }
+        
+        internal static string menu_newAndPromotions {
+            get {
+                return ResourceManager.GetString("menu_newAndPromotions", resourceCulture);
+            }
+        }
+        
+        internal static string menu_new {
+            get {
+                return ResourceManager.GetString("menu_new", resourceCulture);
+            }
+        }
+        
+        internal static string menu_promotions {
+            get {
+                return ResourceManager.GetString("menu_promotions", resourceCulture);
+            }
+        }
+        
+        internal static string menu_contactUS {
+            get {
+                return ResourceManager.GetString("menu_contactUS", resourceCulture);
+            }
+        }
+        
+        internal static string menu_personal_menage {
+            get {
+                return ResourceManager.GetString("menu_personal_menage", resourceCulture);
+            }
+        }
+        
+        internal static string menu_package_info {
+            get {
+                return ResourceManager.GetString("menu_package_info", resourceCulture);
+            }
+        }
+        
+        internal static string menu_vehicle_info {
+            get {
+                return ResourceManager.GetString("menu_vehicle_info", resourceCulture);
+            }
+        }
+        
+        internal static string menu_logout {
+            get {
+                return ResourceManager.GetString("menu_logout", resourceCulture);
+            }
+        }
+        
+        internal static string menu_login {
+            get {
+                return ResourceManager.GetString("menu_login", resourceCulture);
+            }
+        }
+        
+        internal static string company {
+            get {
+                return ResourceManager.GetString("company", resourceCulture);
+            }
+        }
+        
+        internal static string TermsAndConditions {
+            get {
+                return ResourceManager.GetString("TermsAndConditions", resourceCulture);
+            }
+        }
+        
+        internal static string PrivacyPolicy {
+            get {
+                return ResourceManager.GetString("PrivacyPolicy", resourceCulture);
+            }
+        }
+        
+        internal static string version {
+            get {
+                return ResourceManager.GetString("version", resourceCulture);
+            }
+        }
     }
 }

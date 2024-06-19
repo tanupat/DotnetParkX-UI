@@ -74,6 +74,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFja2FnZS9QdXJjaGFzZVBhY2thZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/ParkingSites/ComparePackages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFya2luZ1NpdGVzL0NvbXBhcmVQYWNrYWdlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/ParkingSites/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFya2luZ1NpdGVzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -96,6 +100,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/User/AddVehicle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9BZGRWZWhpY2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/User/EditVehicle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9FZGl0VmVoaWNsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/Views/User/MemberVehicle.cshtml]

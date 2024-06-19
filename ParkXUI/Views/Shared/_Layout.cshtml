@@ -1,5 +1,15 @@
-﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+﻿@using System.Reflection
+@using ParkXUI.Utility
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 
+@{
+    
+    var assembly = Assembly.GetExecutingAssembly();
+    var informationalVersion = GetAssembly.GetAssemblyAttribute<AssemblyInformationalVersionAttribute>(assembly)?.InformationalVersion;
+    var fileVersion = GetAssembly.GetAssemblyAttribute<AssemblyFileVersionAttribute>(assembly)?.Version;
+    var version = GetAssembly.GetAssemblyAttribute<AssemblyVersionAttribute>(assembly)?.Version;
+
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,11 +65,7 @@
     <link href="~/css/dev.css" rel="stylesheet">
     <link href="~/css/park-x.css" rel="stylesheet"/>
     <script src="~/js/jquery-1.12.4.min.js"></script>
-    <!--  <link href="~/css/output.css" rel="stylesheet" /> -->
    
-    <!-- <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
-    <link rel="stylesheet" href="~/ParkXUI.styles.css" asp-append-version="true"/> -->
     
     <style>
         .profile-button {
@@ -70,7 +76,6 @@
             border-radius: 30px;
             padding: 1px 2px;
         }
-        
     </style>
 
     
@@ -149,32 +154,31 @@
                                     <!--  onclick="window.location = ('https://www.parkx.com/th/parking-solutions/about-park-x');" -->
                                     <a data-toggle="dropdown"
                                        asp-controller="ParkingSolutions"
-                                       asp-action="AboutParkX">โซลูชั่นที่จอดรถ</a>
+                                       asp-action="AboutParkX">@localizer["menu_parksolution"]</a>
                                     <div class="dropdown-menu show">
                                         <div class="arrow up"></div>
                                         <ul>
                                             <li>
-                                                <a
-                                                    asp-controller="ParkingSolutions" asp-action="AboutParkX">ข้อมูลสถานที่จอด</a>
+                                                <a asp-controller="ParkingSolutions" asp-action="AboutParkX">@localizer["menu_about"]</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </li>
                                 <li class="">
-                                    <a data-toggle="dropdown"  asp-controller="NewsPromotions" asp-action="Index"  >ข่าวสารและโปรโมชั่น</a>
+                                    <a data-toggle="dropdown"  asp-controller="NewsPromotions" asp-action="Index"  >@localizer["menu_newAndPromotions"]</a>
                                     <div class="dropdown-menu show">
                                         <div class="arrow up"></div>
                                         <ul>
                                             <li>
-                                                <a asp-controller="NewsPromotions" asp-action="Index" >ข่าว</a>
+                                                <a asp-controller="NewsPromotions" asp-action="Index" >@localizer["menu_new"]</a>
                                             </li>
                                             <li>
-                                                <a asp-controller="NewsPromotions" asp-action="Promotions">โปรโมชั่น</a>
+                                                <a asp-controller="NewsPromotions" asp-action="Promotions">@localizer["menu_promotions"]</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </li>
-                                <li class=""><a asp-controller="ContactUS" asp-action="Index">ติดต่อเรา</a></li>
+                                <li class=""><a asp-controller="ContactUS" asp-action="Index">@localizer["menu_contactUS"]</a></li>
                                 @if (User.Identity.IsAuthenticated)
                                 {
                                     <li>
@@ -186,30 +190,27 @@
                                             <div class="arrow up"></div>
                                             <ul>
                                                 <li>
-                                                    <a asp-controller="User" asp-action="Profile" >จัดการข้อมูลส่วนตัว</a>
+                                                    <a asp-controller="User" asp-action="Profile" >@localizer["menu_personal_menage"]</a>
                                                 </li>
                                                 <li>
-                                                    <a asp-controller="Package" asp-action="PackageMember">ข้อมูลแพ็กเกจ</a>
+                                                    <a asp-controller="Package" asp-action="PackageMember">@localizer["menu_package_info"]</a>
                                                 </li>
                                                 <li>
-                                                    <a asp-controller="User" asp-action="MemberVehicle">จัดการข้อมูลรถ</a>
+                                                    <a asp-controller="User" asp-action="MemberVehicle">@localizer["menu_vehicle_info"]</a>
                                                 </li>
                                                 <li>
-                                                    <a asp-controller="Auth" asp-action="Logout">ออกจากระบบ</a>
+                                                    <a asp-controller="Auth" asp-action="Logout">@localizer["menu_logout"]</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
-                                    
                                 }
                                 else
                                 {
                                     <li>
-                                        <a  asp-controller="Auth" asp-action="Login" >เข้าสู่ระบบ</a>
+                                        <a  asp-controller="Auth" asp-action="Login" >@localizer["menu_login"]</a>
                                     </li>
                                 }
-                               
-                                
                             </ul>
                             
                             <div class="d-block d-md-none">
@@ -228,8 +229,7 @@
                                        <span
                                            class="icons icon-email"></span> parkx@bhirajburi.co.th
                                    </a>
-                                   <a class="btn" href="tel:+6627261999p1921"><span
-                                                                                  class="icons icon-phone"></span> 02-4070777 ต่อ 5902-4</a>
+                                   <a class="btn" href="tel:+6627261999p1921"><span class="icons icon-phone"></span> 02-4070777 ต่อ 5902-4</a>
                                    <div class="followus dark">
                                        <a class="facebook" href="https://www.facebook.com/parkxsolutions/"
                                           target="_black">
@@ -367,27 +367,21 @@
         <div class="footer-secondary">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">สงวนลิขสิทธิ์ © 2563 บริษัท เพนต้า 591 จำกัด</div>
+                    <div class="col-md-6">@localizer["company"]  @localizer["version"]: @fileVersion </div>
                     <!--col-md-6-->
                     <div class="col-md-6">
                         <div class="links">
                             <a
-                                href="https://www.parkx.com/en/terms-and-conditions">ข้อตกลงและเงื่อนไข</a>
+                                href="https://www.parkx.com/en/terms-and-conditions">@localizer["TermsAndConditions"]</a>
                             | <a
-                                href="https://www.parkx.com/en/privacy-policy">นโยบายความเป็นส่วนตัว</a>
+                                href="https://www.parkx.com/en/privacy-policy">@localizer["PrivacyPolicy"]</a>
                         </div>
                     </div><!--col-md-6-->
                 </div><!--row-->
             </div><!--container-->
         </div><!--footer-secondary-->
     </footer>
-
-  
 </div> <!--page-->
-<!--
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script> -->
 
 
 <script src="~/js/popper.min.js"></script>

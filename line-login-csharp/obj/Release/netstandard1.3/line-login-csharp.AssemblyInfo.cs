@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LineLoginCSharp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a0f295d4c4d2b8f5ecb1044bc8e76599515618e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01be2eda84bb021a16e96ad27ba8baae5b14fd59")]
 [assembly: System.Reflection.AssemblyProductAttribute("LineLoginCSharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LineLoginCSharp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

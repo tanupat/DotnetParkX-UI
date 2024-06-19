@@ -1,3 +1,4 @@
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 @model ParkXUI.ViewModel.FindCarpark.ParkingSitesViewModel
 
 @{
@@ -15,10 +16,10 @@
 <div class="section section-breadcrumb">
     <div class="container">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">HOME</a></li>
-            <li class="breadcrumb-item"><a asp-controller="FindCarpark" asp-action="Index">FIND A CAR PARK</a>
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">@localizer["menu_home"]</a></li>
+            <li class="breadcrumb-item"><a asp-controller="FindCarpark" asp-action="Index">@localizer["find_car_park"]</a>
             </li>
-            <li class="breadcrumb-item"><a href="#">PARK X SITES</a></li>
+            <li class="breadcrumb-item"><a href="#">@Model.sites.CompanyName.ToUpper()</a></li>
         </ol>
     </div><!--container-->
 </div>
@@ -90,15 +91,15 @@
 										<div class="price">@item.Price.ToString("N0") บาท/ @item.PackageType</div>
 										<ul class="features">
 											<li>@item.StartDay.ToString("MM/dd/yyyy") - @item.Endday.ToString("MM/dd/yyyy")</li>
-											<li>จอดรถพร้อมกันได้ @item.CoCurrent คัน</li>
-											<li> จำนวนรถสำหรับแพ็คเกจ @item.MaxCar คัน</li>
+											<li>@localizer["car_concurrent"] @item.CoCurrent @localizer["vehicle_unit"]</li>
+											<li>@localizer["max_car"] @item.MaxCar @localizer["vehicle_unit"]</li>
 
 										</ul>
 										<div class="compare-checkbox">
 											<input type="checkbox" id="compare-@item.key" name="compare" value="@item.key" onchange="parkingSites.onCheckCompare()">
-											<label for="compare-@item.key">เปรียบเทียบ</label>
+											<label for="compare-@item.key">@localizer["compare"]</label>
 										</div>
-										<a class="btn btn-success" asp-controller="Package" asp-action="PackageDetail" asp-route-packageId="@item.key">เลือก</a>
+										<a class="btn btn-success" asp-controller="Package" asp-action="PackageDetail" asp-route-packageId="@item.key">@localizer["choose"]</a>
 									</div>
 								</div>
 							}
@@ -111,7 +112,7 @@
 								<div class="card-header">
 									<div class="icon"><img alt="" src="/images/155fcf65.png"></div>
 
-									<h3 class="col">PARKING SERVICE REGULATIONS</h3>
+									<h3 class="col">@localizer["park_service"]</h3>
 								</div>
 
 								<div class="card-body">
@@ -134,7 +135,7 @@
 								<div class="card-header">
 									<div class="icon"><img alt="" src="/images/1665e302.png"></div>
 
-									<h3 class="col">PARKING &nbsp;RATE</h3>
+									<h3 class="col">@localizer["parking_rate"]</h3>
 								</div>
 
 								<div class="card-body">
@@ -142,9 +143,9 @@
 									       style="width: 100%; text-align: center;">
 										<tbody>
 										<tr style="width: 33.3%;">
-											<td style="text-align: left"><strong>Type of Car</strong></td>
-											<td><strong>Hourly</strong></td>
-											<td><strong>Monthly</strong></td>
+											<td style="text-align: left"><strong>@localizer["typeOfCar"]</strong></td>
+											<td><strong>@localizer["Hourly"]</strong></td>
+											<td><strong>@localizer["Monthly"]</strong></td>
 										</tr>
 										@foreach (var item in Model.sites.SiteRates)
 										{
@@ -166,10 +167,10 @@
 							<div class="card card-service">
 								<div class="card-header">
 									<div class="icon"><img alt="" src="/images/27ea6507.png"></div>
-									<h3 class="col">CONTACT US</h3>
+									<h3 class="col">@localizer["contactUS"]</h3>
 								</div>
 								<div class="card-body">
-									<p>Further information or service suggestion please contact.</p>
+									<p>@localizer["FurtherInformation"]</p>
 									@foreach (var item in Model.sites.SiteContact)
 									{
 										<h6>@item.ContactName</h6>
@@ -189,7 +190,7 @@
 
 			
 				<div class="nearby-places-wrap">
-					<h2 class="title-lg black wow fadeIn">NEARBY PLACES</h2>
+					<h2 class="title-lg black wow fadeIn">@localizer["NEARBY"]</h2>
 					<div class="row">
 						@foreach(var item in Model.sites.SiteNearby)
 						{
@@ -276,7 +277,7 @@
 								html += "<a href='#' class='remove-compare-item' data-id='" + values[i] + "'>X</a>";
 								html += "</div>";
 							}
-							html += "<button type='submit' class='compare-button'>เปรียบเทียบ</button>";
+							html += "<button type='submit' class='compare-button'>@localizer["compare"]</button>";
 							
 							$("#packageCompareList").html(html);
 						

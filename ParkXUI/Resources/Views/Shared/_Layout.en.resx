@@ -60,4 +60,49 @@
     <data name="CONTACT_US" xml:space="preserve">
         <value>CONTACT US</value>
     </data>
+    <data name="menu_parksolution" xml:space="preserve">
+        <value>PARKING SOLUTIONS</value>
+    </data>
+    <data name="menu_about" xml:space="preserve">
+        <value>ABOUT PARK X</value>
+    </data>
+    <data name="menu_newAndPromotions" xml:space="preserve">
+        <value>NEWS &amp; PROMOTIONS</value>
+    </data>
+    <data name="menu_new" xml:space="preserve">
+        <value>NEWS</value>
+    </data>
+    <data name="menu_promotions" xml:space="preserve">
+        <value>PROMOTIONS</value>
+    </data>
+    <data name="menu_contactUS" xml:space="preserve">
+        <value>CONTACT US</value>
+    </data>
+    <data name="menu_personal_menage" xml:space="preserve">
+        <value>MANAGE PERSONAL </value>
+    </data>
+    <data name="menu_package_info" xml:space="preserve">
+        <value>PACKAGE INFOMATION</value>
+    </data>
+    <data name="menu_vehicle_info" xml:space="preserve">
+        <value>MANAGE VEHICLE </value>
+    </data>
+    <data name="menu_logout" xml:space="preserve">
+        <value>LOG OUT</value>
+    </data>
+    <data name="menu_login" xml:space="preserve">
+        <value>LOGIN</value>
+    </data>
+    <data name="company" xml:space="preserve">
+        <value>Copyright © 2020 PENTA 591 Co., Ltd. All rights reserved.</value>
+    </data>
+    <data name="TermsAndConditions" xml:space="preserve">
+        <value>Terms and Conditions</value>
+    </data>
+    <data name="PrivacyPolicy" xml:space="preserve">
+        <value>Privacy Policy</value>
+    </data>
+    <data name="version" xml:space="preserve">
+        <value>version</value>
+    </data>
 </root>
