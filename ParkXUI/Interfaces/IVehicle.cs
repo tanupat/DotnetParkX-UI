@@ -14,7 +14,7 @@ public interface IVehicle
     
     Task<bool> DeleteVehicle(VehicleModel vehicle);
     
-    IEnumerable<SelectListItem> GetVehicleType();
+    List<SelectListItem> GetVehicleType();
     
     Task<string> ConvertToBase64Async(IFormFile file);
     

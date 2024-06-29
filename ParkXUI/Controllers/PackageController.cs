@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Net;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
@@ -19,23 +20,27 @@ public class PackageController : Controller
     private readonly IPaymentService _paymentService;
     private readonly IAuth _authService;
     private readonly IConfiguration _configuration;
+    private readonly ISites _sites;
     
-    public PackageController(HttpClientUtility httpClientUtility, IAuth authService, IPaymentService paymentService, IConfiguration configuration)
+    public PackageController(HttpClientUtility httpClientUtility, IAuth authService, IPaymentService paymentService, IConfiguration configuration,ISites sites)
     {
         _httpClientUtility = httpClientUtility;
         _authService = authService;
         _paymentService = paymentService;
         _configuration = configuration;
+        _sites = sites;
     }
     
     
-    public async Task<IActionResult> PackageDetail(string packageId)
+    public async Task<IActionResult> PackageDetail(string packageId,string siteId = null)
     {
         PackageDetailViewModel packageDetailViewModel = new PackageDetailViewModel();
         var apiPackageResult = await _httpClientUtility.GetAsync("Packages/Packages?packageIdOrKey=" + packageId);
-        
+        var lang = CultureInfo.CurrentCulture.Name;
         if (apiPackageResult.HttpStatus == HttpStatusCode.OK)
         {
+           var sites = await _sites.GetSites(lang, siteId);
+            packageDetailViewModel.sites = sites.FirstOrDefault();
             var package = JsonConvert.DeserializeObject<List<PackageModel>>(apiPackageResult.Data);
             packageDetailViewModel.Package = package.FirstOrDefault();
             //    packageDetailViewModel.Package = package;
@@ -87,6 +92,7 @@ public class PackageController : Controller
         }
         else if(token == null && chargeId != null)
         {
+            //
             var dataInquiryTransactionAPI = await _paymentService.InquiryTransactionAPI(chargeId);
             string json =   dataInquiryTransactionAPI.Content.ReadAsStringAsync().Result;
             ChargePostResultApi chargePostResultApi = JsonConvert.DeserializeObject<ChargePostResultApi>(json);
@@ -106,7 +112,6 @@ public class PackageController : Controller
     }
     
     [HttpPost]
-   
     public async Task<IActionResult> PurchasePackage()
     {
         //get request data
@@ -260,7 +265,7 @@ public class PackageController : Controller
     }
 
     [AllowAnonymous]
-    public IActionResult PaymentSuccess()
+    public IActionResult PaymentSuccess( string orderId = null)
     {
         return View();
     }

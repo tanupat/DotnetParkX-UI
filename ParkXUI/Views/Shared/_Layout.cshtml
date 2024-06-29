@@ -64,9 +64,8 @@
     <link href="~/css/solid.css" rel="stylesheet">
     <link href="~/css/dev.css" rel="stylesheet">
     <link href="~/css/park-x.css" rel="stylesheet"/>
+    <link href="~/css/loading.css" rel="stylesheet"/>
     <script src="~/js/jquery-1.12.4.min.js"></script>
-   
-    
     <style>
         .profile-button {
             display: flex;
@@ -77,8 +76,6 @@
             padding: 1px 2px;
         }
     </style>
-
-    
     await @RenderSectionAsync("Styles", required: false)
 </head>
 <body>
@@ -89,6 +86,12 @@
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 <!-- <div class="preload"></div> -->
+
+<!-- Loading Spinner -->
+<div id="spinner-wrapper" class="spinner-wrapper">
+    <div class="spinner"></div>
+</div>
+
 <div class="page">
     <header class="header">
      
@@ -153,8 +156,7 @@
                                 <li class="">
                                     <!--  onclick="window.location = ('https://www.parkx.com/th/parking-solutions/about-park-x');" -->
                                     <a data-toggle="dropdown"
-                                       asp-controller="ParkingSolutions"
-                                       asp-action="AboutParkX">@localizer["menu_parksolution"]</a>
+                                     >@localizer["menu_parksolution"]</a>
                                     <div class="dropdown-menu show">
                                         <div class="arrow up"></div>
                                         <ul>
@@ -165,16 +167,17 @@
                                     </div>
                                 </li>
                                 <li class="">
-                                    <a data-toggle="dropdown"  asp-controller="NewsPromotions" asp-action="Index"  >@localizer["menu_newAndPromotions"]</a>
+                                    <a data-toggle="dropdown"    >@localizer["menu_newAndPromotions"]</a>
                                     <div class="dropdown-menu show">
                                         <div class="arrow up"></div>
                                         <ul>
                                             <li>
-                                                <a asp-controller="NewsPromotions" asp-action="Index" >@localizer["menu_new"]</a>
-                                            </li>
-                                            <li>
                                                 <a asp-controller="NewsPromotions" asp-action="Promotions">@localizer["menu_promotions"]</a>
                                             </li>
+                                            <li>
+                                                <a asp-controller="NewsPromotions" asp-action="Index">@localizer["menu_new"]</a>
+                                            </li>
+
                                         </ul>
                                     </div>
                                 </li>
@@ -267,7 +270,8 @@
         </div><!--navbar-main-->
     </header>
     <div>
-            @RenderBody()
+
+        @RenderBody()
     </div>
         
 
@@ -389,7 +393,7 @@
 <script src="~/js/wow.js"></script>
 <script src="~/js/swiper.js"></script>
 <script src="~/js/jquery.fancybox.js"></script>
-<script src="~/js/jquery.customSelect.js"></script>
+<!-- <script src="~/js/jquery.customSelect.js"></script> -->
 <script src="~/js/ie11CustomProperties.js"></script>
 <script src="~/js/skrollr.min.js"></script>
 <script src="~/js/jquery.validate.js"></script>
@@ -454,6 +458,69 @@
     }, function() {
         (this).swiper.autoplay.start();
     });*/
+
+    // Function to show the spinner
+    function showSpinner() {
+        const spinnerWrapper = document.getElementById('spinner-wrapper');
+        spinnerWrapper.style.display = 'flex';
+    }
+
+    // Function to hide the spinner
+    function hideSpinner() {
+        const spinnerWrapper = document.getElementById('spinner-wrapper');
+        spinnerWrapper.style.display = 'none';
+    }
+
+    // Show spinner on page load
+    window.addEventListener('load', hideSpinner);
+
+    // Show spinner on link clicks
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('a[href]');
+        links.forEach(link => {
+            link.addEventListener('click', function(event) {
+                // Only show spinner for local links
+                if (this.href.startsWith(window.location.origin)) {
+                    showSpinner();
+                }
+            });
+        });
+    });
+     
+
+    // Show spinner on button click
+    document.addEventListener('DOMContentLoaded', function() {
+        const button = document.querySelector('button[data-toggle="loading"]');
+        if (button) {
+            button.addEventListener('click', function() {
+                showSpinner();
+                // Simulate an action that takes time (e.g., form submission, data fetch)
+                setTimeout(() => {
+                    hideSpinner();
+                    // Perform the actual action here (e.g., form submission, navigation)
+                }, 3000); // Simulate a 3-second delay
+            });
+        }
+    });
+
+    // Show spinner on form submit
+    // Form validation and show spinner on valid form submit
+    document.addEventListener('DOMContentLoaded', function() {
+        var forms = document.getElementsByClassName('needs-validation');
+        Array.prototype.filter.call(forms, function (form) {
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    showSpinner();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    });
+    
+    
 </script>
 <!-- GOOGLE ANALYTIC CODE -->
 

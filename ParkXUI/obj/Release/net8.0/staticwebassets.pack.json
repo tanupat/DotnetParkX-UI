@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets/css/jquery.fancybox.css"
     },
     {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/loading.css",
+      "PackagePath": "staticwebassets/css/loading.css"
+    },
+    {
       "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/park-x.css",
       "PackagePath": "staticwebassets/css/park-x.css"
     },
@@ -63,6 +67,10 @@
     {
       "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/swiper.css",
       "PackagePath": "staticwebassets/css/swiper.css"
+    },
+    {
+      "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/user/ConfirmOtp.css",
+      "PackagePath": "staticwebassets/css/user/ConfirmOtp.css"
     },
     {
       "Id": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/user/member-vehicle-edit.css",

@@ -73,6 +73,7 @@
     </div><!--container-->
 </div>
 
+@await Component.InvokeAsync("CardSummary")
 <div class="container mt-5">
     <div class="row">
         @foreach (var orderMember in Model.PackageMembers)

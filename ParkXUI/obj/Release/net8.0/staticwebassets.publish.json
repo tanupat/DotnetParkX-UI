@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dkPSSalV9JTTAWbd/tzNxc6TjY2fHgttyGDxOP07bRY=",
+  "Hash": "j3UzqW2lRpNcHLJVwZjm9vW1tS1T0JbqPSdOMGhv+0E=",
   "Source": "ParkXUI",
   "BasePath": "_content/ParkXUI",
   "Mode": "Default",
@@ -226,6 +226,25 @@
       "OriginalItemSpec": "wwwroot/css/jquery.fancybox.css"
     },
     {
+      "Identity": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/loading.css",
+      "SourceId": "ParkXUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/",
+      "BasePath": "_content/ParkXUI",
+      "RelativePath": "css/loading.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/loading.css"
+    },
+    {
       "Identity": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/park-x.css",
       "SourceId": "ParkXUI",
       "SourceType": "Discovered",
@@ -338,6 +357,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/swiper.css"
+    },
+    {
+      "Identity": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/user/ConfirmOtp.css",
+      "SourceId": "ParkXUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/",
+      "BasePath": "_content/ParkXUI",
+      "RelativePath": "css/user/ConfirmOtp.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/user/ConfirmOtp.css"
     },
     {
       "Identity": "/Users/tanupat/Projects/ParkX/UIParkx/ParkXUI/ParkXUI/wwwroot/css/user/member-vehicle-edit.css",

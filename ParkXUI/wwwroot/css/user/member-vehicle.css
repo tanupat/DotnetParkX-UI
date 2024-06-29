@@ -1,5 +1,5 @@
 .btn-edit {
-    background-color: #007bff;
+    background-color: #102A44;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -8,7 +8,7 @@
     margin-right: 10px; /* Add margin to the right */
 }
 .btn-edit:hover {
-    background-color: #0056b3;
+    background-color: #102A44;
     color: #F8F8F8;
 }
 .btn-delete {
@@ -27,6 +27,26 @@
     display: flex;
     justify-content: flex-start; /* Align buttons to the left */
     gap: 10px; /* Space between buttons */
+}
+.vehicle-card {
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.vehicle-card .success-icon {
+    font-size: 40px;
+    color: #28a745;
+}
+.vehicle-card .title {
+    font-size: 18px;
+    font-weight: bold;
+}
+.vehicle-card .amount {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
 }
 
 @media (max-width: 768px) {

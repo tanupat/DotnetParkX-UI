@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ParkXUI.ViewModel.User;
 
-public class ProfileModel
+public class FormProfileModel
 {
   
      public string memberKey { get; set; }

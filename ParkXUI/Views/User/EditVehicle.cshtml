@@ -4,15 +4,16 @@
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
+
 @section Styles
 {
-  <link rel="stylesheet" href="~/css/user/member-vehicle-edit.css" />
+    <link rel="stylesheet" href="~/css/user/member-vehicle-edit.css" />
+    <link rel="stylesheet" href="~/css/user/member-vehicle.css" />
 }
 
 @section Scripts
 {
     <script>
-
         (function () {
             'use strict';
             window.addEventListener('load', function () {
@@ -28,6 +29,19 @@
                 });
             }, false);
         })();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('deleteBtn').addEventListener('click', function (event) {
+                event.preventDefault();
+                $('#deleteModal').modal('show');
+            });
+
+            document.getElementById('confirmDeleteBtn').addEventListener('click', function () {
+                document.getElementById('delete').value = 'true';
+                document.getElementById('form_editVehicle').submit();
+            });
+        });
+        
     </script>
 }
 
@@ -41,96 +55,115 @@
     </div><!--container-->
 </div>
 
-
 <div class="card">
-<div class="card-body">
-    <div class="contact-form-wrap">
-        
-        @using (@Html.BeginForm("EditVehicle", "User", FormMethod.Post, new {  @class="form-contact needs-validation", @id = "form_editVehicle", @enctype = "multipart/form-data" ,@novalidate = "novalidate"}))
-        {
-            if(ViewBag.Error != null)
+    <div class="card-body">
+        <div class="contact-form-wrap">
+
+            @using (@Html.BeginForm("EditVehicle", "User", FormMethod.Post, new { @class = "form-contact needs-validation", @id = "form_editVehicle", @enctype = "multipart/form-data", @novalidate = "novalidate" }))
             {
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    @ViewBag.Error
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        @ViewBag.Error
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                }
+
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(m => m.memberKey)
+                @Html.HiddenFor(m => m.vehicle.rowKey)
+                @Html.HiddenFor(m => m.delete, new { id = "delete" ,name="delete" })
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="input-block">
+                            <span class="input-text">ทะเบียนรถ</span>
+                            @Html.TextBoxFor(m => m.vehicle.licensePlate, new { @class = "form-control", @required = "required" })
+                            @Html.ValidationMessageFor(m => m.vehicle.licensePlate, "กรุณาใส่ทะเบียนรถ", new { @class = "invalid-feedback" })
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="input-block">
+                            <span class="input-text">จังหวัด</span>
+                            @Html.TextBoxFor(m => m.vehicle.province, new { @class = "form-control", @required = "required" })
+                            @Html.ValidationMessageFor(m => m.vehicle.province, "กรุณาใส่จังหวัด", new { @class = "invalid-feedback" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="input-block">
+                            <span class="input-text">ยี่ห้อ</span>
+                            @Html.TextBoxFor(m => m.vehicle.maker, new { @class = "form-control", @required = "required" })
+                            @Html.ValidationMessageFor(m => m.vehicle.maker, "กรุณาใส่ข้อมูลยี่ห้อ", new { @class = "invalid-feedback" })
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="input-block">
+                            <span class="input-text ">รุ่น</span>
+                            @Html.TextBoxFor(m => m.vehicle.model, new { @class = "form-control", @required = "required" })
+                            @Html.ValidationMessageFor(m => m.vehicle.model, "กรุณาใส่รุ่น", new { @class = "invalid-feedback" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="input-block">
+                            <span class="input-text ">ปี</span>
+                            @Html.TextBoxFor(m => m.vehicle.year, new { @class = "form-control", @required = "required" })
+                            @Html.ValidationMessageFor(m => m.vehicle.year, null, new { @class = "invalid-feedback" })
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="input-block">
+                            <span class="input-text">ประเภทรถ</span>
+                            @Html.DropDownListFor(m => m.vehicle.vehicleType, new SelectList(Model.vehicleType, "Value", "Text", Model.vehicle.vehicleType), new { @class = "form-control", @required = "required" })
+                            @Html.ValidationMessageFor(m => m.vehicle.vehicleType, null, new { @class = "invalid-feedback" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="input-block">
+                            <span class="input-text">เอกสาร</span>
+                            @Html.TextBoxFor(m => m.file, new { @class = "form-control", @type = "file" })
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a asp-controller="User" asp-action="MemberVehicle" class="btn-back">
+                        <i class="fa fa-arrow-left"></i> &nbsp ย้อนกลับ
+                    </a>
+                    <button class="btn-edit" type="submit">
+                        <i class="fa fa-save"></i> &nbsp บันทึก
+                    </button>
+                    <button class="btn-delete" id="deleteBtn">
+                        <i class="fa fa-trash"></i> &nbsp ลบ
                     </button>
                 </div>
             }
-            @Html.AntiForgeryToken()
-            @Html.HiddenFor(m => m.memberKey)
-            @Html.HiddenFor(m => m.vehicle.rowKey)
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="input-block">
-                        <span class="input-text">ทะเบียนรถ</span>
-                        @Html.TextBoxFor(m => m.vehicle.licensePlate, new { @class = "form-control",@id="licensePlate",@name="licensePlate",@required="required"  })
-                        @Html.ValidationMessageFor(m => m.vehicle.licensePlate, "กรุณาใส่ข้อมูลทะเบียนรถ", new { @class = "invalid-feedback" })
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="input-block">
-                        <span class="input-text ">จังหวัด</span>
-                        @Html.TextBoxFor(m => m.vehicle.province, new { @class = "form-control",@required="required"  })
-                        @Html.ValidationMessageFor(m => m.vehicle.province, "กรุณาใส่ข้อมูลจังหวัด", new { @class = "invalid-feedback" })
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="input-block">
-                        <span class="input-text">ยี่ห้อ</span>
-                        @Html.TextBoxFor(m => m.vehicle.maker, new { @class = "form-control" ,@required="required" })
-                        @Html.ValidationMessageFor(m => m.vehicle.maker, "กรุณาใส่ข้อมูลยี่ห้อ", new { @class = "invalid-feedback" })
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="input-block">
-                        <span class="input-text ">รุ่น</span>
-                        @Html.TextBoxFor(m => m.vehicle.model, new { @class = "form-control" ,@required="required" })
-                        @Html.ValidationMessageFor(m => m.vehicle.model, "กรุณาใส่รุ่น", new { @class = "invalid-feedback" })
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-               
-                <div class="col-sm-6">
-                    <div class="input-block">
-                        <span class="input-text ">ปี</span>
-                        @Html.TextBoxFor(m => m.vehicle.year, new { @class = "form-control",@required="required"  })
-                        @Html.ValidationMessageFor(m => m.vehicle.year, null, new { @class = "invalid-feedback" })
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="input-block">
-                        <span class="input-text">ประเภทรถ</span>
-                        @Html.DropDownListFor(m => m.vehicle.vehicleType, Model.vehicleType,null,new { @class = "form-control",@required="required"  })
-                        @Html.ValidationMessageFor(m => m.vehicle.vehicleType, null, new { @class = "invalid-feedback" })
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-              
-                <div class="col-sm-6">
-                    <div class="input-block">
-                        <span class="input-text">เอกสาร</span>
-                        @Html.TextBoxFor(m => m.file, new { @class = "form-control", @type = "file"  })
-                    </div>
-                </div>
-            </div>
-            <div class="buttons">
-                
-                <a asp-controller="User" asp-action="MemberVehicle" class="btn-back">
-                    <i class="fa fa-arrow-left"></i> &nbsp ย้อนกลับ
-                </a>
-                <button class="btn-save" type="submit">
-                    <i class="fa fa-save"></i> &nbsp บันทึก
-                </button>
-            </div>
-        }
-        
+
+        </div>
     </div>
 </div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">ยืนยันการลบ</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                คุณต้องการลบยานพาหนะนี้หรือไม่?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-back" data-dismiss="modal">ยกเลิก</button>
+                <button type="button" class="btn-delete" id="confirmDeleteBtn">ลบ</button>
+            </div>
+        </div>
+    </div>
 </div>
-
-

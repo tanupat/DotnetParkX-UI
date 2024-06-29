@@ -1,5 +1,5 @@
 @model  ParkXUI.ViewModel.Package.PackageDetailViewModel
-
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 @{
     ViewBag.Title = "title";
     Layout = "_Layout";
@@ -90,11 +90,11 @@
 <div class="section section-breadcrumb">
     <div class="container">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">HOME</a></li>
-            <li class="breadcrumb-item"><a asp-controller="FindCarpark" asp-action="Index">FIND A CAR PARK</a>
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">@localizer["menu_home"]</a></li>
+            <li class="breadcrumb-item"><a asp-controller="FindCarpark" asp-action="Index">@localizer["menu_find_park"]</a>
             </li>
-            <li class="breadcrumb-item"><a href="#">PARK X SITES</a></li>
-            
+            <li class="breadcrumb-item"><a asp-controller="ParkingSites" asp-action="Index" asp-route-siteId="@Model.sites.SiteID">@Model.sites.CompanyName</a></li>
+            <li class="breadcrumb-item"><a href="#">@localizer["Pacakage_Detail"]</a></li>
             <!-- <li class="breadcrumb-item active"><span>PARK X UDOMSUK</span></li> -->
         </ol>
     </div><!--container-->
@@ -108,58 +108,58 @@
         <div class="package-card">
            
             <div class="package-detail">
-                <h6>รายละเอียด</h6>
+                <h6>@localizer["detail"]</h6>
                 <table>
                     <tr>
-                        <th>Package Name:</th>
+                        <th>@localizer["packageName"]:</th>
                         <td>@Model.Package.PackageName</td>
                     </tr>
                     <tr>
-                        <th>Member Type:</th>
+                        <th>@localizer["Member_type"]:</th>
                         <td>@Model.Package.MemberType</td>
                     </tr>
                     <tr>
-                        <th>Package Type:</th>
+                        <th>@localizer["packageType"]:</th>
                         <td>@Model.Package.PackageType</td>
                     </tr>
                     <tr>
-                        <th>Vehicle Type:</th>
+                        <th>@localizer["vehicleType"]:</th>
                         <td>@Model.Package.VehicleType</td>
                     </tr>
                     <tr>
-                        <th>Price:</th>
+                        <th>@localizer["price"]:</th>
                         <td>@Model.Package.Price.ToString("N0")</td>
                     </tr>
                     <tr>
-                        <th>Qty of car:</th>
+                        <th>@localizer["qtyOfCar"]:</th>
                         <td>@Model.Package.MaxCar.ToString("N0")</td>
                     </tr>
                     <tr>
-                        <th>Slot of car:</th>
+                        <th>@localizer["lotOfCar"]:</th>
                         <td>@Model.Package.CoCurrent.ToString("N0")</td>
                     </tr>
                     <tr>
-                        <th>Overnight Charge Rate:</th>
+                        <th>@localizer["OvernightRate"]:</th>
                         <td>@Model.Package.NightRate.ToString("N0")</td>
                     </tr>
                     <tr>
-                        <th>Deposited Rate:</th>
+                        <th>@localizer["DepositedRate"]:</th>
                         <td>@Model.Package.Deposite.ToString("N0")</td>
                     </tr>
                     <tr>
-                        <th>Additional Price:</th>
+                        <th>@localizer["additionalPrice"]:</th>
                         <td></td>
                     </tr>
                     <tr>
-                        <th>+ Add Slot of car:</th>
+                        <th>+ @localizer["addSlotOfCar"]:</th>
                         <td>@Model.Package.PricePerCar.ToString("N0")</td>
                     </tr>
                     <tr>
-                        <th>+ Add Qty of car:</th>
+                        <th>+ @localizer["addQtyOfCar"]:</th>
                         <td>@Model.Package.PricePerCarMax.ToString("N0")</td>
                     </tr>
                     <tr>
-                        <th>Site Available:</th>
+                        <th>@localizer["siteAvailable"]:</th>
                         <td>@Model.Package.Site.Count Site's</td>
                     </tr>
                     @for(int i = 0; i < Model.Package.Site.Count; i++)
@@ -174,7 +174,7 @@
                 </table>
             </div>
             <div class="btn-group">
-                <a class="btn purchase-btn" asp-controller="Package" asp-action="PurchasePackage" asp-route-packageId="@Model.Package.key">ซื้อแพ็กเกจ</a>
+                <a class="btn purchase-btn" asp-controller="Package" asp-action="PurchasePackage" asp-route-packageId="@Model.Package.key">@localizer["BuyPackage"]</a>
             </div>
         </div>
     </div>

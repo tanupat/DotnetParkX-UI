@@ -134,7 +134,7 @@ namespace ParkXUI.Controllers
             var dataPost = new
             {
                 LineId = authenticateResult.JWTPayload.Sub,
-                Register = false
+                register = true
             };
 
             var apiResult = await _httpClientUtility.PostAsync("auth/ValidateMember", dataPost);
@@ -148,7 +148,7 @@ namespace ParkXUI.Controllers
                         email = authenticateResult.JWTPayload.Email,
                         picture = authenticateResult.JWTPayload.Picture,
                         memberKey = authenticateResult.JWTPayload.Nonce,
-                        name = authenticateResult.JWTPayload.Name,
+                        fullName = authenticateResult.JWTPayload.Name,
                         platform = 0,
                         service = state.ToUpper(),
                         description = "Line Login for " + state.ToUpper(),
@@ -203,11 +203,14 @@ namespace ParkXUI.Controllers
                 if (result.Succeeded)
                 {
                     var Google = result.Principal.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-
+                    var email = result.Principal.FindFirst(ClaimTypes.Email)?.Value;
+                    var name = result.Principal.FindFirst(ClaimTypes.Name)?.Value;
                     var DataPost = new
                     {
                         GoogleId = Google,
-                        Register = false
+                        fullName = name,
+                        email = email,
+                        register = true
                     };
 
                     var apiResult = await _httpClientUtility.PostAsync("auth/ValidateMember", DataPost);
@@ -319,7 +322,9 @@ namespace ParkXUI.Controllers
                     email = user.email,
                     password = user.password,
                     fullName = user.fullName,
+                    mobile = user.mobile,
                     register = true
+                    
                 };
                 var apiResult = await _httpClientUtility.PostAsync("auth/ValidateMember", RegisterUser);
                 if (apiResult.HttpStatus == HttpStatusCode.OK)
@@ -343,7 +348,7 @@ namespace ParkXUI.Controllers
                     };
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
                         new ClaimsPrincipal(claimsIdentity), authProperties);
-                    return RedirectToAction("Profile", "User");
+                    return RedirectToAction("ConfirmOtp", "User");
                 }
                 else
                 {

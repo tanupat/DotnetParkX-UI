@@ -1,5 +1,5 @@
 @model ParkXUI.ViewModel.Components.CardSummaryViewModel
-
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 <style>
     .card-custom {
         background-color: #102A44; /* Dark blue background */
@@ -28,16 +28,17 @@
                     <i class="fas fa-car icon"></i>
                 </div>
                 <div>@Model.vehicleCount.ToString("N0")</div>
-                <div>ยานพาหนะ</div>
+                <div><a asp-controller="User" asp-action="MemberVehicle">@localizer["vehicles"]</a> </div>
             </div>
         </div>
+        
         <div class="col-md-6 mb-4">
             <div class="card-custom">
                 <div class="icon-wrapper">
                     <i class="fas fa-parking icon"></i>
                 </div>
                 <div>@Model.packagesCount.ToString("N0")</div>
-                <div>แพคเกจ</div>
+                <div><a  asp-controller="Package" asp-action="PackageMember" >@localizer["Package"]</a> </div>
             </div>
         </div>
         

@@ -2,6 +2,7 @@ using System.Net;
 using Newtonsoft.Json;
 using ParkXUI.Interfaces;
 using ParkXUI.Models.Auth;
+using ParkXUI.Models.User;
 using ParkXUI.Utility;
 
 namespace ParkXUI.Services;
@@ -43,6 +44,23 @@ public class AuthService : IAuth
         catch (Exception e)
         {
 
+            throw new Exception(e.Message);
+        }
+    }
+
+    public async Task<bool> UpdateProfile(UserDetailModel userDetail)
+    {
+        try
+        {
+            var response = await _httpClientUtility.PostAsync("Profiles/Profile", userDetail);
+            if (response.HttpStatus != HttpStatusCode.OK)
+            {
+                throw new Exception(response.MessageError);
+            }
+            return true;
+            
+        }catch(Exception e)
+        {
             throw new Exception(e.Message);
         }
     }

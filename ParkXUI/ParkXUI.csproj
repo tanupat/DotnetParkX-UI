@@ -57,6 +57,22 @@
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>ComparePackages.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views\Package\PackageDetail.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>PackageDetail.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views\Shared\Components\CardSummary\Default.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Default.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views\Package\PurchasePackage.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>PurchasePackage.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views\Package\PaymentSuccess.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>PaymentSuccess.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
@@ -119,6 +135,26 @@
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>ComparePackages.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views\Package\PackageDetail.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>PackageDetail.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views\Shared\Components\CardSummary\Default.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Default.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views\Package\PurchasePackage.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>PurchasePackage.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views\Package\PaymentSuccess.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>PaymentSuccess.resx</DependentUpon>
       </Compile>
     </ItemGroup>
 

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ParkXUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.1")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01be2eda84bb021a16e96ad27ba8baae5b14fd59")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b6ca1cc7c90b4e333f40f7d09b104786b43a6a7")]
 [assembly: System.Reflection.AssemblyProductAttribute("ParkXUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ParkXUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.1")]

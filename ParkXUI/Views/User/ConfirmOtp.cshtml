@@ -1,0 +1,63 @@
+@model ParkXUI.ViewModel.User.ConfirmOtpViewModel
+
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/user/ConfirmOtp.css" />
+}
+
+<div class="container">
+    <div class="otp-container">
+        @if(ViewBag.Error != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                @ViewBag.Error
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        }
+        <h4>Verify OTP code</h4>
+        <p>We've sent a code to @Model.phoneNumber</p>
+        <form id="otpForm" action="@Url.Action("ConfirmOtp")" method="post">
+            <div class="d-flex justify-content-center">
+                <input type="text" class="form-control otp-input" maxlength="1" id="otp1" name="otp1" onkeyup="moveToNext(this, 'otp2')">
+                <input type="text" class="form-control otp-input" maxlength="1" id="otp2" name="otp2" onkeyup="moveToNext(this, 'otp3')">
+                <input type="text" class="form-control otp-input" maxlength="1" id="otp3" name="otp3" onkeyup="moveToNext(this, 'otp4')">
+                <input type="text" class="form-control otp-input" maxlength="1" id="otp4" name="otp4" onkeyup="moveToNext(this, 'otp5')">
+                <input type="text" class="form-control otp-input" maxlength="1" id="otp5" name="otp5" onkeyup="moveToNext(this, 'otp6')">
+                <input type="text" class="form-control otp-input" maxlength="1" id="otp6" name="otp6" onkeyup="moveToNext(this, null)">
+            </div>
+            <!--  <p class="mt-3">Didn't get the code? <a href="#">Click to resend.</a></p> -->
+            <div class="btn-group">
+                <button id="verifyButton" class="btn btn-success" disabled="disabled" type="submit">Verify</button>
+            </div>
+        </form>
+        
+    </div>
+</div>
+
+
+@section Scripts
+{
+    <script>
+    function moveToNext(current, nextFieldID) {
+        if (current.value.length >= current.maxLength) {
+            if (nextFieldID) {
+                document.getElementById(nextFieldID).focus();
+            }
+        }
+        checkOtpFields();
+    }
+
+    function checkOtpFields() {
+        var allFilled = true;
+        for (var i = 1; i <= 6; i++) {
+            if (document.getElementById('otp' + i).value === '') {
+                allFilled = false;
+                break;
+            }
+        }
+        document.getElementById('verifyButton').disabled = !allFilled;
+    }
+</script>
+}

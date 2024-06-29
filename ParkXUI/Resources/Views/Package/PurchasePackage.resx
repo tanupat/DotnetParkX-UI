@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="PackageName" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PackageType" xml:space="preserve">
+        <value />
+    </data>
+    <data name="Price" xml:space="preserve">
+        <value />
+    </data>
+    <data name="StartDate" xml:space="preserve">
+        <value />
+    </data>
+    <data name="EndDate" xml:space="preserve">
+        <value />
+    </data>
+    <data name="Cars" xml:space="preserve">
+        <value />
+    </data>
+    <data name="Max" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PricePerCar" xml:space="preserve">
+        <value />
+    </data>
+    <data name="UnitCar" xml:space="preserve">
+        <value />
+    </data>
+    <data name="UnitCars" xml:space="preserve">
+        <value />
+    </data>
+    <data name="AddVehicle" xml:space="preserve">
+        <value />
+    </data>
+    <data name="Lot" xml:space="preserve">
+        <value />
+    </data>
+    <data name="MaxLot" xml:space="preserve">
+        <value />
+    </data>
+    <data name="Bath" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PaymentType" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PayQrCode" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PayCreditCard" xml:space="preserve">
+        <value />
+    </data>
+    <data name="ConfirmPayment" xml:space="preserve">
+        <value />
+    </data>
+    <data name="of" xml:space="preserve">
+        <value />
+    </data>
+    <data name="VehicleDetail" xml:space="preserve">
+        <value />
+    </data>
+    <data name="LicensePlate" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PleaseInputLicensePlate" xml:space="preserve">
+        <value />
+    </data>
+    <data name="province" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PleaseInputProvince" xml:space="preserve">
+        <value />
+    </data>
+    <data name="maker" xml:space="preserve">
+        <value />
+    </data>
+    <data name="model" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PleaseInputMaker" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PleaseInputModel" xml:space="preserve">
+        <value />
+    </data>
+    <data name="year" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PleaseInputYear" xml:space="preserve">
+        <value />
+    </data>
+    <data name="color" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PleaseInputColor" xml:space="preserve">
+        <value />
+    </data>
+    <data name="VehicleType" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PleaseInputVehicleType" xml:space="preserve">
+        <value />
+    </data>
+    <data name="Close" xml:space="preserve">
+        <value />
+    </data>
+    <data name="Notify" xml:space="preserve">
+        <value />
+    </data>
+    <data name="mesCannotSelectMore" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PleaseSelectStartDate" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PleaseSelectVehicle" xml:space="preserve">
+        <value />
+    </data>
+    <data name="mesCannotMinusMaxCar" xml:space="preserve">
+        <value />
+    </data>
+    <data name="mesCannotAddCocurrent" xml:space="preserve">
+        <value />
+    </data>
+    <data name="CannotMinusCocurrent" xml:space="preserve">
+        <value />
+    </data>
+</root>

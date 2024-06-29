@@ -129,13 +129,13 @@ public class VehicleService:IVehicle
 
     }
 
-    public IEnumerable<SelectListItem> GetVehicleType()
+    public List<SelectListItem> GetVehicleType()
     {
         
         try
         {
             List<SelectListItem> vehicleType = new List<SelectListItem>();
-            vehicleType.Add(new SelectListItem { Text = "รถยนตร์", Value = "car" });
+            vehicleType.Add(new SelectListItem { Text = "รถยนตร์", Value = "Car" });
             vehicleType.Add(new SelectListItem { Text = "รถจักยานยต์", Value = "Motorcycle" });
             
             return vehicleType;

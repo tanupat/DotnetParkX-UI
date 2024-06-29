@@ -5,7 +5,8 @@ namespace ParkXUI.Models.Vehicles;
 public class VehicleModel
 {
     public string rowKey { get; set; }
-    public string memberIdOrKey { get; set; }
+    
+    public string memberKeyOrId { get; set; }
     public string licensePlate { get; set; }
     public string province { get; set; }
     public string maker { get; set; }

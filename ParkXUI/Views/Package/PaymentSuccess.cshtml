@@ -1,38 +1,72 @@
 @model dynamic
-
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 @{
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
 <style>
-    .success-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        text-align: center;
-        font-family: Arial, sans-serif;
+    .payment-card {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-
-    .success-icon {
-        font-size: 100px;
-        color: #7AE74A;
+    .payment-card .success-icon {
+        font-size: 40px;
+        color: #28a745;
     }
-
-    .success-message {
+    .payment-card .title {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .payment-card .amount {
         font-size: 24px;
-        margin-top: 20px;
+        font-weight: bold;
+        color: #000;
     }
 </style>
 
-<div class="success-container">
-    <div class="success-icon">😊</div>
-    <div class="success-message">ชำระเงินสำเร็จ!</div>
-    <div class="btn-group">
-        <a class="btn purchase-btn" asp-controller="Home" asp-action="Index" >กลับสู่หน้าหลัก</a>
+<div class="container">
+    <div class="card payment-card">
+        <div class="text-center">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h4 class="mt-3">@localizer["PaymentStatus"]</h4>
+         <!--   <p class="amount">1,000,000 บาท</p> -->
+        </div>
+        <a class="btn purchase-btn mt-3" asp-controller="Home" asp-action="Index" >@localizer["BackToHome"]</a>
+        <!--
+         <hr>
+        <div class="row">
+            <div class="col-6 text-muted">Ref Number</div>
+            <div class="col-6 text-right">000085752257</div>
+        </div>
+        <div class="row">
+            <div class="col-6 text-muted">Package ID</div>
+            <div class="col-6 text-right">Antonio Roberto</div>
+        </div>
+        <div class="row">
+            <div class="col-6 text-muted">Payment Time</div>
+            <div class="col-6 text-right">25-02-2023, 13:22:16</div>
+        </div>
+        <div class="row">
+            <div class="col-6 text-muted">Payment Method</div>
+            <div class="col-6 text-right">QR Code</div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-6 text-muted">Amount</div>
+            <div class="col-6 text-right">1,000,000 บาท</div>
+        </div>
+         -->
     </div>
+   
 </div>
+
+
+
 
 
 

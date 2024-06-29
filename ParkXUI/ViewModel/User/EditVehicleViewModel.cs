@@ -10,6 +10,8 @@ public class EditVehicleViewModel
     public VehicleModel? vehicle { get; set; }
     
     public IFormFile file { get; set; }
-    public IEnumerable<SelectListItem>  vehicleType { get; set; }
+    public List<SelectListItem>  vehicleType { get; set; }
+    
+    public bool delete { get; set; } 
     
 }

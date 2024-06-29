@@ -83,3 +83,34 @@
 		</div><!--section-group-->
 	 </div><!--container-->
 </div><!--section-findpark--> 
+
+@section scripts{
+    <script>
+
+
+        function hideSpinnerPayload () {
+            const spinnerWrapper = document.getElementById('spinner-wrapper');
+            spinnerWrapper.style.display = 'none';
+        }
+        
+        function showSpinnerPayload () {
+            const spinnerWrapper = document.getElementById('spinner-wrapper');
+            spinnerWrapper.style.display = 'flex';
+        }
+      
+      // onclick tap hide spinner
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.nav-link');
+            tabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                showSpinnerPayload();
+                setTimeout(hideSpinnerPayload, 300);
+            });
+            });
+        });
+        
+        
+    
+    
+    </script>
+}

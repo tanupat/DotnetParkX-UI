@@ -1,5 +1,5 @@
 @model ParkXUI.ViewModel.Package.PurchasePackageViewModel
-
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 @{
     ViewBag.Title = "title";
     Layout = "_Layout";
@@ -137,6 +137,16 @@
 </style>
 @await Component.InvokeAsync("CardSummary")
 
+@if(ViewBag.error != null)
+{
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    @ViewBag.error
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+}
+
 <div class="container mt-5 mb-5">
     <div class="contact-form-wrap">
     <input type="hidden" id="packageDetail" name="packageDetail" value='@modelJson' />
@@ -151,49 +161,48 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="input-block">
-                        <span class="input-text">ชื่อ Package</span>
-                        <input class="form-control" type="text" placeholder="ชื่อ Package" name="name" value="@Model.SummaryPayment.PackageName" readonly="readonly">
+                        <span class="input-text">@localizer["PackageName"]</span>
+                        <input class="form-control" type="text" placeholder="@localizer["PackageName"]" name="name" value="@Model.SummaryPayment.PackageName" readonly="readonly">
                     </div>
                 </div><!--col-sm-12-->
 
                 <div class="col-sm-6">
                     <div class="input-block">
-                        <span class="input-text">ประเภท Package</span>
+                        <span class="input-text">@localizer["PackageType"]</span>
                         <input class="form-control" type="text" name="packageType"  id="packageType" value="@Model.SummaryPayment.PackageType" readonly="readonly">
                     </div>
                 </div><!--col-sm-6-->
 
                 <div class="col-sm-6">
                     <div class="input-block">
-                        <span class="input-text">ราคา</span>
+                        <span class="input-text">@localizer["Price"]</span>
                         <input class="form-control" type="text" id="price" name="price" value="@Model.SummaryPayment.price" readonly="readonly">
                     </div>
                 </div><!--col-sm-6-->
 
                 <div class="col-sm-6">
                     <div class="input-block">
-                        <span class="input-text">วันที่เริ่มต้น</span>
+                        <span class="input-text">@localizer["StartDate"]</span>
                         <input class="form-control" type="date"  value="@Model.SummaryPayment.startDate"  readonly="readonly">
-                        <div class="invalid-feedback">กรุณาเลือกวันที่เริ่มต้น</div>
                     </div>
                 </div><!--col-sm-6-->
 
                 <div class="col-sm-6">
                     <div class="input-block">
-                        <span class="input-text">วันที่สิ้นสุด</span>
+                        <span class="input-text">@localizer["EndDate"]</span>
                         <input class="form-control" type="date" value="@Model.SummaryPayment.endDate" readonly="readonly" required="required">
                     </div>
                 </div><!--col-sm-6-->
 
                 <div class="col-sm-12">
                     <div class="input-block">
-                        <span class="input-text">Cars: (<span >@Model.SummaryPayment.vehicles.Count.ToString()</span> of <span id="maxCar" name="maxCar">@Model.SummaryPayment.maxCar.ToString() </span> Max)  เข้าจอดพร้อมกันได้ (<span >@Model.SummaryPayment.coCurrent.ToString()</span> คัน)</span>
+                        <span class="input-text">@localizer["Cars"]: (<span >@Model.SummaryPayment.vehicles.Count.ToString()</span> @localizer["of"] <span id="maxCar" name="maxCar">@Model.SummaryPayment.maxCar.ToString() </span> @localizer["Max"])  @localizer["MaxLot"] (<span >@Model.SummaryPayment.coCurrent.ToString()</span> @localizer["UnitCars"])</span>
                     </div>
                 </div><!--col-sm-12-->
     
                 <div class="col-sm-12">
                     <div class="input-block">
-                        <span class="input-text">รายละเอียดยานพาหนะ</span>
+                        <span class="input-text">@localizer["VehicleDetail"]</span>
                         <ul>
                             @foreach (var vehicle in Model.SummaryPayment.vehicles)
                             {
@@ -279,7 +288,7 @@
         }
         else
         { 
-            <form action="@Url.Action("PurchasePackage", "Package")" role="form" class="form-contact needs-validation" id="form_purchase" method="POST" accept-charset="utf-8" style="visibility: visible;" novalidate>
+            <form action="@Url.Action("PurchasePackage", "Package" ,new {packageId = Model.Package.key})" role="form" class="form-contact needs-validation" id="form_purchase" method="POST" accept-charset="utf-8" style="visibility: visible;" novalidate>
             <input id="packageId" name="packageId" value="@Model.Package.key" hidden="hidden"/>
             <input id="selectedVehicles" name="selectedVehicles" hidden="hidden"/>
             <input id="maxCarData" name="maxCarData" hidden="hidden"/>
@@ -287,44 +296,43 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="input-block">
-                        <span class="input-text">ชื่อ Package</span>
+                        <span class="input-text">@localizer["PackageName"]</span>
                         <input class="form-control" type="text" placeholder="ชื่อ Package" name="name" value="@Model.Package.PackageName" readonly="readonly">
                     </div>
                 </div><!--col-sm-12-->
 
                 <div class="col-sm-6">
                     <div class="input-block">
-                        <span class="input-text">ประเภท Package</span>
+                        <span class="input-text">@localizer["PackageType"]</span>
                         <input class="form-control" type="text" name="packageType"  id="packageType" value="@Model.Package.PackageType" readonly="readonly">
                     </div>
                 </div><!--col-sm-6-->
 
                 <div class="col-sm-6">
                     <div class="input-block">
-                        <span class="input-text">ราคา</span>
+                        <span class="input-text">@localizer["Price"]</span>
                         <input class="form-control" type="text" id="price" name="price" value="@Model.Package.Price.ToString("N0")" readonly="readonly">
                     </div>
                 </div><!--col-sm-6-->
 
                 <div class="col-sm-6">
                     <div class="input-block">
-                        <span class="input-text">วันที่เริ่มต้น</span>
+                        <span class="input-text">@localizer["StartDate"]</span>
                         <input class="form-control" type="date" id="startDate" name="startDate" onchange="purchasePackage.onchangeStartDate()" required="required">
-                        <div class="invalid-feedback">กรุณาเลือกวันที่เริ่มต้น</div>
                     </div>
                 </div><!--col-sm-6-->
 
                 <div class="col-sm-6">
                     <div class="input-block">
-                        <span class="input-text">วันที่สิ้นสุด</span>
+                        <span class="input-text">@localizer["EndDate"]</span>
                         <input class="form-control" type="date" id="endDate" name="endDate" readonly="readonly" required="required">
-                        <div class="invalid-feedback">กรุณาเลือกวันที่สิ้นสุด</div>
+                        
                     </div>
                 </div><!--col-sm-6-->
 
                 <div class="col-sm-12">
                     <div class="input-block">
-                        <span class="input-text">Cars: (<span id="countVehicle" name="countVehicle"></span> of <span id="maxCar" name="maxCar">@Model.Package.MaxCar </span> Max)</span>
+                        <span class="input-text">@localizer["Cars"]: (<span id="countVehicle" name="countVehicle"></span> @localizer["of"] <span id="maxCar" name="maxCar">@Model.Package.MaxCar </span> @localizer["Max"])</span>
                         <div class="btn-group" role="group" aria-label="Basic example">
                             <button type="button" class="btn" onclick="purchasePackage.onClickMinusMaxCar(1)">
                                 <div class="icon-wrapper">
@@ -350,16 +358,16 @@
                 </div><!--col-sm-12-->
 
                 <div class="col-sm-12">
-                    (ราคาเพิ่มจำนวนรถ + @Model.Package.PricePerCarMax.ToString("N0") /คัน)
+                    (@localizer["PricePerCar"] + @Model.Package.PricePerCarMax.ToString("N0") /@localizer["UnitCars"])
                     <div class="input-block">
-                        <button type="button" class="text-sm-start btn-add-car" data-toggle="modal" data-target="#modalAddVehicle"> <i class="fas fa-solid fa-plus"></i> เพิ่มทะเบียนรถ </button>
+                        <button type="button" class="text-sm-start btn-add-car" data-toggle="modal" data-target="#modalAddVehicle"> <i class="fas fa-solid fa-plus"></i> @localizer["AddVehicle"] </button>
                     </div>
                 </div>
 
                 <div class="col-sm-12">
                     <div class="input-block">
                         <span class="input-text">Lot: (Max <span id="coCurrent" name="coCurrent">@Model.Package.CoCurrent</span> )</span>
-                        <span class="text-sm-start">- จำนวนรถเข้าจอดพร้อมกันสูงสุด @Model.Package.CoCurrent (+@Model.Package.PricePerCar บาท/คัน) </span>
+                        <span class="text-sm-start">- @localizer["MaxLot"] @Model.Package.CoCurrent (+@Model.Package.PricePerCar @localizer["Bath"]/@localizer["UnitCars"]) </span>
                         <div class="btn-group" role="group" aria-label="Basic example">
 
                             <button type="button" class="btn" id="minusCoCurrent" name="minusCoCurrent" onclick="purchasePackage.clickMinusCoCurrent()">
@@ -379,29 +387,29 @@
 
             <div class="col-sm-12">
                 <div class="input-block">
-                    <span class="input-text">รูปแบบการชำระเงิน</span>
+                    <span class="input-text">@localizer["PaymentType"]</span>
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="paymentType" id="qr"  value="qr" checked="checked">
                             <label class="form-check-label" for="qr">
-                                <i class="fas fa-solid fa-qrcode"></i> จ่ายผ่าน QR Code
+                                <i class="fas fa-solid fa-qrcode"></i> @localizer["PayQrCode"]
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="paymentType" id="card" value="card" >
                             <label class="form-check-label" for="card">
-                                <i class="fas fa-solid fa-credit-card"></i> จ่ายผ่านบัตรเครดิต
+                                <i class="fas fa-solid fa-credit-card"></i> @localizer["PayCreditCard"]
                             </label>
                         </div>
                     </div>
-                    <div class="invalid-feedback">กรุณาเลือกรูปแบบการชำระเงิน</div>
+                    
                 </div>
             </div><!--col-sm-12-->
 
             <div class="buttons">
-                <button class="btn w-270" type="button" id="btnPayment" onclick="purchasePackage.onsubmit()">
+                <button  class="btn w-270" type="button" id="btnPayment" onclick="purchasePackage.onsubmit()">
                     <i class="fas fa-solid fa-money-bill"></i>
-                    ยืนยันการชำระ
+                    @localizer["ConfirmPayment"]
                 </button>
             </div>
         </form>
@@ -414,7 +422,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">เพิ่มยานพาหนะ</h5>
+                <h5 class="modal-title" id="exampleModalLongTitle">@localizer["AddVehicle"]</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -424,68 +432,68 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="input-block">
-                                <span class="input-text">ทะเบียนรถ</span>
-                                <input class="form-control" type="text" placeholder="ทะเบียนรถ" id="licensePlate" name="licensePlate" required>
-                                <div class="invalid-feedback">กรุณาเลือกวันที่สิ้นสุด</div>
+                                <span class="input-text">@localizer["LicensePlate"]</span>
+                                <input class="form-control" type="text" placeholder="@localizer["LicensePlate"]" id="licensePlate" name="licensePlate" required>
+                                <div class="invalid-feedback">@localizer["PleaseInputLicensePlate"]</div>
                             </div>
                         </div><!--col-sm-6-->
 
                         <div class="col-sm-6">
                             <div class="input-block">
-                                <span class="input-text">จังหวัด</span>
-                                <input class="form-control" type="text" placeholder="จังหวัด" id="province" name="province" required>
-                                <div class="invalid-feedback">กรุณาเลือกจังหวัด</div>
+                                <span class="input-text">@localizer["province"]</span>
+                                <input class="form-control" type="text" placeholder="@localizer["province"]" id="province" name="province" required>
+                                <div class="invalid-feedback">@localizer["PleaseInputProvince"]</div>
                             </div>
                         </div><!--col-sm-6-->
 
                         <div class="col-sm-6">
                             <div class="input-block">
-                                <span class="input-text">ยี่ห้อรถ</span>
-                                <input class="form-control" type="text" placeholder="ยี่ห้อรถ" id="maker" name="maker" required>
-                                <div class="invalid-feedback">กรุณาเลือกยี่ห้อรถ</div>
+                                <span class="input-text">@localizer["maker"]</span>
+                                <input class="form-control" type="text" placeholder="@localizer["maker"]" id="maker" name="maker" required>
+                                <div class="invalid-feedback">@localizer["PleaseInputMaker"]</div>
                             </div>
                         </div><!--col-sm-6-->
 
                         <div class="col-sm-6">
                             <div class="input-block">
-                                <span class="input-text">รุ่น</span>
-                                <input class="form-control" type="text" placeholder="รุ่น" id="model" name="model" required>
-                                <div class="invalid-feedback">กรุณาเลือกรุ่น</div>
+                                <span class="input-text">@localizer["model"]</span>
+                                <input class="form-control" type="text" placeholder="@localizer["model"]" id="model" name="model" required>
+                                <div class="invalid-feedback">@localizer["PleaseInputModel"]</div>
                             </div>
                         </div><!--col-sm-6-->
 
                         <div class="col-sm-6">
                             <div class="input-block">
-                                <span class="input-text">ปี</span>
-                                <input class="form-control" type="text" placeholder="ปี" id="year" name="year" required>
-                                <div class="invalid-feedback">กรุณาเลือกปี</div>
+                                <span class="input-text">@localizer["year"]</span>
+                                <input class="form-control" type="text" placeholder="@localizer["year"]" id="year" name="year" required>
+                                <div class="invalid-feedback">@localizer["PleaseInputProvince"]</div>
                             </div>
                         </div><!--col-sm-6-->
 
                         <div class="col-sm-6">
                             <div class="input-block">
-                                <span class="input-text">สี</span>
-                                <input class="form-control" type="text" placeholder="สี" id="color" name="color" required>
-                                <div class="invalid-feedback">กรุณาเลือกสี</div>
+                                <span class="input-text">@localizer["color"]</span>
+                                <input class="form-control" type="text" placeholder="@localizer["color"]" id="color" name="color" required>
+                                <div class="invalid-feedback">@localizer["PleaseInputColor"]</div>
                             </div>
                         </div><!--col-sm-6-->
 
                         <div class="col-sm-6">
                             <div class="input-block">
-                                <span class="input-text">ประเภทยานพาหนะ</span>
+                                <span class="input-text">@localizer["VehicleType"]</span>
                                 <select class="form-control" id="vehicleType" name="vehicleType" required>
                                     <option value="Car">รถยนต์</option>
                                     <option value="Motorcycle">รถจักรยานยนต์</option>
                                 </select>
-                                <div class="invalid-feedback">กรุณาเลือกประเภทยานพาหนะ</div>
+                                <div class="invalid-feedback">@localizer["PleaseInputVehicleType"]</div>
                             </div>
                         </div><!--col-sm-6-->
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn-modal-close" data-dismiss="modal">ปิด</button>
-                <button type="button" class="btn-modal" onclick="purchasePackage.submitFormVehicle()"> <i class="fas fa-solid fa-plus"></i> เพิ่มยานพาหนะ</button>
+                <button type="button" class="btn-modal-close" data-dismiss="modal">@localizer["Close"]</button>
+                <button type="button" class="btn-modal" onclick="purchasePackage.submitFormVehicle()"> <i class="fas fa-solid fa-plus"></i> @localizer["AddVehicle"]</button>
             </div>
         </div>
     </div>
@@ -495,7 +503,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="modalMessagesModalCenterTitle">แจ้งเตือน</h5>
+                <h5 class="modal-title" id="modalMessagesModalCenterTitle">@localizer["Notify"]</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -505,7 +513,7 @@
                 <h5  class="contentMes"></h5>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn-modal-close" data-dismiss="modal">ปิด</button>
+                <button type="button" class="btn-modal-close" data-dismiss="modal">@localizer["Close"]</button>
             </div>
         </div>
     </div>
@@ -513,6 +521,38 @@
 
 @section Scripts {
     <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const startDateInput = document.getElementById('startDate');
+            const endDateInput = document.getElementById('endDate');
+
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            const mm = String(today.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+            const dd = String(today.getDate()).padStart(2, '0');
+            const todayString = `${yyyy}-${mm}-${dd}`;
+
+            startDateInput.setAttribute('min', todayString);
+
+            startDateInput.addEventListener('change', function() {
+                const startDate = new Date(this.value);
+                const yyyy = startDate.getFullYear();
+                const mm = String(startDate.getMonth() + 1).padStart(2, '0');
+                const dd = String(startDate.getDate()).padStart(2, '0');
+                const startDateString = `${yyyy}-${mm}-${dd}`;
+
+                endDateInput.setAttribute('min', startDateString);
+            });
+        });
+        
+        var localizedStrings ={
+            mesCannotSelectMoreThan: '@localizer["mesCannotSelectMore"]',
+            UnitCars: '@localizer["UnitCars"]',
+            PleaseSelectStartDate: '@localizer["PleaseSelectStartDate"]',
+            PleaseSelectVehicle: '@localizer["PleaseSelectVehicle"]',
+            mesCannotMinusMaxCar: '@localizer["mesCannotMinusMaxCar"]',
+            mesCannotAddCocurrent: '@localizer["mesCannotAddCocurrent"]',
+            CannotMinusCocurrent: '@localizer["CannotMinusCocurrent"]',
+        };
         var purchasePackage = (function () {
             var startDate = document.getElementById('startDate');
             var endDate = document.getElementById('endDate');
@@ -560,6 +600,9 @@
                     } else {
                         endDate.value = '';
                     }
+
+                    priceElement.value =  purchasePackage.showPrice();
+                    priceElement.textContent = purchasePackage.showPrice();
                 },
                 onClickPlusMaxCar: function (value) {
                     let maxCar = parseInt(maxCarElement.textContent);
@@ -572,7 +615,7 @@
                     maxCar -= value;
                     if (packageDetail.package.maxCar > maxCar) {
                       
-                         messageModal.querySelector('.contentMes').textContent = 'You cannot select more than ' + packageDetail.package.maxCar + ' vehicles.';
+                         messageModal.querySelector('.contentMes').textContent = localizedStrings.mesCannotMinusMaxCar+' ' + packageDetail.package.maxCar + ' '+localizedStrings.UnitCars+' ';
                             $('#modalMessages').modal('show');
                        
                         return;
@@ -628,7 +671,7 @@
 
                     var maxCar = parseInt(maxCarElement.textContent); // Get the max car value
                     if (checkboxes.length > maxCar && event.target.checked) {
-                        messageModal.querySelector('.contentMes').textContent = 'You cannot select more than ' + maxCar + ' vehicles.';
+                        messageModal.querySelector('.contentMes').textContent = localizedStrings.mesCannotSelectMoreThan +' '+ maxCar + ' ' + localizedStrings.UnitCars +' ';
                         $('#modalMessages').modal('show');
                         event.preventDefault(); // Prevent the checkbox from being checked
                         event.target.checked = false; // Ensure it remains unchecked
@@ -646,7 +689,7 @@
 
                     var value = parseInt(coCurrent.textContent);
                     if (value >= checkboxes.length) {
-                        messageModal.querySelector('.contentMes').textContent = 'You cannot select more than ' + checkboxes.length + ' vehicles.';
+                        messageModal.querySelector('.contentMes').textContent = localizedStrings.mesCannotAddCocurrent + ' ' + checkboxes.length +  ' '+localizedStrings.UnitCars+' ';
                         $('#modalMessages').modal('show');
                         return;
                     }
@@ -662,7 +705,7 @@
                     var value = parseInt(coCurrent.textContent);
 
                     if (value <= packageDetail.package.coCurrent) {
-                        messageModal.querySelector('.contentMes').textContent = 'You cannot select less than ' + packageDetail.package.coCurrent + ' vehicles.';
+                        messageModal.querySelector('.contentMes').textContent = localizedStrings.CannotMinusCocurrent+' ' + packageDetail.package.coCurrent + ' '+localizedStrings.UnitCars+' ';
                         $('#modalMessages').modal('show');
                         return;
                     }
@@ -709,25 +752,34 @@
                     }
                     formVehicle.classList.add('was-validated');
                 },
-                showPrice: function (){
-                    const carCount = document.getElementById('vehicleListGroup').querySelectorAll('input[type="checkbox"]:checked').length;
-                    const coCurrentCount = parseInt(document.getElementById('coCurrent').textContent);
-                    var price =
-                        packageDetail.package.price +
-                        (carCount <= packageDetail.package.maxCar
-                            ? 0
-                            : (carCount - packageDetail.package.maxCar) * packageDetail.package.pricePerCarMax) +
-                        (packageDetail.package.coCurrent >= coCurrentCount
-                            ? 0
-                            : (coCurrentCount - packageDetail.package.coCurrent) * packageDetail.package.pricePerCar);
-                    return price.toLocaleString();
+        showPrice: function () {
+            const carCount = document.getElementById('vehicleListGroup').querySelectorAll('input[type="checkbox"]:checked').length;
+            const coCurrentCount = parseInt(document.getElementById('coCurrent').textContent);
+            const startDate = new Date(document.getElementById('startDate').value);
+
+            // Base price calculation
+            let price =
+                packageDetail.package.price +
+                (carCount <= packageDetail.package.maxCar
+                    ? 0
+                    : (carCount - packageDetail.package.maxCar) * packageDetail.package.pricePerCarMax) +
+                (packageDetail.package.coCurrent >= coCurrentCount
+                    ? 0
+                    : (coCurrentCount - packageDetail.package.coCurrent) * packageDetail.package.pricePerCar);
+
+            // Check if package type is MONTHLY and if start date is after the 15th of the month
+            if (packageDetail.package.packageType.toUpperCase() === 'MONTHLY' && startDate.getDate() > 15) {
+                price /= 2;  // Reduce the price by half
+            }
+
+            return price.toLocaleString();
         }, 
         onLoadVehicleList: function () {
            $.ajax({
                 url: '@Url.Action("GetVehicleById", "User", new { memberId = Model.userId })',
                 type: 'GET',
                 success: function (data) {
-                    console.log('data vehicle',data);
+                  
                    vehicleList = data;
                    
                  //   localStorage.setItem('vehicleList', JSON.stringify(vehicleList));
@@ -738,8 +790,17 @@
                     $('#modalMessages').modal('show');
                 }
             });
+        }, 
+        hideSpinnerPayload: function () {
+            const spinnerWrapper = document.getElementById('spinner-wrapper');
+            spinnerWrapper.style.display = 'none';
+            },
+        showSpinnerPayload: function () {
+            const spinnerWrapper = document.getElementById('spinner-wrapper');
+            spinnerWrapper.style.display = 'flex';
         },
         onsubmit: function () {
+                    this.showSpinnerPayload();
                     const form = document.getElementById('form_purchase');
                         // Get the selected vehicles
                         const vehicleListGroup = document.getElementById('vehicleListGroup');
@@ -758,13 +819,17 @@
                         const paymentMethod = document.querySelector('input[name="paymentType"]:checked').id;
                         //validate
                         if (startDate === '' || endDate === '') {
-                            messageModal.querySelector('.contentMes').textContent = 'Please select the start and end dates.';
+                           
+                            messageModal.querySelector('.contentMes').textContent = localizedStrings.PleaseSelectStartDate;
                             $('#modalMessages').modal('show');
+                            this.hideSpinnerPayload();
                             return;
                         }
                         if (selectedVehicles.length === 0) {
-                            messageModal.querySelector('.contentMes').textContent = 'Please select at least one vehicle.';
+                       
+                            messageModal.querySelector('.contentMes').textContent = localizedStrings.PleaseSelectVehicle;
                             $('#modalMessages').modal('show');
+                            this.hideSpinnerPayload();
                             return;
                         }
                         selectedVehiclesElement.value = JSON.stringify(selectedVehicles);
@@ -792,5 +857,7 @@
         $(document).ready(function () {
             purchasePackage.init();
         });
+    
+    
     </script>
 }
